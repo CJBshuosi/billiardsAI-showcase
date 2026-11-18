@@ -1,0 +1,19 @@
+{
+  "name": "billiards-ai-miniprogram",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=20 <25"
+  },
+  "scripts": {
+    "test": "jest --runInBand",
+    "ranking:dev:validate": "node scripts/validate-development-ranking-configuration.js database/ranking-development.local.json",
+    "ranking:dev:bootstrap": "node scripts/bootstrap-development-ranking.js database/ranking-development.local.json",
+    "ranking:dev:reset": "node scripts/reset-development-ranking.js"
+  },
+  "devDependencies": {
+    "jest": "30.4.2",
+    "jest-environment-jsdom": "30.4.1",
+    "miniprogram-simulate": "1.6.2"
+  }
+}

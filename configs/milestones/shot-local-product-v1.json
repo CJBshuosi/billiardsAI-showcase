@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "milestone_id": "shot-local-product-v1",
+  "status": "frozen_for_regression",
+  "frozen_on": "2026-08-28",
+  "product_mainlines": [
+    "shot_local_vision_events",
+    "route_planning",
+    "field_execution",
+    "wechat_cloudbase_long_term_memory"
+  ],
+  "runtime": {
+    "requires_sam21": false,
+    "requires_global_fixed_id": false,
+    "identity_scope": "single_shot"
+  },
+  "validated": {
+    "shot_local_id_stability": true,
+    "ball_contact_events": true,
+    "cushion_events": true,
+    "route_planning_surface": true,
+    "field_execution_surface": true,
+    "wechat_cloudbase_surface": true
+  },
+  "pending": {
+    "multi_video_regression": true,
+    "live_camera_validation": true
+  },
+  "research_archive_branch": "codex/vision-tracking-research-archive-20260828",
+  "research_archive_commit": "5ca159b1cdbcd0933beb934ee7a9095e7f4c4a65",
+  "known_limitations": [
+    "shot-local IDs are not full-match permanent identities",
+    "dense collision chains may remain ambiguous",
+    "adjacent pocket-jaw contacts may appear as two cushion sub-events",
+    "multi-video and live-camera validation are pending"
+  ]
+}

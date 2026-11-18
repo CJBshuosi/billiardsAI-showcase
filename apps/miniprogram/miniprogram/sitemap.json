@@ -1,0 +1,9 @@
+{
+  "desc": "billiardsAI V0 development sitemap",
+  "rules": [
+    {
+      "action": "disallow",
+      "page": "*"
+    }
+  ]
+}

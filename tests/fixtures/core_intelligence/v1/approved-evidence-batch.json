@@ -1,0 +1,58 @@
+{
+  "schema_version": "1.0",
+  "batch_id": "00000000-0000-4000-8000-000000000003",
+  "user_id": "00000000-0000-4000-8000-000000000001",
+  "session_id": "00000000-0000-4000-8000-000000000002",
+  "report_id": "00000000-0000-4000-8000-000000000004",
+  "report_revision": 1,
+  "review_revision": 1,
+  "approved_at": "2026-08-04T08:05:00Z",
+  "shots": [{
+    "shot_id": "00000000-0000-4000-8000-000000000006",
+    "session_id": "00000000-0000-4000-8000-000000000002",
+    "sequence": 1,
+    "struck_ball": 3,
+    "potted_balls": [3],
+    "cushion_count": 0,
+    "travel_distance_mm": 500,
+    "is_foul": false,
+    "deviation_mm": 80,
+    "target_zone_source": "scene_preset",
+    "confidence": "high",
+    "analysis_status": "analyzed",
+    "review_status": "approved"
+  }],
+  "statistics": {
+    "total_shot_count": 1,
+    "valid_shot_count": 1,
+    "session_quality": {
+      "shot_count": 1,
+      "abstained_shot_count": 0,
+      "abstention_rate": 0.0,
+      "session_quality_status": "SUFFICIENT_COVERAGE"
+    },
+    "potted_ball_count": 1,
+    "successful_potting_shot_count": 0,
+    "potting_shot_count": 0,
+    "pot_rate": null,
+    "average_cue_ball_travel_distance_mm": 500.0,
+    "cue_ball_travel_shot_count": 1,
+    "cushion_distribution": [{"cushion_count": 0, "shot_count": 1}],
+    "cushion_count_shot_count": 1,
+    "cue_ball_end_distribution": [],
+    "cue_ball_end_shot_count": 0,
+    "target_zone_deviation_by_source": [{
+      "target_zone_source": "scene_preset",
+      "shot_count": 1,
+      "average_deviation_mm": 80.0
+    }]
+  },
+  "scores": {
+    "potting": {"score": null, "status": "INSUFFICIENT_EVIDENCE"},
+    "positioning": {"score": null, "status": "UNSUPPORTED"},
+    "power_control": {"score": null, "status": "UNSUPPORTED"},
+    "rotation_application": {"score": null, "status": "UNSUPPORTED"}
+  },
+  "source_envelope_ids": ["00000000-0000-4000-8000-000000000005"],
+  "content_sha256": "cdd42b096acf3f028a4779e361663e19d549fb5990b99ddb2349f0692825e64a"
+}

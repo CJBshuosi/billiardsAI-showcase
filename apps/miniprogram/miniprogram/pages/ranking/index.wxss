@@ -1,0 +1,18 @@
+.ranking-page { padding-bottom: calc(250rpx + env(safe-area-inset-bottom)); }
+.ranking-head, .ranking-meta, .my-position-card { display:flex; align-items:center; justify-content:space-between; gap:20rpx; }
+.ranking-head .hero { margin-bottom:8rpx; }
+.settings-link { border:2rpx solid #111; border-radius:999rpx; padding:12rpx 20rpx; font-size:22rpx; font-weight:700; }
+.head-links { display:flex; align-items:center; gap:10rpx; }
+.ranking-meta { margin:28rpx 0 12rpx; }
+.ranking-list { border-top:3rpx solid #111; }
+.ranking-row { min-height:104rpx; display:flex; align-items:center; gap:20rpx; border-bottom:2rpx solid #deded9; }
+.rank-number { width:64rpx; font-size:28rpx; font-weight:900; }
+.ranking-person { flex:1; min-width:0; }
+.ranking-name { font-size:29rpx; font-weight:750; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.ranking-score, .my-score { font-size:34rpx; font-weight:900; }
+.my-position-card { position:fixed; left:28rpx; right:28rpx; bottom:calc(126rpx + env(safe-area-inset-bottom)); z-index:8; background:#111; color:#fff; border-radius:20rpx; padding:24rpx 28rpx; box-shadow:0 10rpx 36rpx rgba(0,0,0,.2); }
+.my-position-card .tiny { color:#ccc; }
+.snapshot-note { margin-top:24rpx; color:#777; font-size:20rpx; }
+.title-line { display:flex; align-items:center; gap:16rpx; flex-wrap:wrap; }
+.test-badge { border:2rpx solid #111; border-radius:999rpx; padding:7rpx 14rpx; font-size:20rpx; font-weight:800; }
+.test-notice { margin:18rpx 0 8rpx; padding:18rpx 22rpx; border-left:6rpx solid #111; background:#f0f0eb; font-size:23rpx; font-weight:650; }

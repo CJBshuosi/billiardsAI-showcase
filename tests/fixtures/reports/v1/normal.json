@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "report_id": "30000000-0000-4000-8000-000000000001",
+  "revision": 1,
+  "parent_revision_id": null,
+  "session_id": "10000000-0000-4000-8000-000000000001",
+  "generated_at": "2026-07-29T10:00:00Z",
+  "analysis_version": "phase0-3.3",
+  "calibration_status": "ACTIVE",
+  "report_status": "DRAFT_PENDING_REVIEW",
+  "quality_summary": {
+    "shot_count": 4,
+    "abstained_shot_count": 0,
+    "abstention_rate": 0.0,
+    "session_quality_status": "SUFFICIENT_COVERAGE"
+  },
+  "session_statistics": {
+    "total_shot_count": 4,
+    "valid_shot_count": 4,
+    "potted_ball_count": 2,
+    "successful_potting_shot_count": 2,
+    "potting_shot_count": 4,
+    "pot_rate": 0.5,
+    "cushion_distribution": [
+      {"cushion_count": 0, "shot_count": 3},
+      {"cushion_count": 1, "shot_count": 1}
+    ],
+    "cushion_count_shot_count": 4,
+    "average_cue_ball_travel_distance_mm": 650.0,
+    "cue_ball_travel_shot_count": 4,
+    "cue_ball_end_distribution": [
+      {"position": {"x_mm": 800, "y_mm": 500}, "shot_count": 4}
+    ],
+    "cue_ball_end_shot_count": 4,
+    "target_zone_deviation_by_source": []
+  },
+  "dimension_scores": {
+    "potting": {"score": 50, "status": "SCORED"},
+    "positioning": {"score": null, "status": "UNSUPPORTED"},
+    "power_control": {"score": null, "status": "UNSUPPORTED"},
+    "rotation_application": {"score": null, "status": "UNSUPPORTED"}
+  },
+  "abstention_summary": {
+    "total_shot_count": 4,
+    "abstained_shot_count": 0,
+    "display_text": "0 杆超出当前分析范围"
+  },
+  "typical_shots": [],
+  "coaching_recommendations": []
+}

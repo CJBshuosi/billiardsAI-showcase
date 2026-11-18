@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0",
+  "review_status": "MANUAL_REVIEW_REQUIRED_DO_NOT_RUN_AS_TRUTH",
+  "entity_contract": "Use shot-local anchor IDs from active-tracks.json and frame IDs from the reviewed overlay.",
+  "shots": [
+    {
+      "shot_id": "shot-0001",
+      "events": [
+        {
+          "event_type": "ball_collision",
+          "contact_frame_id": 0,
+          "actor_id": "shot-0001-anchor-XX",
+          "target_id": "shot-0001-anchor-YY"
+        },
+        {
+          "event_type": "cushion",
+          "contact_frame_id": 0,
+          "actor_id": "shot-0001-anchor-XX",
+          "rail": "left|right|bottom|top|pocket-jaw:POCKET"
+        },
+        {
+          "event_type": "pot",
+          "contact_frame_id": 0,
+          "actor_id": "shot-0001-anchor-XX",
+          "pocket": "left-bottom|middle-bottom|right-bottom|left-top|middle-top|right-top"
+        }
+      ],
+      "identity_checkpoints": [
+        {
+          "track_id": "shot-0001-anchor-XX",
+          "frame_id": 0,
+          "x_mm": 0.0,
+          "y_mm": 0.0,
+          "tolerance_mm": 25.0
+        }
+      ]
+    }
+  ]
+}

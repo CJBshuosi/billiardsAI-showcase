@@ -1,0 +1,7 @@
+miniprogram/config/env.local.js
+miniprogram/config/preview-entry.local.js
+project.private.config.json
+.local/
+node_modules/
+.DS_Store
+coverage/

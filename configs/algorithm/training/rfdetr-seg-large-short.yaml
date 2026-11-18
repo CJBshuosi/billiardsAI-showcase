@@ -1,0 +1,26 @@
+schema_version: "1.0"
+schedule_status: dormant_requires_explicit_escalation
+candidate_id: rfdetr-seg-large-short-r1
+model_class: RFDETRSegLarge
+package_asset_id: rfdetr-package-1.9.0
+weight_asset_id: rfdetr-seg-large-1.9.0
+seed: 20260801
+resolution: [504, 504]
+dataset_fraction: 1.0
+batch_size: auto
+auto_batch_target_effective: 16
+epochs: 12
+early_stopping_patience: 4
+synthetic_only: false
+augmentation_backend: albumentations
+augmentation:
+  brightness_delta: [-0.15, 0.15]
+  contrast_scale: [0.85, 1.15]
+  perspective_scale: [0.0, 0.025]
+  motion_blur_kernel: [3, 7]
+  specular_highlight_probability: 0.15
+  partial_occlusion_max_fraction: 0.12
+  jpeg_quality: [70, 100]
+  horizontal_flip: false
+  vertical_flip: false
+  calibration_transform_required: true

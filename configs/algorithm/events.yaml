@@ -1,0 +1,40 @@
+schema_version: "1.0"
+candidate_id: evidence-events-r1
+status: deterministic_rule_baseline
+
+shot_segmentation:
+  motion_threshold_mm: 8
+  still_duration_ms: 400
+  f1_min: 0.90
+  match_tolerance_ms: 200
+  boundary_median_error_ms_max: 100
+  boundary_p95_error_ms_max: 250
+
+first_contact:
+  # Standard pool-ball diameter is 57.15 mm; allow modest localization error.
+  contact_distance_mm: 65
+  ambiguity_mm: 3
+  cue_motion_min_mm: 5
+  bridge_frames: 3
+  top1_accuracy_min: 0.70
+  coverage_min: 0.80
+
+cushion:
+  rail_distance_mm: 45
+  event_f1_min: 0.85
+  per_shot_count_exact_match_min: 0.80
+
+pot:
+  pocket_radius_mm: 90
+  persistence_frames: 3
+  identity_aware_precision_min: 0.95
+  identity_aware_recall_min: 0.90
+  identity_aware_f1_min: 0.92
+
+foul_observation:
+  supported_rules: [cue_ball_scratch]
+  unsupported_policy: explicit_unsupported
+  precision_min: 0.95
+  recall_min: 0.80
+  coverage_min: 0.60
+  locked_test_high_confidence_wrong_max: 0

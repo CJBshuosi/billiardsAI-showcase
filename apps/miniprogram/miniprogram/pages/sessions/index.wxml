@@ -1,0 +1,17 @@
+<view class="page-shell nav-space">
+  <text class="eyebrow">MATCH RECORDS / 比赛记录</text>
+  <view class="hero">{{clipsMode ? '找到那一场，\n回看那一杆。' : '每一次上场，\n留个记录。'}}</view>
+  <text class="muted intro">{{clipsMode ? '先选择场次，再查看本场击球片段。' : '这里保存你参与过的场次观察记录。'}}</text>
+  <view wx:if="{{loading}}" class="card muted">正在读取比赛记录…</view>
+  <view wx:elif="{{errorCode}}" class="card"><text class="error">{{error}}</text><button class="secondary" bindtap="refresh">重新读取</button></view>
+  <view wx:elif="{{!sessions.length}}" class="card"><text class="section-title">还没有比赛记录</text><text class="muted">参与场次并保存记录后，可在这里找回。</text></view>
+  <block wx:else>
+    <navigator wx:for="{{sessions}}" wx:key="session_id" class="list-row" url="{{clipsMode ? '/pages/clips/index' : '/pages/session-detail/index'}}?session_id={{item.session_id}}">
+      <view class="row"><text class="record-title">{{item.dateLabel || '场次时间未记录'}}</text><text>↗</text></view>
+      <text class="muted">{{item.statusLabel || '状态待确认'}} · {{clipsMode ? '查看片段' : '查看本场报告'}}</text>
+      <text wx:if="{{item.analysisView}}" class="muted small">{{item.analysisView.label}}</text>
+    </navigator>
+  </block>
+  <text class="muted footnote">记录不等于个人成绩；大屏保存不代表系统精选。</text>
+  <app-nav active="home" />
+</view>

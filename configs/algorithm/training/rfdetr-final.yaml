@@ -1,0 +1,18 @@
+schema_version: "1.0"
+candidate_id: rfdetr-seg-final-r1
+allowed_model_classes: [RFDETRSegSmall, RFDETRSegMedium]
+escalation_model_classes: [RFDETRSegLarge, RFDETRSegXLarge]
+escalation_policy: separate_asset_download_and_compute_budget_approval_required
+selection_order:
+  - zero_commercial_or_contract_violations
+  - fewer_dev_hard_gate_violations
+  - higher_identity_aware_tracking_event_score
+  - lower_position_p95_mm
+  - lower_inference_cost
+seeds: [20260801, 20260802, 20260803]
+epochs_max: 80
+early_stopping_patience: 10
+freeze_encoder_epochs: 5
+backbone_learning_rate_scale: 0.10
+locked_test_access: prohibited_until_finalist_frozen
+ensemble: prohibited_without_cost_approval

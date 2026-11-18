@@ -1,0 +1,22 @@
+{
+  "contract": "blackbox-dev-machine/v1",
+  "bootstrap_python": "C:/REPLACE/verified-runtime/python.exe",
+  "bootstrap_python_sha256": "REPLACE_WITH_VERIFIED_SHA256",
+  "git_executable": "C:/REPLACE/verified-git/bin/git.exe",
+  "git_sha256": "REPLACE_WITH_VERIFIED_SHA256",
+  "runtime": "C:/REPLACE/verified-runtime",
+  "runtime_pins": {
+    "python.exe": {"bytes": 0, "sha256": "REPLACE_WITH_VERIFIED_SHA256"},
+    "python312.dll": {"bytes": 0, "sha256": "REPLACE_WITH_VERIFIED_SHA256"},
+    "python312.zip": {"bytes": 0, "sha256": "REPLACE_WITH_VERIFIED_SHA256"},
+    "_ctypes.pyd": {"bytes": 0, "sha256": "REPLACE_WITH_VERIFIED_SHA256"}
+  },
+  "dependencies": "C:/REPLACE/verified-site-packages",
+  "dependency_pins": {
+    "REPLACE_WITH_DEPENDENCY_MANIFEST_MEMBERS": {"bytes": 0, "sha256": "REPLACE_WITH_VERIFIED_SHA256"}
+  },
+  "fixtures": "C:/REPLACE/fixed-synthetic-input",
+  "codec": "C:/REPLACE/verified-codec-and-license",
+  "ownership": "C:/REPLACE/verified-ownership.py",
+  "runs": "C:/REPLACE/billiardsAI-dev-validation/runs"
+}

@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "envelope_id": "00000000-0000-4000-8000-000000000005",
+  "session_id": "00000000-0000-4000-8000-000000000002",
+  "shot": {
+    "shot_id": "00000000-0000-4000-8000-000000000006",
+    "session_id": "00000000-0000-4000-8000-000000000002",
+    "sequence": 1,
+    "t_start_ms": 1000,
+    "t_end_ms": 2500,
+    "ball_positions_before": [],
+    "ball_positions_after": [],
+    "cue_ball_end": {"x_mm": 1200, "y_mm": 600},
+    "struck_ball": 3,
+    "potted_balls": [3],
+    "cushion_count": 0,
+    "travel_distance_mm": 500,
+    "is_foul": false,
+    "target_zone_source": "scene_preset",
+    "deviation_mm": 80,
+    "confidence": "high",
+    "field_quality": null,
+    "analysis_status": "analyzed",
+    "review_status": "pending_review",
+    "created_at": "2026-08-04T08:00:00Z"
+  },
+  "event_evidence": [{
+    "event_id": "00000000-0000-4000-8000-000000000011",
+    "shot_id": "00000000-0000-4000-8000-000000000006",
+    "kind": "FIRST_CONTACT",
+    "support_status": "OBSERVED",
+    "occurred_at_ms": 1200,
+    "confidence": 0.91,
+    "source": "perception-finalizer-v1"
+  }],
+  "perception_run": {
+    "run_id": "00000000-0000-4000-8000-000000000012",
+    "pipeline_version": "perception-v1",
+    "model_versions": ["detector-v1", "tracker-v1"],
+    "started_at": "2026-08-04T07:59:00Z",
+    "completed_at": "2026-08-04T08:00:00Z",
+    "input_content_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "calibration": {
+    "calibration_id": "00000000-0000-4000-8000-000000000013",
+    "revision_id": "00000000-0000-4000-8000-000000000014",
+    "revision_number": 1,
+    "status": "ACTIVE",
+    "table_profile_id": "chinese-eight-ball-2540x1270",
+    "table_length_mm": 2540,
+    "table_width_mm": 1270,
+    "table_configuration_fingerprint": "2222222222222222222222222222222222222222222222222222222222222222"
+  },
+  "media_manifest_sha256": "3333333333333333333333333333333333333333333333333333333333333333",
+  "content_sha256": "4444444444444444444444444444444444444444444444444444444444444444"
+}

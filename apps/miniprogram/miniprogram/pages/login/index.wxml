@@ -1,0 +1,9 @@
+<view class="page-shell">
+  <text class="eyebrow">billiardsAI / 欢迎</text><text class="hero">从这一场，
+认识你的球技。</text>
+  <view class="card"><text class="state">登录后，记录与你关联。</text><text class="muted">使用微信建立账号，不读取微信昵称、头像或手机号。</text></view>
+  <view wx:if="{{errorMessage}}" class="error">{{errorMessage}}</view>
+  <button class="primary" bindtap="authorize" loading="{{loading}}" disabled="{{loading}}">{{loading ? '正在登录…' : '微信登录并继续'}}</button>
+  <text class="muted">登录不等于同意录像或公开视频。采集与访问仍遵循各自授权。</text>
+  <navigator class="list-row" open-type="reLaunch" url="/pages/home/index"><text>先看看小程序</text><text class="chevron">›</text></navigator>
+</view>

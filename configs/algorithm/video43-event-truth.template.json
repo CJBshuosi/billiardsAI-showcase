@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "source": "MANUAL_REVIEW_REQUIRED_REPLACE_WITH_RAYTHEON_VIDEO43_TIMESTAMPS",
+  "entity_contract": "Use shot-local stable anchor IDs from event-timeline.json; never use global ball IDs.",
+  "shots": [
+    {
+      "shot_id": "shot-0001",
+      "events": [
+        {"event_type": "shot_start", "timestamp_ms": 0},
+        {"event_type": "first_contact", "timestamp_ms": 0, "target_entity": "shot-0001-anchor-XX"},
+        {"event_type": "ball_ball_collision", "timestamp_ms": 0, "actor_entity": "shot-0001-anchor-XX", "target_entity": "shot-0001-anchor-YY"},
+        {"event_type": "cushion", "timestamp_ms": 0, "actor_entity": "shot-0001-anchor-XX", "rail": "left|right|bottom|top"},
+        {"event_type": "pot", "timestamp_ms": 0, "actor_entity": "shot-0001-anchor-XX", "pocket": "left-bottom|middle-bottom|right-bottom|left-top|middle-top|right-top"},
+        {"event_type": "shot_end", "timestamp_ms": 0}
+      ]
+    }
+  ]
+}

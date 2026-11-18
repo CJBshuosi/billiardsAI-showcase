@@ -1,0 +1,10 @@
+<view class="page-shell">
+  <text class="eyebrow">扫码入场</text><text class="hero">这场球，
+从这里开始。</text>
+  <view class="card"><text class="state">{{displayName || '球友'}}</text><text class="muted">已识别永久球桌码，请核对你扫描的是当前球桌的大屏。</text><text class="tiny">加入后选择红蓝身份；红蓝不是球组。</text></view>
+  <view wx:if="{{errorMessage}}" class="error">{{errorMessage}}</view>
+  <button class="primary" bindtap="join" loading="{{joining}}" disabled="{{joining || !tableCode}}">{{joining ? '正在确认加入结果…' : '加入本场'}}</button>
+  <text class="muted">加入本场不等于授权公开录像。</text>
+  <navigator class="list-row" open-type="reLaunch" url="/pages/scan/index"><text>重新扫描球桌</text><text class="chevron">›</text></navigator>
+  <navigator class="list-row" open-type="reLaunch" url="/pages/home/index"><text>返回我的球技</text><text class="chevron">›</text></navigator>
+</view>

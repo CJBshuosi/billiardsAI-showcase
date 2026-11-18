@@ -1,0 +1,5 @@
+.profile-score { border:4rpx solid #111; border-radius:22rpx; padding:30rpx; margin:26rpx 0; }
+.score-number { font-size:86rpx; font-weight:950; line-height:1.1; margin:12rpx 0; }
+.profile-heading { display:flex; align-items:center; justify-content:space-between; gap:16rpx; }
+.test-badge { border:2rpx solid #111; border-radius:999rpx; padding:7rpx 14rpx; font-size:20rpx; font-weight:800; }
+.test-notice { margin:18rpx 0; padding:18rpx 22rpx; border-left:6rpx solid #111; background:#f0f0eb; font-size:23rpx; font-weight:650; }

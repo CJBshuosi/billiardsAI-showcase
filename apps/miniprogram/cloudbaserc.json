@@ -1,0 +1,75 @@
+{
+  "$schema": "https://static.cloudbase.net/cli/cloudbaserc.schema.json",
+  "version": "2.0",
+  "envId": "{{env.MINIPROGRAM_CLOUDBASE_ENV_ID}}",
+  "functionRoot": "./cloudfunctions",
+  "functions": [
+    {
+      "name": "client-api",
+      "dir": "./cloudfunctions",
+      "handler": "index.main",
+      "runtime": "Nodejs20.19",
+      "timeout": 10,
+      "memorySize": 256,
+      "envVariables": {
+        "BILLIARDS_FUNCTION_ENTRY": "client-api",
+        "RANKING_RUNTIME_ENVIRONMENT": "development",
+        "RANKING_WORKER_TOKEN": "{{env.RANKING_WORKER_TOKEN}}"
+      },
+      "installDependency": true
+    },
+    {
+      "name": "sync-api",
+      "dir": "./cloudfunctions",
+      "handler": "index.main",
+      "runtime": "Nodejs20.19",
+      "timeout": 30,
+      "memorySize": 512,
+      "envVariables": {
+        "BILLIARDS_FUNCTION_ENTRY": "sync-api",
+        "RANKING_RUNTIME_ENVIRONMENT": "development",
+        "CLOUDBASE_ENV_ID": "{{env.MINIPROGRAM_CLOUDBASE_ENV_ID}}"
+      },
+      "installDependency": true
+    },
+    {
+      "name": "ranking-worker",
+      "dir": "./cloudfunctions",
+      "handler": "index.main",
+      "runtime": "Nodejs20.19",
+      "timeout": 30,
+      "memorySize": 512,
+      "envVariables": {
+        "BILLIARDS_FUNCTION_ENTRY": "ranking-worker",
+        "RANKING_RUNTIME_ENVIRONMENT": "development",
+        "RANKING_WORKER_TOKEN": "{{env.RANKING_WORKER_TOKEN}}"
+      },
+      "installDependency": true
+    },
+    {
+      "name": "media-retention",
+      "dir": "./cloudfunctions",
+      "handler": "index.main",
+      "runtime": "Nodejs20.19",
+      "timeout": 30,
+      "memorySize": 512,
+      "envVariables": {
+        "BILLIARDS_FUNCTION_ENTRY": "media-retention"
+      },
+      "installDependency": true
+    },
+    {
+      "name": "shot-projection-worker",
+      "dir": "./cloudfunctions",
+      "handler": "index.main",
+      "runtime": "Nodejs20.19",
+      "timeout": 30,
+      "memorySize": 256,
+      "envVariables": {
+        "BILLIARDS_FUNCTION_ENTRY": "shot-projection-worker",
+        "SHOT_PROJECTION_WORKER_TOKEN": "{{env.SHOT_PROJECTION_WORKER_TOKEN}}"
+      },
+      "installDependency": true
+    }
+  ]
+}

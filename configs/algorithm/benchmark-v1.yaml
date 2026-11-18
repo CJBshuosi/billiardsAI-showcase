@@ -1,0 +1,72 @@
+schema_version: "1.0"
+revision: benchmark-v1-policy-r1
+threshold_status: approved_before_real_results
+data_manifest_status: pending
+
+data:
+  minimum_sessions: 12
+  minimum_shots: 120
+  dev_shots: 60
+  locked_test_shots: 60
+  group_isolation:
+    - person
+    - session
+    - table
+    - camera
+  required_strata:
+    - lighting
+    - occlusion
+    - cluster
+    - rail_pocket_proximity
+    - speed_blur
+    - ball_identity_orientation
+    - camera_stability
+
+hard_gates:
+  position_mm:
+    median_max: 10
+    p95_max: 20
+  detection:
+    precision_min: 0.98
+    recall_min: 0.95
+    supported_class_recall_min: 0.90
+  identity:
+    macro_f1_min: 0.90
+    cue_f1_min: 0.98
+    eight_ball_f1_min: 0.98
+    force_fill_unknown_max: 0
+  tracking:
+    idf1_min: 0.90
+    hota_min: 0.80
+    id_switch_per_ball_shot_max: 0.05
+  shot_segmentation:
+    f1_min: 0.90
+    match_tolerance_ms: 200
+    boundary_median_error_ms_max: 100
+    boundary_p95_error_ms_max: 250
+  first_hit:
+    top1_accuracy_min: 0.70
+    coverage_min: 0.80
+  pot:
+    identity_aware_precision_min: 0.95
+    identity_aware_recall_min: 0.90
+    identity_aware_f1_min: 0.92
+  cushion:
+    event_f1_min: 0.85
+    per_shot_count_exact_match_min: 0.80
+  supported_foul:
+    precision_min: 0.95
+    recall_min: 0.80
+    coverage_min: 0.60
+    locked_test_high_confidence_wrong_max: 0
+  unsupported_field_false_claims_max: 0
+  report_fact_evidence_traceability_min: 1.0
+  normal_report_min_valid_shot_coverage: 0.50
+  deterministic_prediction_metric_hash_required: true
+
+reporting:
+  include_denominator: true
+  include_errors: true
+  include_abstentions: true
+  include_coverage: true
+  include_confidence_interval_95: true

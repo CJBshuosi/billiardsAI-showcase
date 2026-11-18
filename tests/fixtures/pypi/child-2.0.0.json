@@ -1,0 +1,13 @@
+{
+  "info": {
+    "name": "child",
+    "version": "2.0.0",
+    "summary": "Offline resolver child fixture",
+    "requires_python": ">=3.12",
+    "requires_dist": [],
+    "license_expression": "MIT",
+    "license": null,
+    "classifiers": ["License :: OSI Approved :: MIT License"]
+  },
+  "urls": []
+}

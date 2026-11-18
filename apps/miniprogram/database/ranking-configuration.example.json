@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0",
+  "scope": {
+    "ranking_scope_id": "zhoukou-urban",
+    "display_name": "周口市区",
+    "status": "disabled",
+    "publication_status": "closed",
+    "configuration_version": 1
+  },
+  "seasons": [],
+  "venues": [],
+  "tables": []
+}

@@ -1,0 +1,28 @@
+{
+  "schema_version": "1.0",
+  "frame_id": 10,
+  "timestamp_ms": 333,
+  "calibration_id": "synthetic-calibration-1",
+  "motion_status": "stationary",
+  "balls": [
+    {
+      "track_id": "cue",
+      "identity": "cue",
+      "kind": "cue",
+      "identity_confidence": 0.99,
+      "center": {"x_mm": 500, "y_mm": 500},
+      "radius_mm": 28.5,
+      "detection_confidence": 0.99
+    },
+    {
+      "track_id": "solid",
+      "identity": "1",
+      "kind": "solid",
+      "identity_confidence": 0.95,
+      "center": {"x_mm": 1500, "y_mm": 650},
+      "radius_mm": 28.5,
+      "detection_confidence": 0.97
+    }
+  ],
+  "source_refs": ["synthetic:frame:10"]
+}

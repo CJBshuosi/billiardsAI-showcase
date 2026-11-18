@@ -1,0 +1,8 @@
+<view class="page-shell">
+  <text class="eyebrow">billiardsAI</text><text class="hero">每一场球，
+更了解自己。</text>
+  <view class="card"><text>{{message}}</text></view>
+  <navigator wx:if="{{ready && !resuming}}" class="primary" url="/pages/login/index">微信登录</navigator>
+  <navigator class="secondary" open-type="reLaunch" url="/pages/home/index">浏览新版小程序</navigator>
+  <text class="tiny">已有功能连接原服务；未开放功能仅提供说明。</text>
+</view>

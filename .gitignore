@@ -1,0 +1,67 @@
+# Operating system and editor state
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Local agent/user settings
+.agents/
+.claude/
+.claude/settings.local.json
+_bmad/config.user.toml
+
+# Python environments and generated files
+.venv/
+.venv-rfdetr/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.project-archive/
+.worktrees/
+.coverage
+htmlcov/
+dist/
+build/
+*.egg-info/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*credential*.json
+
+# REAL_VIDEO_GATE stores, locks, and real media must remain outside Git
+*gates.json
+.*gates.json-lock
+real-data/
+private-data/
+evidence/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.wav
+*.mp3
+
+# Temporary files
+*.tmp
+*.log
+.pytest-tmp/
+.superpowers/brainstorm/
+output/
+project.private.config.json
+apps/miniprogram/database/ranking-development.local.json
+
+# Generated dependency approval packets contain reproducible metadata only
+artifacts/dependency-approvals/
+
+# Flutter SDKs are bootstrapped outside Git. This protects an accidental local
+# cache while the supported invocation accepts any caller-supplied cache path.
+.flutter-sdk-cache/
+
+# Raw Flutter machine output can contain absolute local cache paths.
+.superpowers/sdd/**/flutter-version-machine.raw.json

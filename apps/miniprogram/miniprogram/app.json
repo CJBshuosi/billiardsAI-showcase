@@ -1,0 +1,35 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/login/index",
+    "pages/profile/index",
+    "pages/join/index",
+    "pages/current-session/index",
+    "pages/home/index",
+    "pages/sessions/index",
+    "pages/session-detail/index",
+    "pages/clips/index",
+    "pages/clip-detail/index",
+    "pages/scan/index",
+    "pages/ranking/index",
+    "pages/ranking-player/index",
+    "pages/ranking-settings/index",
+    "pages/challenge/index",
+    "pages/challenges/index",
+    "pages/pending-results/index",
+    "pages/calibration/index",
+    "pages/insight/index"
+  ],
+  "window": {
+    "backgroundColor": "#ffffff",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "billiardsAI"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "app-nav": "/components/app-nav/index"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "report_id": "30000000-0000-4000-8000-000000000002",
+  "revision": 1,
+  "parent_revision_id": null,
+  "session_id": "10000000-0000-4000-8000-000000000002",
+  "generated_at": "2026-07-29T10:01:00Z",
+  "analysis_version": "phase0-3.3",
+  "calibration_status": "STALE",
+  "report_status": "DRAFT_PENDING_REVIEW",
+  "quality_summary": {
+    "shot_count": 5,
+    "abstained_shot_count": 2,
+    "abstention_rate": 0.4,
+    "session_quality_status": "SUFFICIENT_COVERAGE"
+  },
+  "session_statistics": {
+    "total_shot_count": 5,
+    "valid_shot_count": 3,
+    "potted_ball_count": 1,
+    "successful_potting_shot_count": 1,
+    "potting_shot_count": 3,
+    "pot_rate": 0.3333333333333333,
+    "cushion_distribution": [
+      {"cushion_count": 0, "shot_count": 3}
+    ],
+    "cushion_count_shot_count": 3
+  },
+  "dimension_scores": {
+    "potting": {"score": 33, "status": "SCORED"},
+    "positioning": {"score": null, "status": "UNSUPPORTED"},
+    "power_control": {"score": null, "status": "UNSUPPORTED"},
+    "rotation_application": {"score": null, "status": "UNSUPPORTED"}
+  },
+  "abstention_summary": {
+    "total_shot_count": 5,
+    "abstained_shot_count": 2,
+    "display_text": "2 杆超出当前分析范围"
+  },
+  "typical_shots": [],
+  "coaching_recommendations": []
+}

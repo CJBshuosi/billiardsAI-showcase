@@ -1,0 +1,32 @@
+schema_version: "1.0"
+release_id: billiards-brain-v1
+status: BLOCKED_NO_FINALIST
+packageable: false
+stage: R&D-0
+
+blockers:
+  - real_video_gate_not_approved
+  - frozen_real_video_dataset_not_available
+  - finalist_not_trained
+  - locked_test_not_authorized
+  - locked_test_not_opened
+  - hard_gates_not_evaluated
+  - referenced_external_assets_pending
+
+required_before_package:
+  generation_status: frozen_before_locked_test
+  locked_test_open_count: 1
+  locked_test_result: PASS
+  all_hard_gates_passed: true
+  referenced_assets_commercial_status: allowed
+  referenced_assets_approval_status: approved
+  artifact_hash_algorithm: sha256
+  machine_readable_locked_metrics: required
+  immutable_locked_test_claim: required
+
+forbidden_substitutes:
+  - synthetic_truth_adapter
+  - development_split_result
+  - readme_claim
+  - demonstration_video
+  - unlicensed_or_unapproved_asset

@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0",
+  "suite_id": "REPLACE_WITH_REVIEWED_SUITE_ID",
+  "frame_tolerance": 2,
+  "gates": {
+    "minimum_overall_precision": 0.9,
+    "minimum_overall_recall": 0.9,
+    "minimum_identity_checkpoint_pass_rate": 1.0,
+    "maximum_case_wall_seconds": 30.0,
+    "minimum_recall_by_event_type": {
+      "ball_collision": 0.9,
+      "cushion": 0.9
+    }
+  },
+  "cases": [
+    {
+      "case_id": "REPLACE_WITH_CASE_ID",
+      "video": "REPLACE_WITH_VIDEO_PATH",
+      "source_artifact": "REPLACE_WITH_VERIFIED_MAINLINE1_ARTIFACT_PATH",
+      "shot_local_config": "../../../configs/algorithm/shot-local.yaml",
+      "truth": "REPLACE_WITH_MANUAL_TRUTH_PATH"
+    }
+  ]
+}

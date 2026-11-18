@@ -1,0 +1,5 @@
+<view class="nav">
+  <navigator class="item {{active === 'home' ? 'active' : ''}}" open-type="reLaunch" url="/pages/home/index"><view class="person-icon"></view><text>我的球技</text></navigator>
+  <navigator class="item {{active === 'scan' ? 'active' : ''}}" open-type="reLaunch" url="/pages/scan/index"><view class="scan-icon"></view><text>扫码开局</text></navigator>
+  <navigator class="item {{active === 'ranking' ? 'active' : ''}}" open-type="reLaunch" url="/pages/ranking/index"><view class="rank-icon">▥</view><text>同城排名</text></navigator>
+</view>

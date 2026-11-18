@@ -1,0 +1,7 @@
+/configs/algorithm/windows/raytheon-rfdetr-smoke.json text eol=lf
+/configs/algorithm/training/rfdetr-single-batch-smoke.yaml text eol=lf
+*.pdf binary
+*.png binary
+
+# Preserve required single-space context lines in this archived unified diff.
+/docs/operations/deferred/recording-http-cleanup-2026-11-09/server.patch whitespace=-blank-at-eol

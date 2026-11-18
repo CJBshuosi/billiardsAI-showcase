@@ -1,0 +1,23 @@
+{
+  "packages": {
+    "pypi_index": "https://pypi.org/simple",
+    "pytorch_index": "https://download.pytorch.org/whl/cu126",
+    "rfdetr": "rfdetr[train,onnx]==1.9.0",
+    "torch": "torch==2.13.0+cu126",
+    "torchvision": "torchvision==0.28.0+cu126"
+  },
+  "request_id": "windows-cuda-rfdetr-smoke-r1",
+  "schema_version": "1.0",
+  "text_hash_mode": "sha256-normalized-utf8-lf",
+  "smoke": {
+    "batch_size": 1,
+    "config_relative_path": "configs/algorithm/training/rfdetr-single-batch-smoke.yaml",
+    "config_sha256": "c3b2633fef80a9da6ebeac20b120f80561cf3fab760f2df058090decf12a57c5",
+    "model_class": "RFDETRSegSmall",
+    "seed": 20260801
+  },
+  "weight": {
+    "asset_id": "rfdetr-seg-small-1.9.0",
+    "sha256": "6de3da31b2572cac214a1c76cce4a92a13966d56390ac2b3a3de9a8dc2b2bca3"
+  }
+}

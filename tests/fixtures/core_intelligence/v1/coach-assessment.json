@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "assessment_id": "00000000-0000-4000-8000-00000000000a",
+  "user_id": "00000000-0000-4000-8000-000000000001",
+  "snapshot_id": "00000000-0000-4000-8000-000000000008",
+  "snapshot_version": 1,
+  "revision": 1,
+  "agent_run_id": "00000000-0000-4000-8000-000000000009",
+  "created_at": "2026-08-04T08:15:00Z",
+  "snapshot_evidence_ref_ids": ["00000000-0000-4000-8000-000000000007"],
+  "findings": [{
+    "finding_id": "00000000-0000-4000-8000-00000000000b",
+    "code": "LARGE_ANGLE_POTTING",
+    "support_status": "SUPPORTED",
+    "reliability": "MEDIUM",
+    "evidence_ref_ids": ["00000000-0000-4000-8000-000000000007"],
+    "summary": "大角度切球成功率偏低，当前证据为中等可靠度。"
+  }],
+  "primary_finding_id": "00000000-0000-4000-8000-00000000000b",
+  "secondary_finding_id": null,
+  "content_sha256": "7777777777777777777777777777777777777777777777777777777777777777"
+}

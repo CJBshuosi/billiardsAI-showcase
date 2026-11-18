@@ -1,0 +1,122 @@
+{
+  "schema_version": "2.0",
+  "descriptor": {
+    "schema_version": "2.0",
+    "publication_kind": "saved_postgame_clip",
+    "clip_id": "clip-f6ff42b71aa4bcc3dd88326e4e225d7ba5b6ba4188e24c6f05bafcdb456c0500",
+    "session_id": "session-1",
+    "shot_id": "shot-0001",
+    "job_id": "job-1",
+    "artifact_id": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "postgame_manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "save_request_id": "save-request-1",
+    "save_receipt_sha256": "a18fbeda01f410384a6101c5e3a9b2f183ea5169b5ef833c22f34af156497ce1",
+    "source_kind": "usb_live",
+    "start_ms": 2500,
+    "end_ms": 5500,
+    "duration_ms": 3000,
+    "content_sha256": "c8c5af84ac765d911a9ab05bc9a19d15d0b1bc5cf0654eff4469ce536410654e",
+    "byte_size": 24,
+    "content_type": "video/mp4",
+    "owner_user_id": "user-a",
+    "actor_role": "red",
+    "ownership_receipt": {
+      "session_id": "session-1",
+      "shot_id": "shot-0001",
+      "sequence": 1,
+      "actor_user_id": "user-a",
+      "actor_role": "red",
+      "match_revision": 1,
+      "source_artifact_id": "field-artifact-1",
+      "source_mainline1_artifact_id": null,
+      "source_started_ms": 3000,
+      "recorded_at_utc": "2026-10-28T14:00:03.000Z",
+      "evidence_status": "bound_at_start",
+      "source_kind": "usb_live",
+      "revision": 1,
+      "supersedes_revision": null,
+      "source_start_event_id": "start-击球-1",
+      "evidence_reason": "SOURCE_START_VERIFIED",
+      "source_epoch_id": "epoch-1"
+    },
+    "ownership_receipt_sha256": "4cf00c59b70ddc50a0843ef05edb54153bdfc227166986e6d770f58dc986a687"
+  },
+  "descriptor_sha256": "b81021c4b20fc42cb5a0b1583c8e8ea962ae6f8e679c107dfd0c0a67a5bb1806",
+  "mp4_hex": "000000186674797069736f6d0000020069736f6d69736f32",
+  "published_session": {
+    "schema_version": "1.0",
+    "session_id": "session-1",
+    "artifact_id": "field-artifact-1",
+    "status": "ended",
+    "sync_status": "published",
+    "created_at_utc": "2026-10-28T14:00:00.000Z",
+    "ended_at_utc": "2026-10-28T14:05:00.000Z",
+    "postgame_manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "evidence_source_kind": "usb_live",
+    "participants": [
+      {
+        "schema_version": "1.0",
+        "user_id": "user-a",
+        "role": "red",
+        "group": "open"
+      },
+      {
+        "schema_version": "1.0",
+        "user_id": "user-b",
+        "role": "blue",
+        "group": "open"
+      }
+    ],
+    "shots": [
+      {
+        "schema_version": "1.0",
+        "shot_id": "shot-0001",
+        "sequence": 1,
+        "started_ms": 3000,
+        "settled_ms": 5000,
+        "live_job_id": "job-1",
+        "actor_role": "red"
+      },
+      {
+        "schema_version": "1.0",
+        "shot_id": "shot-0002",
+        "sequence": 2,
+        "started_ms": 6000,
+        "settled_ms": 8000,
+        "live_job_id": "job-2",
+        "actor_role": "blue"
+      }
+    ],
+    "_sync_publication": {
+      "table_id": "table-1",
+      "device_id": "device-1",
+      "content_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    }
+  },
+  "descriptor_json": "{\"actor_role\":\"red\",\"artifact_id\":\"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd\",\"byte_size\":24,\"clip_id\":\"clip-f6ff42b71aa4bcc3dd88326e4e225d7ba5b6ba4188e24c6f05bafcdb456c0500\",\"content_sha256\":\"c8c5af84ac765d911a9ab05bc9a19d15d0b1bc5cf0654eff4469ce536410654e\",\"content_type\":\"video/mp4\",\"duration_ms\":3000,\"end_ms\":5500,\"job_id\":\"job-1\",\"owner_user_id\":\"user-a\",\"ownership_receipt\":{\"actor_role\":\"red\",\"actor_user_id\":\"user-a\",\"evidence_reason\":\"SOURCE_START_VERIFIED\",\"evidence_status\":\"bound_at_start\",\"match_revision\":1,\"recorded_at_utc\":\"2026-10-28T14:00:03.000Z\",\"revision\":1,\"sequence\":1,\"session_id\":\"session-1\",\"shot_id\":\"shot-0001\",\"source_artifact_id\":\"field-artifact-1\",\"source_epoch_id\":\"epoch-1\",\"source_kind\":\"usb_live\",\"source_mainline1_artifact_id\":null,\"source_start_event_id\":\"start-击球-1\",\"source_started_ms\":3000,\"supersedes_revision\":null},\"ownership_receipt_sha256\":\"4cf00c59b70ddc50a0843ef05edb54153bdfc227166986e6d770f58dc986a687\",\"postgame_manifest_sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"publication_kind\":\"saved_postgame_clip\",\"save_receipt_sha256\":\"a18fbeda01f410384a6101c5e3a9b2f183ea5169b5ef833c22f34af156497ce1\",\"save_request_id\":\"save-request-1\",\"schema_version\":\"2.0\",\"session_id\":\"session-1\",\"shot_id\":\"shot-0001\",\"source_kind\":\"usb_live\",\"start_ms\":2500}",
+  "save_receipt": {
+    "schema_version": "2.0",
+    "request_id": "save-request-1",
+    "session_id": "session-1",
+    "shot_id": "shot-0001",
+    "postgame_manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "status": "SAVED",
+    "clip_id": "clip-f6ff42b71aa4bcc3dd88326e4e225d7ba5b6ba4188e24c6f05bafcdb456c0500",
+    "owner_user_id": "user-a",
+    "actor_role": "red",
+    "ownership_receipt_sha256": "4cf00c59b70ddc50a0843ef05edb54153bdfc227166986e6d770f58dc986a687"
+  },
+  "save_receipt_json": "{\"actor_role\":\"red\",\"clip_id\":\"clip-f6ff42b71aa4bcc3dd88326e4e225d7ba5b6ba4188e24c6f05bafcdb456c0500\",\"owner_user_id\":\"user-a\",\"ownership_receipt_sha256\":\"4cf00c59b70ddc50a0843ef05edb54153bdfc227166986e6d770f58dc986a687\",\"postgame_manifest_sha256\":\"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb\",\"request_id\":\"save-request-1\",\"schema_version\":\"2.0\",\"session_id\":\"session-1\",\"shot_id\":\"shot-0001\",\"status\":\"SAVED\"}",
+  "ownership_receipt_json": "{\"actor_role\":\"red\",\"actor_user_id\":\"user-a\",\"evidence_reason\":\"SOURCE_START_VERIFIED\",\"evidence_status\":\"bound_at_start\",\"match_revision\":1,\"recorded_at_utc\":\"2026-10-28T14:00:03.000Z\",\"revision\":1,\"sequence\":1,\"session_id\":\"session-1\",\"shot_id\":\"shot-0001\",\"source_artifact_id\":\"field-artifact-1\",\"source_epoch_id\":\"epoch-1\",\"source_kind\":\"usb_live\",\"source_mainline1_artifact_id\":null,\"source_start_event_id\":\"start-击球-1\",\"source_started_ms\":3000,\"supersedes_revision\":null}",
+  "role_binding_history": [
+    {
+      "session_id": "session-1",
+      "role": "red",
+      "user_id": "user-a",
+      "resulting_revision": 1,
+      "command_id": "claim-red-1",
+      "table_id": "table-1",
+      "device_id": "device-1"
+    }
+  ]
+}

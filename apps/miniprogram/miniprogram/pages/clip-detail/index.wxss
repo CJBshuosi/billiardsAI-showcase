@@ -1,0 +1,15 @@
+.intro { display: block; margin-bottom: 38rpx; }
+.video { width: 100%; height: 380rpx; border-radius: 18rpx; background: #252525; }
+.media-state { min-height: 330rpx; display: flex; align-items: center; justify-content: center; text-align: center; padding: 28rpx; border-radius: 18rpx; background: #e7e7e1; }
+.playback-error { margin-top: 20rpx; }
+.guidance { margin: 40rpx 0 26rpx; }
+.guidance text { display: block; margin-top: 12rpx; }
+.replay-note { border-top: 2rpx solid #cacac2; padding-top: 18rpx; font-size: 25rpx; }
+.sharing { margin: 34rpx 0; }
+.sharing text { display: block; font-size: 25rpx; margin-top: 12rpx; }
+.actions { display: flex; gap: 24rpx; align-items: stretch; margin-top: 28rpx; }
+.actions button { flex: 1; margin: 0; font-size: 26rpx; padding: 22rpx 10rpx; }
+.footer-note { display: block; text-align: center; margin-top: 28rpx; font-size: 22rpx; }
+.deletion-actions { margin-top: 32rpx; }
+.deletion-message { display: block; margin-bottom: 18rpx; font-size: 25rpx; }
+.delete-button { color: #a52c25; }

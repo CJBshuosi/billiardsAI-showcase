@@ -1,0 +1,15 @@
+<view class="page-shell">
+  <text class="eyebrow">同城排名设置</text><text class="hero small">决定别人看到什么。</text>
+  <view wx:if="{{loading}}" class="card"><text>正在读取公开设置…</text></view>
+  <block wx:else>
+    <text class="section-title">唯一公开昵称</text>
+    <input class="field-input" maxlength="16" value="{{nickname}}" placeholder="2—16 个字符" bindinput="updateNickname"/>
+    <text class="tiny">不读取微信昵称；忽略全半角、大小写和多余空格后也不允许重名。</text>
+    <view class="setting-row"><view><text class="state">公开参与周口排名</text><text class="muted">关闭后私人积分仍继续更新，但不占公开榜名次。</text></view><switch checked="{{isPublic}}" bindchange="togglePublic" color="#111111"/></view>
+    <view class="setting-row"><view><text class="state">接受球友挑战</text><text class="muted">它只控制能否收到约球邀请，不改变任何积分权重。</text></view><switch checked="{{acceptChallenges}}" bindchange="toggleChallenges" color="#111111"/></view>
+    <view wx:if="{{acceptChallenges && !isPublic}}" class="feedback">主页未公开时，其他球友仍无法向你发起挑战。</view>
+    <view wx:if="{{errorMessage}}" class="error">{{errorMessage}}</view>
+    <view wx:if="{{saved}}" class="feedback">公开设置已保存。</view>
+    <button class="primary dark" bindtap="save" disabled="{{saving}}">{{saving ? '保存中…' : '保存设置'}}</button>
+  </block>
+</view>

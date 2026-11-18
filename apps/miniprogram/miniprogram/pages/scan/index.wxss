@@ -1,0 +1,1 @@
+.scan-illustration { background:#f2f2f0; border-radius:24rpx; padding:54rpx 28rpx; text-align:center; margin:36rpx 0; font-weight:700; } .scan-corners { border:6rpx dashed #111; width:130rpx; height:130rpx; line-height:116rpx; margin:0 auto 28rpx; font-size:70rpx; border-radius:12rpx; }

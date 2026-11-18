@@ -1,0 +1,8 @@
+.role-option { border: 4rpx solid #111; background: #fff; text-align: left; padding: 28rpx; }
+.role-title { font-size: 40rpx; font-weight: 900; margin-bottom: 12rpx; }
+.red .role-title { color: #b52f35; } .blue .role-title { color: #2c59aa; }
+.role-option[disabled] .role-title { color: #666; }
+.debug-toggle { background: #fff; margin-top: 34rpx; font-size: 24rpx; text-decoration: underline; }
+.debug button { margin-top: 18rpx; border: 2rpx solid #888; }
+.selected-choice { background:#111; color:#fff; }
+.setting-line { display:flex; align-items:center; justify-content:space-between; gap:20rpx; margin-top:24rpx; padding-top:20rpx; border-top:2rpx solid #e4e4e0; }

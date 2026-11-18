@@ -1,0 +1,2 @@
+.challenge-card { margin-bottom:0; }
+.compact { margin:18rpx 0 0; box-shadow:none; }

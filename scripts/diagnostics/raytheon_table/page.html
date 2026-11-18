@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RER 台面几何诊断</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#101820;color:#ecf0f2;font:16px/1.6 system-ui,sans-serif}main{max-width:1280px;margin:auto;padding:24px}h1{margin:0;font-size:26px}.muted{color:#b5c1cc}.panel{background:#1c2a36;border:1px solid #344857;border-radius:10px;padding:18px;margin:16px 0}#step{color:#89edcd;font-size:20px;font-weight:600}#table{display:block;width:100%;height:auto;cursor:crosshair;background:#080c10}button,input{font:inherit;border:1px solid #7b8e9b;border-radius:5px;padding:7px 12px}button{cursor:pointer;background:#d8eee6;color:#102b23;margin:4px}button:disabled{opacity:.4;cursor:default}input[type=number]{width:110px;background:#101820;color:#fff}table{border-collapse:collapse}td,th{padding:5px 14px 5px 0;text-align:left}#loupe{width:200px;height:200px;border:1px solid #89edcd}#result{white-space:pre-wrap;overflow-wrap:anywhere}.row{display:flex;gap:24px;align-items:flex-start;flex-wrap:wrap}.warning{color:#ffce85}label{display:block;margin:15px 0}a{color:#89edcd}
+#table{width:min(100%,calc(58vh * 16 / 9))}.magnifier{position:fixed;right:16px;bottom:12px;z-index:2;padding:10px;pointer-events:none;font-size:13px}.magnifier p{margin:4px 0}.magnifier #loupe{display:block;width:140px;height:140px}@media(max-width:700px){.magnifier{position:static}.magnifier #loupe{width:160px;height:160px}}
+</style>
+<main><h1>台面几何诊断 · 不启用正式标定</h1>
+<p class="muted">固定机位 · 1920 × 1080 原图 · 有效内沿 2540 × 1270 mm<br>镜头候选仅用于本次计算；不会更新服务、状态库或正式标定。</p>
+<div class="panel"><div id="step">正在加载本次原图…</div><p>四边顺序：<b>下 → 右 → 上 → 左</b>，每边各点两次。点胶边最靠台面的一条直线（胶边鼻尖），两点尽量分开；避开袋口弧线。<br>然后按编号点击 5 个平面标记的十字中心。点击共 13 次；选错可撤销。</p>
+<canvas id="table" width="1920" height="1080" aria-label="本次原始台面图"></canvas>
+<button id="undo">撤销上一个点</button><button id="reset">重选全部点</button></div>
+<div class="row"><section class="panel"><h2>独立实测坐标（毫米）</h2><p>面对屏幕：x 从左胶边鼻尖向右量，y 从下胶边鼻尖向上量。<br>沿台面平面、平行于对应边测量，<b>不要按图像估数</b>。<br>填写十字中心实际测得的坐标；建议位置只是摆放参考。</p>
+<table><thead><tr><th>编号 / 建议位置</th><th>实测 x</th><th>实测 y</th></tr></thead><tbody id="fields"></tbody></table>
+<label><input id="confirmed" type="checkbox"> 我确认画面是这台 RER 相机，机位/焦距未变；内沿尺寸已确认，五个标记的坐标均已独立实测。</label>
+<p class="warning">参考点仅用于检验，不参与拟合。误差偏大也会保存证据，请将结果 ZIP 发回。</p>
+<button id="save" disabled>保存诊断并生成回传包</button><button id="cancel">取消并保留已采集证据</button></section>
+<section class="panel magnifier"><b>原图局部放大</b><p class="muted">红线交点为点击位置</p><canvas id="loupe" width="240" height="240"></canvas></section></div>
+<div class="panel" id="result" role="status">等待标记和实测坐标。本轮只检查台面几何，不代表全链路验收通过。</div></main>
+<script>
+'use strict';
+const canvas=document.querySelector('#table'),ctx=canvas.getContext('2d'),loupe=document.querySelector('#loupe').getContext('2d');
+const img=new Image(),points=[],suggestions=[[300,300],[2240,300],[1270,635],[300,970],[2240,970]];
+const steps=['下胶边：第 1 点','下胶边：第 2 点','右胶边：第 1 点','右胶边：第 2 点','上胶边：第 1 点','上胶边：第 2 点','左胶边：第 1 点','左胶边：第 2 点','参考标记 1：十字中心','参考标记 2：十字中心','参考标记 3：十字中心','参考标记 4：十字中心','参考标记 5：十字中心'];
+let busy=false,finished=false,loaded=false;
+document.querySelector('#fields').innerHTML=suggestions.map(([x,y],i)=>`<tr><td>${i+1} / (${x}, ${y})</td><td><input type="number" id="x${i}" aria-label="标记${i+1}实测x" min="1" max="2539" step="1" placeholder="实测 mm"></td><td><input type="number" id="y${i}" aria-label="标记${i+1}实测y" min="1" max="1269" step="1" placeholder="实测 mm"></td></tr>`).join('');
+function values(){return suggestions.map((_,i)=>['x','y'].map(axis=>{const v=document.querySelector('#'+axis+i).value;return v===''?NaN:Number(v)}))}
+function update(){
+ document.querySelector('#step').textContent=finished?'本次诊断已结束':!loaded?'正在加载本次原图…':points.length<13?`${points.length+1} / 13 · ${steps[points.length]}`:'13 / 13 · 点击完成，请填写并核对独立实测坐标';
+ const mm=values(),valid=mm.every(([x,y])=>Number.isInteger(x)&&x>0&&x<2540&&Number.isInteger(y)&&y>0&&y<1270);
+ document.querySelector('#save').disabled=busy||finished||points.length!==13||!valid||!document.querySelector('#confirmed').checked;
+ document.querySelector('#undo').disabled=busy||finished||!points.length;document.querySelector('#reset').disabled=busy||finished||!points.length;
+ if(!loaded)return;ctx.drawImage(img,0,0);
+ points.forEach(([x,y],i)=>{ctx.strokeStyle=i<8?'#ffca6a':'#66ffff';ctx.fillStyle=ctx.strokeStyle;ctx.lineWidth=2;ctx.beginPath();ctx.arc(x,y,6,0,Math.PI*2);ctx.stroke();ctx.font='bold 22px sans-serif';ctx.fillText(i<8?String(i+1):'R'+(i-7),x+10,y-10);if(i<8&&i%2){ctx.beginPath();ctx.moveTo(...points[i-1]);ctx.lineTo(x,y);ctx.stroke()}});
+}
+function position(event){const r=canvas.getBoundingClientRect();return [(event.clientX-r.left)*1920/r.width,(event.clientY-r.top)*1080/r.height]}
+canvas.addEventListener('click',e=>{if(!loaded||busy||finished||points.length>=13)return;const p=position(e);if(p[0]>=0&&p[0]<1920&&p[1]>=0&&p[1]<1080){points.push(p);update()}});
+canvas.addEventListener('mousemove',e=>{if(!loaded)return;const [x,y]=position(e);loupe.fillStyle='#000';loupe.fillRect(0,0,240,240);loupe.imageSmoothingEnabled=false;loupe.drawImage(img,x-40,y-40,80,80,0,0,240,240);loupe.strokeStyle='#f44';loupe.lineWidth=1;loupe.beginPath();loupe.moveTo(120,0);loupe.lineTo(120,240);loupe.moveTo(0,120);loupe.lineTo(240,120);loupe.stroke()});
+document.querySelector('#undo').onclick=()=>{points.pop();update()};document.querySelector('#reset').onclick=()=>{points.length=0;update()};document.querySelectorAll('input').forEach(input=>input.addEventListener('input',update));
+async function post(route,payload){const response=await fetch(route,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});const result=await response.json();if(!response.ok)throw new Error(result.error||'请求失败');return result}
+document.querySelector('#save').onclick=async()=>{busy=true;update();try{const r=await post('save',{rails_px:points.slice(0,8),references_px:points.slice(8),references_mm:values(),confirmed:document.querySelector('#confirmed').checked});finished=true;document.querySelector('#cancel').disabled=true;document.querySelector('#result').textContent=(r.reference_check==='FAILED'?'参考点误差超过 20 mm，未通过本轮检查。':'五个参考点均在 20 mm 内，仍需人工审阅。')+'\n'+r.reference_errors_mm.map((e,i)=>`标记 ${i+1}：误差 ${e.toFixed(2)} mm`).join('\n')+'\n已保存。请回到 PowerShell，等待 SEND_BACK ZIP 路径，将该 ZIP 发回。\n没有启用正式标定或完成主线验收。'}catch(e){document.querySelector('#result').textContent='未完成保存：'+e.message+'。请修正或查看 PowerShell；如提示已结束，请查看回传包。'}finally{busy=false;update()}};
+document.querySelector('#cancel').onclick=async()=>{if(busy||finished)return;busy=true;update();try{await post('cancel',{});finished=true;document.querySelector('#cancel').disabled=true;document.querySelector('#result').textContent='本次已取消。请回到 PowerShell 查看回传 ZIP；已有原图仍会保留。'}catch(e){document.querySelector('#result').textContent=e.message}finally{busy=false;update()}};
+img.onload=()=>{loaded=true;update()};img.onerror=()=>{document.querySelector('#step').textContent='原图加载失败，请检查 PowerShell，不要继续点选。'};img.src='frame.png';update();
+</script></html>

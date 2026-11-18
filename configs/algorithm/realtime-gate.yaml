@@ -1,0 +1,21 @@
+schema_version: "1.0"
+gate_id: product-v1-realtime-readiness-r1
+stage: Product-V1
+
+prerequisites:
+  offline_brain_status: NOT_AVAILABLE
+  teacher_export_compatibility: pending
+  identity_export_compatibility: pending
+  cue_stick_aim_line_annotation_status: pending
+  cue_dataset_status: pending
+  candidate_device_list_status: pending
+  target_hardware_benchmark_status: pending
+  power_thermal_protocol_status: pending
+  offline_degradation_status: pending
+  commercial_runtime_licenses_status: pending
+
+performance_targets:
+  table_state_hz_min: 8
+  aim_line_hz_min: 15
+  end_to_end_guidance_ms_max: 200
+

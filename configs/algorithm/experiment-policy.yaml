@@ -1,0 +1,26 @@
+schema_version: "1.0"
+locked_test_single_open: true
+allowed_seeds: [20260801, 20260802, 20260803]
+cloud_budget_usd: 100
+cloud_budget_status: pending
+preferred_region: eu
+automatic_shutdown_minutes: 30
+real_video_purposes:
+  - local_view
+  - annotation
+  - benchmark
+  - local_training
+  - cloud_training
+production_license_policy:
+  allow:
+    - Apache-2.0
+    - BSD-2-Clause
+    - BSD-3-Clause
+    - MIT
+  require_legal_review:
+    - CC-BY-4.0
+    - CC-BY-SA-4.0
+    - PML-1.0
+  exclude_from_proprietary_production_without_legal_approval:
+    - AGPL-3.0
+    - GPL-3.0

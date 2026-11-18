@@ -1,0 +1,24 @@
+schema_version: "1.0"
+candidate_id: rfdetr-seg-small-smoke-r1
+model_class: RFDETRSegSmall
+package_asset_id: rfdetr-package-1.9.0
+weight_asset_id: rfdetr-seg-small-1.9.0
+seed: 20260801
+resolution: [384, 384]
+dataset_fraction: 0.20
+batch_size: 1
+epochs: 3
+early_stopping_patience: 0
+synthetic_only: true
+augmentation_backend: albumentations
+augmentation:
+  brightness_delta: [-0.15, 0.15]
+  contrast_scale: [0.85, 1.15]
+  perspective_scale: [0.0, 0.025]
+  motion_blur_kernel: [3, 7]
+  specular_highlight_probability: 0.15
+  partial_occlusion_max_fraction: 0.12
+  jpeg_quality: [70, 100]
+  horizontal_flip: false
+  vertical_flip: false
+  calibration_transform_required: true

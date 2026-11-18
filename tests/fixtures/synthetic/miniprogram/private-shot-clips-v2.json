@@ -1,0 +1,292 @@
+{
+  "authority_seed": {
+    "field_session_commands": {
+      "claim-blue": {
+        "actor_user_id": "user-b",
+        "applied_role": "blue",
+        "claimed_by_device_id": "device-1",
+        "command_id": "claim-blue",
+        "command_type": "claim_role",
+        "resulting_revision": 2,
+        "session_id": "session-private",
+        "status": "applied",
+        "table_id": "table-1",
+        "validated_payload": {
+          "role": "blue"
+        }
+      },
+      "claim-red": {
+        "actor_user_id": "user-a",
+        "applied_role": "red",
+        "claimed_by_device_id": "device-1",
+        "command_id": "claim-red",
+        "command_type": "claim_role",
+        "resulting_revision": 1,
+        "session_id": "session-private",
+        "status": "applied",
+        "table_id": "table-1",
+        "validated_payload": {
+          "role": "red"
+        }
+      },
+      "claim-replacement-red": {
+        "actor_user_id": "user-c",
+        "applied_role": "red",
+        "claimed_by_device_id": "device-1",
+        "command_id": "claim-replacement-red",
+        "command_type": "claim_role",
+        "resulting_revision": 6,
+        "session_id": "session-private",
+        "status": "applied",
+        "table_id": "table-1",
+        "validated_payload": {
+          "role": "red"
+        }
+      },
+      "release-red": {
+        "actor_user_id": "user-a",
+        "applied_role": "red",
+        "claimed_by_device_id": "device-1",
+        "command_id": "release-red",
+        "command_type": "release_role",
+        "resulting_revision": 5,
+        "session_id": "session-private",
+        "status": "applied",
+        "table_id": "table-1",
+        "validated_payload": {}
+      }
+    },
+    "session_role_binding_history": {
+      "41f62d11d8fc30762df3106183dd12a1955851f4ea273c1a26d97cccb019e680": {
+        "command_id": "claim-replacement-red",
+        "device_id": "device-1",
+        "resulting_revision": 6,
+        "role": "red",
+        "session_id": "session-private",
+        "table_id": "table-1",
+        "user_id": "user-c"
+      },
+      "45983547f1b6995eb6de4d645a813bc6003855ad90c3b71ad6cec6b0ce362072": {
+        "command_id": "claim-blue",
+        "device_id": "device-1",
+        "resulting_revision": 2,
+        "role": "blue",
+        "session_id": "session-private",
+        "table_id": "table-1",
+        "user_id": "user-b"
+      },
+      "594ad93fa32067528c6e476071f67decc3bf5efd662435bf25c825814e33d240": {
+        "command_id": "release-red",
+        "device_id": "device-1",
+        "resulting_revision": 5,
+        "role": "red",
+        "session_id": "session-private",
+        "table_id": "table-1",
+        "user_id": null
+      },
+      "8ad88335af1c7767579e1c1d329518e5d2f68eb509bcd1acd0daab607348de87": {
+        "command_id": "claim-red",
+        "device_id": "device-1",
+        "resulting_revision": 1,
+        "role": "red",
+        "session_id": "session-private",
+        "table_id": "table-1",
+        "user_id": "user-a"
+      }
+    }
+  },
+  "mp4_hex": "000000186674797069736f6d0000020069736f6d69736f32",
+  "published_session": {
+    "_sync_publication": {
+      "content_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "device_id": "device-1",
+      "table_id": "table-1"
+    },
+    "artifact_id": "field-artifact-private",
+    "evidence_source_kind": "usb_live",
+    "participants": [
+      {
+        "role": "red",
+        "user_id": "user-c"
+      },
+      {
+        "role": "blue",
+        "user_id": "user-b"
+      }
+    ],
+    "postgame_manifest_sha256": "8f15a16f8f2e44bdfdfca07658a43dc5217cbc00afce43a7ad8867c57ba2b0ca",
+    "schema_version": "1.0",
+    "session_id": "session-private",
+    "shots": [
+      {
+        "actor_role": "red",
+        "live_job_id": "job-1",
+        "sequence": 1,
+        "settled_ms": 5000,
+        "shot_id": "shot-0001",
+        "started_ms": 3000
+      },
+      {
+        "actor_role": "blue",
+        "live_job_id": "job-2",
+        "sequence": 2,
+        "settled_ms": 8000,
+        "shot_id": "shot-0002",
+        "started_ms": 6000
+      }
+    ],
+    "status": "ended",
+    "sync_status": "published"
+  },
+  "schema_version": "2.0",
+  "selections": [
+    {
+      "descriptor": {
+        "actor_role": "red",
+        "artifact_id": "3333333333333333333333333333333333333333333333333333333333333333",
+        "byte_size": 24,
+        "clip_id": "clip-3f1d2edf243a570889f70b60ad8fd0e0f7481ac131ac3b2357605f73d6395c92",
+        "content_sha256": "c8c5af84ac765d911a9ab05bc9a19d15d0b1bc5cf0654eff4469ce536410654e",
+        "content_type": "video/mp4",
+        "duration_ms": 2000,
+        "end_ms": 5000,
+        "job_id": "job-1",
+        "owner_user_id": "user-a",
+        "ownership_receipt": {
+          "actor_role": "red",
+          "actor_user_id": "user-a",
+          "evidence_reason": "SOURCE_START_VERIFIED",
+          "evidence_status": "bound_at_start",
+          "match_revision": 3,
+          "recorded_at_utc": "2026-10-29T10:00:00Z",
+          "revision": 1,
+          "sequence": 1,
+          "session_id": "session-private",
+          "shot_id": "shot-0001",
+          "source_artifact_id": "field-artifact-private",
+          "source_epoch_id": "epoch-1",
+          "source_kind": "usb_live",
+          "source_mainline1_artifact_id": null,
+          "source_start_event_id": "start-击球-1",
+          "source_started_ms": 3000,
+          "supersedes_revision": null
+        },
+        "ownership_receipt_sha256": "ca870b02a336debafdbca6f2d2bbe162d5e5046eae6e05eac8a83a2283bdaa2e",
+        "postgame_manifest_sha256": "8f15a16f8f2e44bdfdfca07658a43dc5217cbc00afce43a7ad8867c57ba2b0ca",
+        "publication_kind": "saved_postgame_clip",
+        "save_receipt_sha256": "d04010581c990e9c969145d0119a43835e33963cb5995349e1bb40be833c8d28",
+        "save_request_id": "screen-save-1",
+        "schema_version": "2.0",
+        "session_id": "session-private",
+        "shot_id": "shot-0001",
+        "source_kind": "usb_live",
+        "start_ms": 3000
+      },
+      "descriptor_json": "{\"actor_role\":\"red\",\"artifact_id\":\"3333333333333333333333333333333333333333333333333333333333333333\",\"byte_size\":24,\"clip_id\":\"clip-3f1d2edf243a570889f70b60ad8fd0e0f7481ac131ac3b2357605f73d6395c92\",\"content_sha256\":\"c8c5af84ac765d911a9ab05bc9a19d15d0b1bc5cf0654eff4469ce536410654e\",\"content_type\":\"video/mp4\",\"duration_ms\":2000,\"end_ms\":5000,\"job_id\":\"job-1\",\"owner_user_id\":\"user-a\",\"ownership_receipt\":{\"actor_role\":\"red\",\"actor_user_id\":\"user-a\",\"evidence_reason\":\"SOURCE_START_VERIFIED\",\"evidence_status\":\"bound_at_start\",\"match_revision\":3,\"recorded_at_utc\":\"2026-10-29T10:00:00Z\",\"revision\":1,\"sequence\":1,\"session_id\":\"session-private\",\"shot_id\":\"shot-0001\",\"source_artifact_id\":\"field-artifact-private\",\"source_epoch_id\":\"epoch-1\",\"source_kind\":\"usb_live\",\"source_mainline1_artifact_id\":null,\"source_start_event_id\":\"start-击球-1\",\"source_started_ms\":3000,\"supersedes_revision\":null},\"ownership_receipt_sha256\":\"ca870b02a336debafdbca6f2d2bbe162d5e5046eae6e05eac8a83a2283bdaa2e\",\"postgame_manifest_sha256\":\"8f15a16f8f2e44bdfdfca07658a43dc5217cbc00afce43a7ad8867c57ba2b0ca\",\"publication_kind\":\"saved_postgame_clip\",\"save_receipt_sha256\":\"d04010581c990e9c969145d0119a43835e33963cb5995349e1bb40be833c8d28\",\"save_request_id\":\"screen-save-1\",\"schema_version\":\"2.0\",\"session_id\":\"session-private\",\"shot_id\":\"shot-0001\",\"source_kind\":\"usb_live\",\"start_ms\":3000}",
+      "descriptor_sha256": "9b7ab736ac61253fcf5a6c0450c49195506065b7ca08ceaef41e67c7ff8ec628",
+      "ownership_receipt_json": "{\"actor_role\":\"red\",\"actor_user_id\":\"user-a\",\"evidence_reason\":\"SOURCE_START_VERIFIED\",\"evidence_status\":\"bound_at_start\",\"match_revision\":3,\"recorded_at_utc\":\"2026-10-29T10:00:00Z\",\"revision\":1,\"sequence\":1,\"session_id\":\"session-private\",\"shot_id\":\"shot-0001\",\"source_artifact_id\":\"field-artifact-private\",\"source_epoch_id\":\"epoch-1\",\"source_kind\":\"usb_live\",\"source_mainline1_artifact_id\":null,\"source_start_event_id\":\"start-击球-1\",\"source_started_ms\":3000,\"supersedes_revision\":null}",
+      "save_receipt": {
+        "actor_role": "red",
+        "clip_id": null,
+        "owner_user_id": "user-a",
+        "ownership_receipt_sha256": "ca870b02a336debafdbca6f2d2bbe162d5e5046eae6e05eac8a83a2283bdaa2e",
+        "postgame_manifest_sha256": "8f15a16f8f2e44bdfdfca07658a43dc5217cbc00afce43a7ad8867c57ba2b0ca",
+        "request_id": "screen-save-1",
+        "schema_version": "2.0",
+        "session_id": "session-private",
+        "shot_id": "shot-0001",
+        "status": "SAVE_PENDING"
+      },
+      "save_receipt_json": "{\"actor_role\":\"red\",\"clip_id\":null,\"owner_user_id\":\"user-a\",\"ownership_receipt_sha256\":\"ca870b02a336debafdbca6f2d2bbe162d5e5046eae6e05eac8a83a2283bdaa2e\",\"postgame_manifest_sha256\":\"8f15a16f8f2e44bdfdfca07658a43dc5217cbc00afce43a7ad8867c57ba2b0ca\",\"request_id\":\"screen-save-1\",\"schema_version\":\"2.0\",\"session_id\":\"session-private\",\"shot_id\":\"shot-0001\",\"status\":\"SAVE_PENDING\"}"
+    },
+    {
+      "descriptor": {
+        "actor_role": "blue",
+        "artifact_id": "4444444444444444444444444444444444444444444444444444444444444444",
+        "byte_size": 24,
+        "clip_id": "clip-029857688e19ad9c5a08353c3c05a06c2b9bb71ce67b787d293b5188e502b13f",
+        "content_sha256": "c8c5af84ac765d911a9ab05bc9a19d15d0b1bc5cf0654eff4469ce536410654e",
+        "content_type": "video/mp4",
+        "duration_ms": 2000,
+        "end_ms": 8000,
+        "job_id": "job-2",
+        "owner_user_id": "user-b",
+        "ownership_receipt": {
+          "actor_role": "blue",
+          "actor_user_id": "user-b",
+          "evidence_reason": "SOURCE_START_VERIFIED",
+          "evidence_status": "bound_at_start",
+          "match_revision": 4,
+          "recorded_at_utc": "2026-10-29T10:00:00Z",
+          "revision": 1,
+          "sequence": 2,
+          "session_id": "session-private",
+          "shot_id": "shot-0002",
+          "source_artifact_id": "field-artifact-private",
+          "source_epoch_id": "epoch-2",
+          "source_kind": "usb_live",
+          "source_mainline1_artifact_id": null,
+          "source_start_event_id": "start-击球-2",
+          "source_started_ms": 6000,
+          "supersedes_revision": null
+        },
+        "ownership_receipt_sha256": "c878410cda4ee5eefa40a528fcf23dee00ea93ff602095818ade3328ff58ca97",
+        "postgame_manifest_sha256": "8f15a16f8f2e44bdfdfca07658a43dc5217cbc00afce43a7ad8867c57ba2b0ca",
+        "publication_kind": "saved_postgame_clip",
+        "save_receipt_sha256": "45f578f08dbdc27dd0ebe116381af4c8e14edd5fb8ad8dbad40db9de8883852f",
+        "save_request_id": "screen-save-2",
+        "schema_version": "2.0",
+        "session_id": "session-private",
+        "shot_id": "shot-0002",
+        "source_kind": "usb_live",
+        "start_ms": 6000
+      },
+      "descriptor_json": "{\"actor_role\":\"blue\",\"artifact_id\":\"4444444444444444444444444444444444444444444444444444444444444444\",\"byte_size\":24,\"clip_id\":\"clip-029857688e19ad9c5a08353c3c05a06c2b9bb71ce67b787d293b5188e502b13f\",\"content_sha256\":\"c8c5af84ac765d911a9ab05bc9a19d15d0b1bc5cf0654eff4469ce536410654e\",\"content_type\":\"video/mp4\",\"duration_ms\":2000,\"end_ms\":8000,\"job_id\":\"job-2\",\"owner_user_id\":\"user-b\",\"ownership_receipt\":{\"actor_role\":\"blue\",\"actor_user_id\":\"user-b\",\"evidence_reason\":\"SOURCE_START_VERIFIED\",\"evidence_status\":\"bound_at_start\",\"match_revision\":4,\"recorded_at_utc\":\"2026-10-29T10:00:00Z\",\"revision\":1,\"sequence\":2,\"session_id\":\"session-private\",\"shot_id\":\"shot-0002\",\"source_artifact_id\":\"field-artifact-private\",\"source_epoch_id\":\"epoch-2\",\"source_kind\":\"usb_live\",\"source_mainline1_artifact_id\":null,\"source_start_event_id\":\"start-击球-2\",\"source_started_ms\":6000,\"supersedes_revision\":null},\"ownership_receipt_sha256\":\"c878410cda4ee5eefa40a528fcf23dee00ea93ff602095818ade3328ff58ca97\",\"postgame_manifest_sha256\":\"8f15a16f8f2e44bdfdfca07658a43dc5217cbc00afce43a7ad8867c57ba2b0ca\",\"publication_kind\":\"saved_postgame_clip\",\"save_receipt_sha256\":\"45f578f08dbdc27dd0ebe116381af4c8e14edd5fb8ad8dbad40db9de8883852f\",\"save_request_id\":\"screen-save-2\",\"schema_version\":\"2.0\",\"session_id\":\"session-private\",\"shot_id\":\"shot-0002\",\"source_kind\":\"usb_live\",\"start_ms\":6000}",
+      "descriptor_sha256": "da6c9d478b846bf9ac9128218f9073441d4d58ad7304582392d19c7810f9200d",
+      "ownership_receipt_json": "{\"actor_role\":\"blue\",\"actor_user_id\":\"user-b\",\"evidence_reason\":\"SOURCE_START_VERIFIED\",\"evidence_status\":\"bound_at_start\",\"match_revision\":4,\"recorded_at_utc\":\"2026-10-29T10:00:00Z\",\"revision\":1,\"sequence\":2,\"session_id\":\"session-private\",\"shot_id\":\"shot-0002\",\"source_artifact_id\":\"field-artifact-private\",\"source_epoch_id\":\"epoch-2\",\"source_kind\":\"usb_live\",\"source_mainline1_artifact_id\":null,\"source_start_event_id\":\"start-击球-2\",\"source_started_ms\":6000,\"supersedes_revision\":null}",
+      "save_receipt": {
+        "actor_role": "blue",
+        "clip_id": "clip-029857688e19ad9c5a08353c3c05a06c2b9bb71ce67b787d293b5188e502b13f",
+        "owner_user_id": "user-b",
+        "ownership_receipt_sha256": "c878410cda4ee5eefa40a528fcf23dee00ea93ff602095818ade3328ff58ca97",
+        "postgame_manifest_sha256": "8f15a16f8f2e44bdfdfca07658a43dc5217cbc00afce43a7ad8867c57ba2b0ca",
+        "request_id": "screen-save-2",
+        "schema_version": "2.0",
+        "session_id": "session-private",
+        "shot_id": "shot-0002",
+        "status": "SAVED"
+      },
+      "save_receipt_json": "{\"actor_role\":\"blue\",\"clip_id\":\"clip-029857688e19ad9c5a08353c3c05a06c2b9bb71ce67b787d293b5188e502b13f\",\"owner_user_id\":\"user-b\",\"ownership_receipt_sha256\":\"c878410cda4ee5eefa40a528fcf23dee00ea93ff602095818ade3328ff58ca97\",\"postgame_manifest_sha256\":\"8f15a16f8f2e44bdfdfca07658a43dc5217cbc00afce43a7ad8867c57ba2b0ca\",\"request_id\":\"screen-save-2\",\"schema_version\":\"2.0\",\"session_id\":\"session-private\",\"shot_id\":\"shot-0002\",\"status\":\"SAVED\"}"
+    }
+  ],
+  "source_facts": [
+    {
+      "actor_role": "red",
+      "actor_user_id": "user-a",
+      "idempotency_key": "live-shot-b06b7b09f8cbf6909f18ec17ff8e0fb1204ca098762aac470612a248e58acdef",
+      "mode": "observation",
+      "observed_outcome": "unknown",
+      "recording_reference": "session-recording:epoch-1:100-160",
+      "rule_revision": 3,
+      "sequence": 1,
+      "session_id": "session-private",
+      "settle_frame_id": 160,
+      "shot_id": "shot-0001",
+      "start_frame_id": 100
+    },
+    {
+      "actor_role": "blue",
+      "actor_user_id": "user-b",
+      "idempotency_key": "live-shot-26521b0c9c004b4316159b455fd61443d8d817afd7db16c81c8db893e3ff469a",
+      "mode": "observation",
+      "observed_outcome": "unknown",
+      "recording_reference": "session-recording:epoch-2:100-160",
+      "rule_revision": 4,
+      "sequence": 2,
+      "session_id": "session-private",
+      "settle_frame_id": 260,
+      "shot_id": "shot-0002",
+      "start_frame_id": 200
+    }
+  ]
+}

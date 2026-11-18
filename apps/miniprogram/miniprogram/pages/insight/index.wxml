@@ -1,0 +1,8 @@
+<view class="page-shell">
+  <text class="pill">私人球技分析 · 暂未开放</text><text class="hero">每个判断，
+都要有依据。</text>
+  <view class="card outlined"><text class="state">还不能形成个人评价</text><text class="muted">优势、待改善和击球偏好，需要可靠的本人击球记录与视频依据。当前不生成示例评价。</text></view>
+  <view class="card"><text class="state">大屏保存片段仍然可以回看</text><text class="muted">在小程序观看一段视频，不代表它已成为某项球技判断的证据。</text></view>
+  <button class="secondary" disabled="{{!available}}">评价与证据详情 · 暂未开放</button>
+  <navigator class="primary" url="{{guest ? '/pages/login/index' : '/pages/sessions/index?mode=clips'}}">查看已有击球片段</navigator>
+</view>

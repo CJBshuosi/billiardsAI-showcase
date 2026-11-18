@@ -1,0 +1,2 @@
+.result-score { font-size:46rpx; font-weight:900; margin:18rpx 0; }
+.compact { margin:18rpx 0 0; box-shadow:none; }

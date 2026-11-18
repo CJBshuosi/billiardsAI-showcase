@@ -1,0 +1,62 @@
+{
+  "schema_version": "1.0",
+  "descriptor": {
+    "schema_version": "1.0",
+    "publication_kind": "saved_postgame_clip",
+    "clip_id": "clip-f6ff42b71aa4bcc3dd88326e4e225d7ba5b6ba4188e24c6f05bafcdb456c0500",
+    "session_id": "session-1",
+    "shot_id": "shot-0001",
+    "job_id": "job-1",
+    "artifact_id": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+    "postgame_manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "save_request_id": "save-request-1",
+    "save_receipt_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "source_kind": "usb_live",
+    "start_ms": 2500,
+    "end_ms": 5500,
+    "duration_ms": 3000,
+    "content_sha256": "c8c5af84ac765d911a9ab05bc9a19d15d0b1bc5cf0654eff4469ce536410654e",
+    "byte_size": 24,
+    "content_type": "video/mp4"
+  },
+  "descriptor_sha256": "7de373ba4d7b2a20d4271a8cc9b08f83f8039a71fe7c190ba95d2fd09420fba4",
+  "mp4_hex": "000000186674797069736f6d0000020069736f6d69736f32",
+  "published_session": {
+    "schema_version": "1.0",
+    "session_id": "session-1",
+    "artifact_id": "field-artifact-1",
+    "status": "ended",
+    "sync_status": "published",
+    "created_at_utc": "2026-10-28T14:00:00.000Z",
+    "ended_at_utc": "2026-10-28T14:05:00.000Z",
+    "postgame_manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "evidence_source_kind": "usb_live",
+    "participants": [
+      {"schema_version": "1.0", "user_id": "user-a", "role": "red", "group": "open"},
+      {"schema_version": "1.0", "user_id": "user-b", "role": "blue", "group": "open"}
+    ],
+    "shots": [
+      {
+        "schema_version": "1.0",
+        "shot_id": "shot-0001",
+        "sequence": 1,
+        "started_ms": 3000,
+        "settled_ms": 5000,
+        "live_job_id": "job-1"
+      },
+      {
+        "schema_version": "1.0",
+        "shot_id": "shot-0002",
+        "sequence": 2,
+        "started_ms": 6000,
+        "settled_ms": 8000,
+        "live_job_id": "job-2"
+      }
+    ],
+    "_sync_publication": {
+      "table_id": "table-1",
+      "device_id": "device-1",
+      "content_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    }
+  }
+}

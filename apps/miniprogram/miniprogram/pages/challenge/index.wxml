@@ -1,0 +1,21 @@
+<view class="page-shell">
+  <text class="eyebrow">邀请 PK</text>
+  <view wx:if="{{loading}}" class="card"><text>正在读取球友和可约球房…</text></view>
+  <view wx:elif="{{errorMessage && !player}}" class="error">{{errorMessage}}</view>
+  <block wx:elif="{{player}}">
+    <text class="hero small">约 {{player.nickname}} 打一场。</text>
+    <view wx:if="{{submitted}}" class="card outlined"><text class="state">邀请已发出</text><text class="muted">对方有 48 小时回应。接受邀请不等于比赛已开始，到店后仍要扫码、确认赛制并完成正式赛果确认。</text><navigator class="primary" open-type="navigateBack">完成</navigator></view>
+    <block wx:else>
+      <text class="section-title">球房</text>
+      <picker range="{{venues}}" range-key="display_name" value="{{venueIndex}}" bindchange="chooseVenue"><view class="picker-field">{{venueIndex >= 0 ? venues[venueIndex].display_name : '选择已批准球房'}}<text>›</text></view></picker>
+      <text class="section-title">建议时间</text>
+      <view class="row"><picker mode="date" value="{{proposedDate}}" bindchange="chooseDate"><view class="picker-field">{{proposedDate || '选择日期'}}</view></picker><picker mode="time" value="{{proposedTime}}" bindchange="chooseTime"><view class="picker-field">{{proposedTime || '选择时间'}}</view></picker></view>
+      <text class="section-title">赛制意向</text>
+      <view class="tab-row"><button class="{{format === 'single' ? 'selected' : ''}}" data-format="single" bindtap="chooseFormat">单局</button><button class="{{format === 'race' ? 'selected' : ''}}" data-format="race" bindtap="chooseFormat">抢球</button></view>
+      <input wx:if="{{format === 'race'}}" class="field-input" type="number" min="2" max="99" value="{{raceTarget}}" bindinput="updateRaceTarget" placeholder="抢几"/>
+      <view wx:if="{{errorMessage}}" class="error">{{errorMessage}}</view>
+      <button class="primary dark" bindtap="submit" disabled="{{submitting || venues.length === 0}}">{{submitting ? '发送中…' : '发送邀请'}}</button>
+      <text class="tiny">邀请来源不会进入积分公式，也不会让这场比赛加得更多或扣得更少。</text>
+    </block>
+  </block>
+</view>

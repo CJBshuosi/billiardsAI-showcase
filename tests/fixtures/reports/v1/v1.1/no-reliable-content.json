@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.1",
+  "report_id": "30000000-0000-4000-8000-000000000101",
+  "revision": 2,
+  "parent_revision_id": "30000000-0000-4000-8000-000000000001",
+  "session_id": "10000000-0000-4000-8000-000000000001",
+  "generated_at": "2026-07-29T14:00:00Z",
+  "analysis_version": "phase0-3.3",
+  "calibration_status": "ACTIVE",
+  "report_status": "DRAFT_PENDING_REVIEW",
+  "quality_summary": {
+    "shot_count": 4,
+    "abstained_shot_count": 0,
+    "abstention_rate": 0.0,
+    "session_quality_status": "SUFFICIENT_COVERAGE"
+  },
+  "session_statistics": {
+    "total_shot_count": 4,
+    "valid_shot_count": 4,
+    "potted_ball_count": 2,
+    "successful_potting_shot_count": 2,
+    "potting_shot_count": 4,
+    "pot_rate": 0.5,
+    "cushion_distribution": [
+      {
+        "cushion_count": 0,
+        "shot_count": 3
+      },
+      {
+        "cushion_count": 1,
+        "shot_count": 1
+      }
+    ],
+    "cushion_count_shot_count": 4,
+    "average_cue_ball_travel_distance_mm": 650.0,
+    "cue_ball_travel_shot_count": 4,
+    "cue_ball_end_distribution": [
+      {
+        "position": {
+          "x_mm": 800,
+          "y_mm": 500
+        },
+        "shot_count": 4
+      }
+    ],
+    "cue_ball_end_shot_count": 4,
+    "target_zone_deviation_by_source": []
+  },
+  "dimension_scores": {
+    "potting": {
+      "score": 50,
+      "status": "SCORED"
+    },
+    "positioning": {
+      "score": null,
+      "status": "UNSUPPORTED"
+    },
+    "power_control": {
+      "score": null,
+      "status": "UNSUPPORTED"
+    },
+    "rotation_application": {
+      "score": null,
+      "status": "UNSUPPORTED"
+    }
+  },
+  "abstention_summary": {
+    "total_shot_count": 4,
+    "abstained_shot_count": 0,
+    "display_text": "0 杆超出当前分析范围"
+  },
+  "typical_shots": [],
+  "coaching_recommendations": [],
+  "headline": {
+    "code": "NO_RELIABLE_COACHING",
+    "text": "本场保留客观统计，当前没有足够可靠的教练内容。"
+  },
+  "trust_scope": {
+    "review_status": "APPROVED",
+    "total_shot_count": 4,
+    "valid_shot_count": 4,
+    "abstained_shot_count": 0,
+    "calibration_status": "ACTIVE",
+    "unsupported_dimensions": [
+      "positioning",
+      "power_control",
+      "rotation_application"
+    ],
+    "default_expanded": true
+  },
+  "objective_statistics": {
+    "source": {
+      "session_id": "10000000-0000-4000-8000-000000000001",
+      "report_id": "30000000-0000-4000-8000-000000000001",
+      "report_revision": 1
+    },
+    "analysis_version": "phase0-3.3",
+    "shot_ids": [
+      "50000000-0000-4000-8000-000000000001",
+      "50000000-0000-4000-8000-000000000002",
+      "50000000-0000-4000-8000-000000000003",
+      "50000000-0000-4000-8000-000000000004"
+    ],
+    "content_sha256": "be576c32ed7f23381c5ffb6f95a05a1531bfa91517c2348b45e71cdc4dbfcd83"
+  },
+  "typical_shot_analysis": {
+    "status": "NO_RELIABLE_DATA",
+    "no_data_reason": "当前没有可可靠展示的典型杆",
+    "cards": []
+  },
+  "training_recommendation": {
+    "result": {
+      "catalog_version": "1.0",
+      "status": "NO_RELIABLE_RECOMMENDATION",
+      "reason": "INSUFFICIENT_EVIDENCE",
+      "source_lineage": {
+        "session_id": "10000000-0000-4000-8000-000000000001",
+        "report_id": "30000000-0000-4000-8000-000000000001",
+        "report_revision": 1,
+        "selection_rule_version": "1.0"
+      },
+      "recommendations": [],
+      "fallback": "当前数据不足以给出训练建议",
+      "content_sha256": "d4dbca175229a50c728e4071ccf9e1f194f9d42168b7271203c4b625362301b7"
+    }
+  },
+  "quality_notice": {
+    "data_coverage_status": "SUFFICIENT_COVERAGE",
+    "algorithm_boundaries": [
+      "positioning",
+      "power_control",
+      "rotation_application"
+    ],
+    "current_revision": 2,
+    "source_parent_report_id": "30000000-0000-4000-8000-000000000001",
+    "source_parent_revision": 1,
+    "created_as_status": "DRAFT_PENDING_REVIEW",
+    "review_notice": "本报告新增教练内容，须再次人工复核后方可交付。"
+  },
+  "content_sha256": "ad7910adc01f146e838994fe461e7c644325cf98740c8741ace23aafefa16ffe"
+}

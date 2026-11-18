@@ -1,0 +1,15 @@
+<view class="page-shell">
+  <text class="eyebrow">邀请 PK</text><text class="hero small">我的约球邀请</text>
+  <view wx:if="{{loading}}" class="card"><text>正在读取邀请…</text></view>
+  <view wx:elif="{{errorMessage}}" class="error"><text>{{errorMessage}}</text><button bindtap="load">重新加载</button></view>
+  <view wx:elif="{{challenges.length === 0}}" class="card"><text class="state">暂时没有邀请</text><text class="muted">从公开球友主页可以发起约球。普通扫码比赛不需要先邀请，也能按相同规则计分。</text></view>
+  <view wx:else class="stack">
+    <view wx:for="{{challenges}}" wx:key="challenge_id" class="card challenge-card">
+      <text class="tiny">{{item.direction === 'incoming' ? '收到邀请' : '我发出的邀请'}} · {{item.status}}</text>
+      <text class="state">{{item.counterpart_nickname}}</text><text class="muted">{{item.venue_name}} · {{item.proposed_at}}</text><text class="muted">{{item.format === 'single' ? '单局' : '抢 ' + item.race_target}}</text>
+      <view wx:if="{{item.status === 'pending' && item.direction === 'incoming'}}" class="row"><button class="primary dark compact" data-id="{{item.challenge_id}}" data-action="accept" bindtap="act" disabled="{{actingId}}">接受</button><button class="secondary" data-id="{{item.challenge_id}}" data-action="reject" bindtap="act" disabled="{{actingId}}">拒绝</button></view>
+      <button wx:if="{{item.status === 'pending' && item.direction === 'outgoing'}}" class="secondary" data-id="{{item.challenge_id}}" data-action="cancel" bindtap="act" disabled="{{actingId}}">取消邀请</button>
+      <block wx:if="{{item.status === 'accepted'}}"><text class="tiny">已约好。到店后请扫描球桌二维码；这里不会自动创建比赛或积分。</text><button class="primary dark" bindtap="openScanner">到店扫码开局</button></block>
+    </view>
+  </view>
+</view>

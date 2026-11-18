@@ -1,0 +1,17 @@
+{
+  "meta": {"api-version": "1.0"},
+  "name": "child",
+  "files": [
+    {
+      "core-metadata": false,
+      "data-dist-info-metadata": false,
+      "filename": "child-2.0.0-py3-none-any.whl",
+      "hashes": {"sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"},
+      "requires-python": ">=3.12",
+      "size": 200,
+      "upload-time": "2026-08-01T09:00:00.000000Z",
+      "url": "https://files.pythonhosted.org/packages/bb/bb/bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb/child-2.0.0-py3-none-any.whl",
+      "yanked": false
+    }
+  ]
+}

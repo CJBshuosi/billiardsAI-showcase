@@ -1,0 +1,23 @@
+schema_version: "1.0"
+candidate_id: rfdetr-seg-small-bootstrap-short-r1
+model_class: RFDETRSegSmall
+package_asset_id: rfdetr-package-1.9.0
+weight_asset_id: rfdetr-seg-small-1.9.0
+seed: 20260801
+resolution: [384, 384]
+batch_size: 1
+grad_accum_steps: 4
+epochs: 12
+num_workers: 0
+accelerator: cuda
+amp: true
+synthetic_only: false
+dataset_kind: sam2_rfdetr_bootstrap
+training_purpose: local_bootstrap_short
+augmentation_backend: torchvision
+geometry_augmentation: false
+use_ema: false
+early_stopping: false
+baseline_validation: true
+export_onnx: true
+scientific_use: development_short_train_not_locked_accuracy

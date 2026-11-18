@@ -1,0 +1,2 @@
+.picker-field { min-height:96rpx; border:3rpx solid #111; border-radius:16rpx; padding:24rpx; display:flex; align-items:center; justify-content:space-between; background:#fff; }
+.row picker { flex:1; }

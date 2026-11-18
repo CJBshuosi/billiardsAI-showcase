@@ -1,0 +1,1007 @@
+{
+  "$defs": {
+    "AuthorizationBinding": {
+      "additionalProperties": false,
+      "properties": {
+        "authorization_id": {
+          "format": "uuid4",
+          "title": "Authorization Id",
+          "type": "string"
+        },
+        "authorization_version": {
+          "minimum": 1,
+          "title": "Authorization Version",
+          "type": "integer"
+        },
+        "expires_at": {
+          "format": "date-time",
+          "title": "Expires At",
+          "type": "string"
+        },
+        "issued_at": {
+          "format": "date-time",
+          "title": "Issued At",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "session_id": {
+          "format": "uuid4",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "target_device_id": {
+          "minLength": 1,
+          "pattern": "^\\S(?:.*\\S)?$",
+          "title": "Target Device Id",
+          "type": "string"
+        },
+        "user_id": {
+          "format": "uuid4",
+          "title": "User Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "authorization_id",
+        "authorization_version",
+        "user_id",
+        "session_id",
+        "target_device_id",
+        "issued_at",
+        "expires_at"
+      ],
+      "title": "AuthorizationBinding",
+      "type": "object"
+    },
+    "BallPlacement": {
+      "additionalProperties": false,
+      "properties": {
+        "ball_code": {
+          "minLength": 1,
+          "title": "Ball Code",
+          "type": "string"
+        },
+        "position": {
+          "$ref": "#/$defs/TablePointMm"
+        }
+      },
+      "required": [
+        "ball_code",
+        "position"
+      ],
+      "title": "BallPlacement",
+      "type": "object"
+    },
+    "CapabilityManifest": {
+      "additionalProperties": false,
+      "properties": {
+        "capabilities": {
+          "items": {
+            "minLength": 1,
+            "pattern": "^\\S(?:.*\\S)?$",
+            "type": "string"
+          },
+          "title": "Capabilities",
+          "type": "array"
+        },
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "equipment_codes": {
+          "items": {
+            "minLength": 1,
+            "pattern": "^\\S(?:.*\\S)?$",
+            "type": "string"
+          },
+          "title": "Equipment Codes",
+          "type": "array"
+        },
+        "manifest_id": {
+          "minLength": 1,
+          "pattern": "^\\S(?:.*\\S)?$",
+          "title": "Manifest Id",
+          "type": "string"
+        },
+        "manifest_version": {
+          "minimum": 1,
+          "title": "Manifest Version",
+          "type": "integer"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "target_device_id": {
+          "minLength": 1,
+          "pattern": "^\\S(?:.*\\S)?$",
+          "title": "Target Device Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "manifest_id",
+        "manifest_version",
+        "target_device_id",
+        "capabilities",
+        "equipment_codes",
+        "content_sha256"
+      ],
+      "title": "CapabilityManifest",
+      "type": "object"
+    },
+    "DrillDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "contraindication_codes": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Contraindication Codes",
+          "type": "array"
+        },
+        "drill_id": {
+          "minLength": 1,
+          "title": "Drill Id",
+          "type": "string"
+        },
+        "instructions": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Instructions",
+          "type": "array"
+        },
+        "maximum_level": {
+          "minimum": 1,
+          "title": "Maximum Level",
+          "type": "integer"
+        },
+        "minimum_level": {
+          "minimum": 1,
+          "title": "Minimum Level",
+          "type": "integer"
+        },
+        "prerequisite_skill_codes": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Prerequisite Skill Codes",
+          "type": "array"
+        },
+        "progression_rule": {
+          "$ref": "#/$defs/ProgressionRule"
+        },
+        "regression_rule": {
+          "$ref": "#/$defs/RegressionRule"
+        },
+        "required_capabilities": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Required Capabilities",
+          "type": "array"
+        },
+        "required_equipment_codes": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Required Equipment Codes",
+          "type": "array"
+        },
+        "review_lineage": {
+          "$ref": "#/$defs/ReviewLineage"
+        },
+        "review_status": {
+          "$ref": "#/$defs/DrillReviewStatus"
+        },
+        "revision": {
+          "minimum": 1,
+          "title": "Revision",
+          "type": "integer"
+        },
+        "safety_codes": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Safety Codes",
+          "type": "array"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "setup": {
+          "$ref": "#/$defs/TableSetup"
+        },
+        "skill_codes": {
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "minItems": 1,
+          "title": "Skill Codes",
+          "type": "array"
+        },
+        "success_metrics": {
+          "items": {
+            "$ref": "#/$defs/SuccessMetricDefinition"
+          },
+          "minItems": 1,
+          "title": "Success Metrics",
+          "type": "array"
+        },
+        "supersedes_content_sha256": {
+          "anyOf": [
+            {
+              "pattern": "^[0-9a-f]{64}$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Supersedes Content Sha256"
+        },
+        "supersedes_revision": {
+          "anyOf": [
+            {
+              "minimum": 1,
+              "type": "integer"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Supersedes Revision"
+        }
+      },
+      "required": [
+        "drill_id",
+        "revision",
+        "skill_codes",
+        "minimum_level",
+        "maximum_level",
+        "setup",
+        "instructions",
+        "success_metrics",
+        "progression_rule",
+        "regression_rule",
+        "safety_codes",
+        "review_status",
+        "review_lineage",
+        "content_sha256"
+      ],
+      "title": "DrillDefinition",
+      "type": "object"
+    },
+    "DrillReference": {
+      "additionalProperties": false,
+      "properties": {
+        "catalog_version": {
+          "minLength": 1,
+          "title": "Catalog Version",
+          "type": "string"
+        },
+        "drill_id": {
+          "minLength": 1,
+          "title": "Drill Id",
+          "type": "string"
+        },
+        "drill_revision": {
+          "minimum": 1,
+          "title": "Drill Revision",
+          "type": "integer"
+        },
+        "required_capabilities": {
+          "default": [],
+          "items": {
+            "minLength": 1,
+            "type": "string"
+          },
+          "title": "Required Capabilities",
+          "type": "array"
+        }
+      },
+      "required": [
+        "catalog_version",
+        "drill_id",
+        "drill_revision"
+      ],
+      "title": "DrillReference",
+      "type": "object"
+    },
+    "DrillReviewStatus": {
+      "enum": [
+        "DRAFT",
+        "APPROVED",
+        "DISABLED",
+        "RETIRED"
+      ],
+      "title": "DrillReviewStatus",
+      "type": "string"
+    },
+    "FinalTrainingPlan": {
+      "additionalProperties": false,
+      "properties": {
+        "admission_status": {
+          "enum": [
+            "VALIDATED",
+            "APPROVED"
+          ],
+          "title": "Admission Status",
+          "type": "string"
+        },
+        "assessment_id": {
+          "format": "uuid4",
+          "title": "Assessment Id",
+          "type": "string"
+        },
+        "assessment_revision": {
+          "minimum": 1,
+          "title": "Assessment Revision",
+          "type": "integer"
+        },
+        "blocks": {
+          "items": {
+            "$ref": "#/$defs/TrainingBlock"
+          },
+          "minItems": 1,
+          "title": "Blocks",
+          "type": "array"
+        },
+        "content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Content Sha256",
+          "type": "string"
+        },
+        "created_at": {
+          "format": "date-time",
+          "title": "Created At",
+          "type": "string"
+        },
+        "fallback_drill": {
+          "$ref": "#/$defs/DrillReference"
+        },
+        "plan_id": {
+          "format": "uuid4",
+          "title": "Plan Id",
+          "type": "string"
+        },
+        "schema_version": {
+          "const": "2.0",
+          "default": "2.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "format": "uuid4",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "snapshot_version": {
+          "minimum": 1,
+          "title": "Snapshot Version",
+          "type": "integer"
+        },
+        "user_id": {
+          "format": "uuid4",
+          "title": "User Id",
+          "type": "string"
+        },
+        "valid_until": {
+          "format": "date-time",
+          "title": "Valid Until",
+          "type": "string"
+        },
+        "version": {
+          "minimum": 1,
+          "title": "Version",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "plan_id",
+        "user_id",
+        "assessment_id",
+        "assessment_revision",
+        "snapshot_id",
+        "snapshot_version",
+        "version",
+        "admission_status",
+        "created_at",
+        "valid_until",
+        "blocks",
+        "fallback_drill",
+        "content_sha256"
+      ],
+      "title": "FinalTrainingPlan",
+      "type": "object"
+    },
+    "GrowthRuntimeViewV2": {
+      "additionalProperties": false,
+      "properties": {
+        "focus_metric_codes": {
+          "items": {
+            "minLength": 1,
+            "pattern": "^\\S(?:.*\\S)?$",
+            "type": "string"
+          },
+          "title": "Focus Metric Codes",
+          "type": "array"
+        },
+        "minimum_reliability": {
+          "$ref": "#/$defs/Reliability"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "snapshot_id": {
+          "format": "uuid4",
+          "title": "Snapshot Id",
+          "type": "string"
+        },
+        "snapshot_version": {
+          "minimum": 1,
+          "title": "Snapshot Version",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "snapshot_id",
+        "snapshot_version",
+        "focus_metric_codes",
+        "minimum_reliability"
+      ],
+      "title": "GrowthRuntimeViewV2",
+      "type": "object"
+    },
+    "ProgressionRule": {
+      "additionalProperties": false,
+      "properties": {
+        "level_delta": {
+          "exclusiveMinimum": 0,
+          "title": "Level Delta",
+          "type": "integer"
+        },
+        "reason_code": {
+          "minLength": 1,
+          "title": "Reason Code",
+          "type": "string"
+        },
+        "threshold": {
+          "exclusiveMinimum": 0,
+          "title": "Threshold",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "reason_code",
+        "threshold",
+        "level_delta"
+      ],
+      "title": "ProgressionRule",
+      "type": "object"
+    },
+    "PublicVerificationKey": {
+      "additionalProperties": false,
+      "properties": {
+        "algorithm": {
+          "const": "ED25519",
+          "default": "ED25519",
+          "title": "Algorithm",
+          "type": "string"
+        },
+        "expires_at": {
+          "format": "date-time",
+          "title": "Expires At",
+          "type": "string"
+        },
+        "issued_at": {
+          "format": "date-time",
+          "title": "Issued At",
+          "type": "string"
+        },
+        "key_id": {
+          "minLength": 1,
+          "pattern": "^\\S(?:.*\\S)?$",
+          "title": "Key Id",
+          "type": "string"
+        },
+        "key_version": {
+          "minimum": 1,
+          "title": "Key Version",
+          "type": "integer"
+        },
+        "not_before": {
+          "format": "date-time",
+          "title": "Not Before",
+          "type": "string"
+        },
+        "public_key_base64": {
+          "minLength": 1,
+          "pattern": "^\\S(?:.*\\S)?$",
+          "title": "Public Key Base64",
+          "type": "string"
+        },
+        "purpose": {
+          "const": "PLAN_BUNDLE_SIGNING",
+          "default": "PLAN_BUNDLE_SIGNING",
+          "title": "Purpose",
+          "type": "string"
+        },
+        "revoked_at": {
+          "anyOf": [
+            {
+              "format": "date-time",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Revoked At"
+        },
+        "rotation_predecessor_key_id": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "pattern": "^\\S(?:.*\\S)?$",
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Rotation Predecessor Key Id"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        }
+      },
+      "required": [
+        "key_id",
+        "key_version",
+        "public_key_base64",
+        "issued_at",
+        "not_before",
+        "expires_at"
+      ],
+      "title": "PublicVerificationKey",
+      "type": "object"
+    },
+    "PublicationPolicy": {
+      "additionalProperties": false,
+      "properties": {
+        "expires_at": {
+          "format": "date-time",
+          "title": "Expires At",
+          "type": "string"
+        },
+        "issued_at": {
+          "format": "date-time",
+          "title": "Issued At",
+          "type": "string"
+        },
+        "not_before": {
+          "format": "date-time",
+          "title": "Not Before",
+          "type": "string"
+        },
+        "policy_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Policy Version",
+          "type": "string"
+        },
+        "publication_sequence": {
+          "minimum": 1,
+          "title": "Publication Sequence",
+          "type": "integer"
+        },
+        "schema_version": {
+          "const": "1.0",
+          "default": "1.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "signing_key": {
+          "$ref": "#/$defs/PublicVerificationKey"
+        }
+      },
+      "required": [
+        "publication_sequence",
+        "issued_at",
+        "not_before",
+        "expires_at",
+        "signing_key"
+      ],
+      "title": "PublicationPolicy",
+      "type": "object"
+    },
+    "PublishedPlanPayload": {
+      "additionalProperties": false,
+      "properties": {
+        "authorization": {
+          "$ref": "#/$defs/AuthorizationBinding"
+        },
+        "bundle_id": {
+          "format": "uuid4",
+          "title": "Bundle Id",
+          "type": "string"
+        },
+        "capability_manifest": {
+          "$ref": "#/$defs/CapabilityManifest"
+        },
+        "catalog_content_sha256": {
+          "pattern": "^[0-9a-f]{64}$",
+          "title": "Catalog Content Sha256",
+          "type": "string"
+        },
+        "catalog_version": {
+          "minLength": 1,
+          "pattern": "^\\S(?:.*\\S)?$",
+          "title": "Catalog Version",
+          "type": "string"
+        },
+        "drill_definitions": {
+          "items": {
+            "$ref": "#/$defs/DrillDefinition"
+          },
+          "minItems": 1,
+          "title": "Drill Definitions",
+          "type": "array"
+        },
+        "growth_runtime_view": {
+          "$ref": "#/$defs/GrowthRuntimeViewV2"
+        },
+        "plan": {
+          "$ref": "#/$defs/FinalTrainingPlan"
+        },
+        "publication_policy": {
+          "$ref": "#/$defs/PublicationPolicy"
+        },
+        "schema_version": {
+          "const": "2.0",
+          "default": "2.0",
+          "title": "Schema Version",
+          "type": "string"
+        },
+        "session_id": {
+          "format": "uuid4",
+          "title": "Session Id",
+          "type": "string"
+        },
+        "target_device_id": {
+          "minLength": 1,
+          "pattern": "^\\S(?:.*\\S)?$",
+          "title": "Target Device Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "bundle_id",
+        "plan",
+        "session_id",
+        "target_device_id",
+        "catalog_version",
+        "catalog_content_sha256",
+        "drill_definitions",
+        "growth_runtime_view",
+        "capability_manifest",
+        "authorization",
+        "publication_policy"
+      ],
+      "title": "PublishedPlanPayload",
+      "type": "object"
+    },
+    "RegressionRule": {
+      "additionalProperties": false,
+      "properties": {
+        "level_delta": {
+          "exclusiveMaximum": 0,
+          "title": "Level Delta",
+          "type": "integer"
+        },
+        "reason_code": {
+          "minLength": 1,
+          "title": "Reason Code",
+          "type": "string"
+        },
+        "threshold": {
+          "exclusiveMinimum": 0,
+          "title": "Threshold",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "reason_code",
+        "threshold",
+        "level_delta"
+      ],
+      "title": "RegressionRule",
+      "type": "object"
+    },
+    "Reliability": {
+      "enum": [
+        "LOW",
+        "MEDIUM",
+        "HIGH"
+      ],
+      "title": "Reliability",
+      "type": "string"
+    },
+    "ReviewLineage": {
+      "additionalProperties": false,
+      "properties": {
+        "reason_code": {
+          "minLength": 1,
+          "title": "Reason Code",
+          "type": "string"
+        },
+        "reviewed_at": {
+          "format": "date-time",
+          "title": "Reviewed At",
+          "type": "string"
+        },
+        "reviewer_id": {
+          "format": "uuid4",
+          "title": "Reviewer Id",
+          "type": "string"
+        }
+      },
+      "required": [
+        "reviewer_id",
+        "reviewed_at",
+        "reason_code"
+      ],
+      "title": "ReviewLineage",
+      "type": "object"
+    },
+    "SuccessMetricDefinition": {
+      "additionalProperties": false,
+      "properties": {
+        "metric_code": {
+          "minLength": 1,
+          "title": "Metric Code",
+          "type": "string"
+        },
+        "minimum_successes": {
+          "minimum": 0,
+          "title": "Minimum Successes",
+          "type": "integer"
+        },
+        "target_attempts": {
+          "exclusiveMinimum": 0,
+          "title": "Target Attempts",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "metric_code",
+        "target_attempts",
+        "minimum_successes"
+      ],
+      "title": "SuccessMetricDefinition",
+      "type": "object"
+    },
+    "TablePointMm": {
+      "additionalProperties": false,
+      "properties": {
+        "x_mm": {
+          "minimum": 0,
+          "title": "X Mm",
+          "type": "integer"
+        },
+        "y_mm": {
+          "minimum": 0,
+          "title": "Y Mm",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "x_mm",
+        "y_mm"
+      ],
+      "title": "TablePointMm",
+      "type": "object"
+    },
+    "TableSetup": {
+      "additionalProperties": false,
+      "properties": {
+        "placements": {
+          "items": {
+            "$ref": "#/$defs/BallPlacement"
+          },
+          "minItems": 1,
+          "title": "Placements",
+          "type": "array"
+        },
+        "table_length_mm": {
+          "exclusiveMinimum": 0,
+          "title": "Table Length Mm",
+          "type": "integer"
+        },
+        "table_width_mm": {
+          "exclusiveMinimum": 0,
+          "title": "Table Width Mm",
+          "type": "integer"
+        },
+        "target_pocket_code": {
+          "anyOf": [
+            {
+              "minLength": 1,
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null,
+          "title": "Target Pocket Code"
+        },
+        "target_zone": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/TableTargetZoneMm"
+            },
+            {
+              "type": "null"
+            }
+          ],
+          "default": null
+        }
+      },
+      "required": [
+        "table_width_mm",
+        "table_length_mm",
+        "placements"
+      ],
+      "title": "TableSetup",
+      "type": "object"
+    },
+    "TableTargetZoneMm": {
+      "additionalProperties": false,
+      "properties": {
+        "maximum_x_mm": {
+          "minimum": 0,
+          "title": "Maximum X Mm",
+          "type": "integer"
+        },
+        "maximum_y_mm": {
+          "minimum": 0,
+          "title": "Maximum Y Mm",
+          "type": "integer"
+        },
+        "minimum_x_mm": {
+          "minimum": 0,
+          "title": "Minimum X Mm",
+          "type": "integer"
+        },
+        "minimum_y_mm": {
+          "minimum": 0,
+          "title": "Minimum Y Mm",
+          "type": "integer"
+        },
+        "zone_code": {
+          "minLength": 1,
+          "title": "Zone Code",
+          "type": "string"
+        }
+      },
+      "required": [
+        "zone_code",
+        "minimum_x_mm",
+        "maximum_x_mm",
+        "minimum_y_mm",
+        "maximum_y_mm"
+      ],
+      "title": "TableTargetZoneMm",
+      "type": "object"
+    },
+    "TrainingBlock": {
+      "additionalProperties": false,
+      "properties": {
+        "block_id": {
+          "format": "uuid4",
+          "title": "Block Id",
+          "type": "string"
+        },
+        "drill": {
+          "$ref": "#/$defs/DrillReference"
+        },
+        "order": {
+          "minimum": 1,
+          "title": "Order",
+          "type": "integer"
+        },
+        "progress_after_successes": {
+          "exclusiveMinimum": 0,
+          "title": "Progress After Successes",
+          "type": "integer"
+        },
+        "regress_after_failures": {
+          "exclusiveMinimum": 0,
+          "title": "Regress After Failures",
+          "type": "integer"
+        },
+        "target_finding_id": {
+          "format": "uuid4",
+          "title": "Target Finding Id",
+          "type": "string"
+        },
+        "target_repetitions": {
+          "exclusiveMinimum": 0,
+          "title": "Target Repetitions",
+          "type": "integer"
+        }
+      },
+      "required": [
+        "block_id",
+        "order",
+        "drill",
+        "target_finding_id",
+        "target_repetitions",
+        "progress_after_successes",
+        "regress_after_failures"
+      ],
+      "title": "TrainingBlock",
+      "type": "object"
+    }
+  },
+  "additionalProperties": false,
+  "properties": {
+    "payload": {
+      "$ref": "#/$defs/PublishedPlanPayload"
+    },
+    "signature": {
+      "minLength": 1,
+      "pattern": "^\\S(?:.*\\S)?$",
+      "title": "Signature",
+      "type": "string"
+    }
+  },
+  "required": [
+    "payload",
+    "signature"
+  ],
+  "title": "PublishedPlanEnvelope",
+  "type": "object"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "environment": "development",
+  "environment_id": null,
+  "scope": {
+    "ranking_scope_id": "zhoukou-urban-dev",
+    "display_name": "周口开发测试榜",
+    "mode": "development_acceptance",
+    "is_test": true,
+    "status": "disabled",
+    "publication_status": "closed",
+    "configuration_version": 1
+  },
+  "seasons": [],
+  "venues": [],
+  "tables": []
+}

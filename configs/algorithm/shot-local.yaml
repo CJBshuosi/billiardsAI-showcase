@@ -1,0 +1,38 @@
+schema_version: "1.0"
+candidate_id: mainline1-shot-local-r1
+status: development_evidence_only
+
+window:
+  motion_threshold_mm: 8
+  motion_confirm_frames: 2
+  still_duration_ms: 400
+
+cue:
+  ambiguity_margin: 0.08
+  reacquire_confidence_min: 0.55
+
+fragment:
+  motion_threshold_mm: 8
+  continuation_distance_mm: 80
+  ambiguity_mm: 5
+
+event:
+  first_contact_distance_mm: 65
+  first_contact_ambiguity_mm: 3
+  cue_motion_min_mm: 5
+  contact_time_tolerance_ms: 120
+  cushion_distance_mm: 45
+  cushion_normal_motion_min_mm: 3
+  cushion_max_gap_frames: 3
+  cushion_sparse_extra_mm: 40
+  cushion_cooldown_frames: 6
+  collision_distance_mm: 55
+  collision_motion_min_mm: 8
+  collision_max_gap_frames: 3
+  collision_ambiguity_mm: 5
+  collision_chain_confidence_min: 0.7
+  pocket_distance_mm: 90
+  pot_missing_frames: 3
+  after_match_distance_mm: 80
+  table_length_mm: 2540
+  table_width_mm: 1270

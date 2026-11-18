@@ -1,0 +1,67 @@
+schema_version: "2.0"
+candidate_id: ball-identity-teacher-r1
+status: group_head_development_short_training
+backbone_asset_id: dinov2-small-model-ed25f3a
+backbone_support_asset_ids:
+  - dinov2-small-config-ed25f3a
+  - dinov2-small-preprocessor-ed25f3a
+backbone_revision: ed25f3a31f01632728cabb09d1542f84ab7b0056
+backbone_preference: dinov2-small-apache-2.0
+classes: [cue, "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", unknown]
+groups: [cue, solid, eight, stripe, unknown]
+outputs: [exact_identity, group, visibility, confidence, unknown_reason]
+trained_heads: [group]
+exact_head:
+  status: deferred
+  trained: false
+group_head_training:
+  backbone_frozen: true
+  classifier: hierarchical_fused_evidence_mlp
+  hidden_size: 64
+  epochs: 500
+  learning_rate: 0.01
+  weight_decay: 0.0001
+  augmentation_count: 2
+  unknown_rejection:
+    trained_class: false
+    trained_rejection_head: true
+    head: binary_knownness_mlp
+    known_probability_min: 0.55
+    confidence_min: 0.55
+    margin_min: 0.10
+    calibration_split: train_asset_holdout
+    calibration_min_unknown_support: 2
+    threshold_grid: [0.30, 0.90, 0.05]
+    evidence_poor_augmentation: blur_plus_center_occlusion
+  visual_evidence:
+    backend: deadpool-centred-ball-evidence/1
+    features: [white_ratio, black_ratio, color_ratio, saturation_mean, value_mean, white_spatial_std, color_spatial_std, radial_saturation_contrast]
+    weight: 0.5
+  hard_negative:
+    source: train_only_online_focal
+    focal_gamma: 2.0
+    object_weight: 1.5
+    validation_feedback_used: false
+  scientific_use: development_short_train_not_locked_accuracy
+seed: 20260801
+balance_by: [group, exact_identity, visibility]
+label_smoothing:
+  visible_identity: 0.05
+  unknown_or_occluded: 0.0
+confidence_calibration:
+  method: temperature_scaling
+  split: dev
+unknown_policy:
+  exact_confidence_min: 0.80
+  exact_margin_min: 0.20
+  force_highest_softmax: false
+hard_gates:
+  group_macro_f1_min: 0.90
+  cue_f1_min: 0.98
+  eight_f1_min: 0.98
+  solid_f1_min: 0.90
+  stripe_f1_min: 0.90
+  forced_exact_without_evidence_max: 0
+export:
+  format: onnx
+  logits_absolute_tolerance: 0.0001

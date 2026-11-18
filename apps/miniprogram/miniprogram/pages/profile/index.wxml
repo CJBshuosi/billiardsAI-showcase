@@ -1,0 +1,10 @@
+<view class="page-shell">
+  <text class="eyebrow">账号资料</text><text class="hero">怎么称呼你？</text>
+  <text class="muted">昵称可以修改，不会改变你的长期账号。</text>
+  <text class="section-title">昵称</text><input class="field-input" value="{{nickname}}" maxlength="40" placeholder="填写昵称（选填）" bindinput="updateNickname" disabled="{{saving}}"/>
+  <text class="tiny">最多40个字符；留空时使用系统显示名。</text>
+  <view wx:if="{{errorMessage}}" class="error">{{errorMessage}}</view>
+  <view wx:if="{{saved}}" class="feedback">资料已保存。</view>
+  <button class="primary" bindtap="save" disabled="{{saving}}" loading="{{saving}}">{{saving ? '正在保存…' : '保存资料'}}</button>
+  <text class="muted">修改昵称不会自动公开你的球技分析或比赛录像。</text>
+</view>

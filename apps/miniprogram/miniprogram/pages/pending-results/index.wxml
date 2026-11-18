@@ -1,0 +1,17 @@
+<view class="page-shell">
+  <text class="eyebrow">正式比赛</text><text class="hero small">待确认赛果</text>
+  <view wx:if="{{loading}}" class="card"><text>正在读取待处理比赛…</text></view>
+  <view wx:elif="{{errorMessage}}" class="error"><text>{{errorMessage}}</text><button bindtap="load">重试</button></view>
+  <view wx:elif="{{matches.length === 0}}" class="card"><text class="state">没有待确认赛果</text><text class="muted">设备提出候选胜方后，双方各自确认同一个结果；沉默不会自动判负。</text></view>
+  <view wx:else class="stack">
+    <view wx:for="{{matches}}" wx:key="match_id" class="card outlined">
+      <text class="tiny">{{item.settings.format === 'single' ? '单局' : '抢 ' + item.settings.race_target}} · 24 小时内确认</text>
+      <text class="result-score">红方 {{item.result.red_score}} : {{item.result.blue_score}} 蓝方</text>
+      <text class="state">候选胜方：{{item.result.winner_role === 'red' ? '红方' : '蓝方'}}</text>
+      <text class="muted">截止 {{item.result_confirmation_deadline_at}}</text>
+      <view wx:if="{{item.actor_result_confirmed}}" class="feedback">你已确认，正在等待对方。</view>
+      <view wx:else class="row"><button class="primary dark compact" data-id="{{item.match_id}}" bindtap="confirm" disabled="{{actingId}}">结果正确</button><button class="secondary" data-id="{{item.match_id}}" bindtap="dispute" disabled="{{actingId}}">结果有问题</button></view>
+      <text class="tiny">确认前不显示预计加减分；双方一致并通过资格与风控后才正式结算。</text>
+    </view>
+  </view>
+</view>

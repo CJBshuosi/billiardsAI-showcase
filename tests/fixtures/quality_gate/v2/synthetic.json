@@ -1,0 +1,57 @@
+{
+  "fixture_schema_version": "quality-gate-e2e-fixture-v2",
+  "report_fixture": "tests/fixtures/reports/v1/normal.json",
+  "now": "2026-08-10T20:00:00Z",
+  "reviewer": {
+    "principal_id": "synthetic-reviewer",
+    "credential_id": "synthetic-credential"
+  },
+  "identifiers": {
+    "session_id": "10000000-0000-4000-8000-000000001101",
+    "source_report_id": "30000000-0000-4000-8000-000000001101",
+    "task_id": "40000000-0000-4000-8000-000000001101",
+    "user_id": "50000000-0000-4000-8000-000000001101",
+    "attempt_id": "60000000-0000-4000-8000-000000001101",
+    "asset_id": "70000000-0000-4000-8000-000000001101",
+    "calibration_id": "80000000-0000-4000-8000-000000001101",
+    "calibration_revision_id": "90000000-0000-4000-8000-000000001101"
+  },
+  "shots": [
+    {
+      "shot_id": "20000000-0000-4000-8000-000000001101",
+      "source_envelope_id": "21000000-0000-4000-8000-000000001101",
+      "sequence": 1,
+      "struck_ball": 1,
+      "potted_balls": [1],
+      "cushion_count": 0,
+      "travel_distance_mm": 400
+    },
+    {
+      "shot_id": "20000000-0000-4000-8000-000000001102",
+      "source_envelope_id": "21000000-0000-4000-8000-000000001102",
+      "sequence": 2,
+      "struck_ball": 2,
+      "potted_balls": [],
+      "cushion_count": 0,
+      "travel_distance_mm": 600
+    },
+    {
+      "shot_id": "20000000-0000-4000-8000-000000001103",
+      "source_envelope_id": "21000000-0000-4000-8000-000000001103",
+      "sequence": 3,
+      "struck_ball": 3,
+      "potted_balls": [3],
+      "cushion_count": 0,
+      "travel_distance_mm": 800
+    },
+    {
+      "shot_id": "20000000-0000-4000-8000-000000001104",
+      "source_envelope_id": "21000000-0000-4000-8000-000000001104",
+      "sequence": 4,
+      "struck_ball": 4,
+      "potted_balls": [],
+      "cushion_count": 1,
+      "travel_distance_mm": 800
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+schema_version: "1.0"
+candidate_id: classic-cv-local-contrast-v1
+kind: classic_cv
+source_ref: codex/6-7-cloudbase-real-loop
+source_commit_inspected: 2403420
+implementation_classification: real_inference_rule_baseline
+synthetic_truth_adapter: false
+detector_version: opencv-ball-locator/1.0
+runtime:
+  python: "3.12.13"
+  opencv: "4.10.0"
+  numpy: "2.3.5"
+parameters:
+  minimum_radius_px: 10.0
+  maximum_radius_px: 40.0
+  foreground_distance: 28.0
+  minimum_circularity: 0.82
+  confidence_abstain_below: 0.50
+synthetic_baseline_evidence: docs/engineering/algorithm/classic-cv-synthetic-baseline-evidence-2026-08-01.json
+status: synthetic_regression_pass
+notes:
+  - Port only inference behavior covered by the pinned branch's synthetic tests.
+  - The backend sees decoded PNG pixels only; synthetic truth is used by the evaluator, never as detector output.
+  - No real-video accuracy claim is permitted from synthetic fixtures.

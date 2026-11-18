@@ -1,0 +1,70 @@
+{
+  "schema_version": "1.0",
+  "session": {
+    "schema_version": "1.0",
+    "session_id": "session-0001",
+    "artifact_id": "artifact-development-0001",
+    "status": "ended",
+    "created_at_utc": "2026-08-26T10:00:00Z",
+    "ended_at_utc": "2026-08-26T10:05:00Z",
+    "postgame_manifest_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "evidence_source_kind": "development_replay",
+    "participants": [
+      {
+        "schema_version": "1.0",
+        "user_id": "user-synthetic-red",
+        "role": "red",
+        "group": "stripe"
+      },
+      {
+        "schema_version": "1.0",
+        "user_id": "user-synthetic-blue",
+        "role": "blue",
+        "group": "solid"
+      }
+    ],
+    "breaker": "red",
+    "active_role_at_end": "blue",
+    "shots": [
+      {
+        "schema_version": "1.0",
+        "shot_id": "shot-0001",
+        "sequence": 1,
+        "actor_role": "red",
+        "started_ms": 1000,
+        "settled_ms": 4000,
+        "recommendation_id": "route-development-0001",
+        "live_job_id": "job-development-0001",
+        "power": {
+          "schema_version": "1.0",
+          "band": "medium_light",
+          "approximate_percent": 40,
+          "personalized": false
+        },
+        "limitations": ["development_replay_media"]
+      }
+    ],
+    "limitations": [
+      "development_replay_media",
+      "no_global_fixed_ball_id",
+      "no_automatic_foul_verdict"
+    ]
+  },
+  "media": [
+    {
+      "schema_version": "1.0",
+      "clip_id": "clip-shot-0001",
+      "session_id": "session-0001",
+      "shot_id": "shot-0001",
+      "artifact_id": "artifact-development-0001",
+      "relative_path": "clips/shot-0001.mp4",
+      "source_kind": "development_replay",
+      "start_ms": 0,
+      "end_ms": 6000,
+      "duration_ms": 6000,
+      "content_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "byte_size": 1024,
+      "media_type": "video/mp4"
+    }
+  ]
+}

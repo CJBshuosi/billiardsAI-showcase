@@ -1,0 +1,7 @@
+ .nav { position: fixed; z-index: 10; bottom: 0; left: 0; right: 0; background: #fff; border-top: 2rpx solid #ddd; display: flex; justify-content: space-around; padding: 20rpx 16rpx calc(20rpx + env(safe-area-inset-bottom)); color: #666; }
+.item { width: 30%; text-align: center; font-size: 23rpx; display: flex; flex-direction: column; align-items: center; gap: 10rpx; }
+.active { color: #111; font-weight: 800; }
+.scan-icon { width: 36rpx; height: 36rpx; border: 4rpx dashed currentColor; border-radius: 4rpx; box-sizing: border-box; }
+.person-icon { width: 30rpx; height: 24rpx; border: 3rpx solid currentColor; border-radius: 50% 50% 4rpx 4rpx; margin-top: 12rpx; position: relative; box-sizing: border-box; }
+.person-icon::before { content: ''; position: absolute; width: 14rpx; height: 14rpx; top: -18rpx; left: 5rpx; border: 3rpx solid currentColor; border-radius: 50%; background: #fff; }
+.rank-icon { font-size: 44rpx; line-height: 36rpx; height: 36rpx; }

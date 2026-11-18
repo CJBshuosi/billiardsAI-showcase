@@ -1,0 +1,18 @@
+<view class="page-shell nav-space ranking-page">
+  <view class="ranking-head"><view><text class="eyebrow">周口市区 · 跨球房</text><view class="title-line"><text class="hero small">{{rankingTitle}}</text><text wx:if="{{isTest}}" class="test-badge">开发测试榜</text></view></view><view wx:if="{{!guest}}" class="head-links"><navigator class="settings-link" url="/pages/pending-results/index">赛果</navigator><navigator class="settings-link" url="/pages/challenges/index">邀请</navigator><navigator class="settings-link" url="/pages/ranking-settings/index">设置</navigator></view></view>
+  <view wx:if="{{isTest}}" class="test-notice"><text>{{scopeNotice}}</text></view>
+  <view class="tab-row"><button class="{{kind === 'long_term' ? 'selected' : ''}}" data-kind="long_term" bindtap="switchKind">长期榜</button><button class="{{kind === 'season' ? 'selected' : ''}}" data-kind="season" bindtap="switchKind">60 天赛季</button></view>
+  <view wx:if="{{guest}}" class="card outlined"><text class="state">登录后查看自己的位置</text><text class="muted">榜单只展示主动公开且已完成定级的球友。</text><navigator class="primary" url="/pages/login/index">登录</navigator></view>
+  <view wx:elif="{{loading}}" class="card"><text>正在读取同一份排名快照…</text></view>
+  <view wx:elif="{{errorMessage}}" class="error"><text>{{errorMessage}}</text><button bindtap="loadRanking">重新加载</button></view>
+  <block wx:elif="{{available}}">
+    <view class="ranking-meta"><text class="tiny">{{kind === 'long_term' ? '长期球技积分' : '本赛季表现'}}</text><text class="tiny">更新于 {{asOf}}</text></view>
+    <view class="ranking-list"><view wx:for="{{entries}}" wx:key="user_id" class="ranking-row" data-user-id="{{item.user_id}}" bindtap="openPlayer"><text class="rank-number">{{item.rank}}</text><view class="ranking-person"><text class="ranking-name">{{item.nickname}}</text><text wx:if="{{item.recent_sample_limited}}" class="tiny">近期样本较少</text></view><text class="ranking-score">{{item.display_rating}}</text><text class="chevron">›</text></view></view>
+    <button wx:if="{{hasMore}}" class="secondary" bindtap="loadMore" disabled="{{loadingMore}}">{{loadingMore ? '正在加载…' : '查看更多排名'}}</button>
+    <view wx:if="{{entries.length === 0}}" class="card"><text class="state">样本建立中</text><text class="muted">暂无主动公开并完成定级的球友。</text></view>
+  </block>
+  <view wx:else class="card outlined"><text class="state">{{isTest ? '测试排名尚未生成' : '排名尚未开放'}}</text><text class="muted">{{isTest ? '完成真实测试对局并双方确认后，这里才会出现积分。' : '正式球技积分或公开快照还没有准备好。'}}这里不会用演示回放、零分或示例用户填榜。</text></view>
+  <view wx:if="{{!guest && myStatus && myStatus.status === 'unplaced'}}" class="my-position-card"><view><text class="tiny">我的位置 · 定级中</text><text class="state">{{myStatus.rated_matches}} / {{myStatus.required_matches}} 场 · {{myStatus.distinct_opponents}} / {{myStatus.required_opponents}} 名对手</text></view><text class="tiny">正式积分和名次暂不显示</text></view>
+  <view wx:elif="{{!guest && myPosition}}" class="my-position-card"><view><text class="tiny">我的位置</text><text class="state">第 {{myPosition.rank}} 名</text></view><text class="my-score">{{myPosition.display_rating}}</text></view>
+  <text wx:if="{{snapshotId}}" class="snapshot-note">快照 {{snapshotVersion}} · 列表、本人位置与球友主页使用同一版本</text><app-nav active="ranking"/>
+</view>

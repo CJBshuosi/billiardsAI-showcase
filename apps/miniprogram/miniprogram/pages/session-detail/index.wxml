@@ -1,0 +1,43 @@
+<view class="page-shell">
+  <text class="eyebrow">MATCH REVIEW / 本场报告</text>
+  <view class="hero">这一场，<text class="line">留个记录。</text></view>
+  <view wx:if="{{analysisView}}" class="card analysis-status">
+    <text class="section-title">{{analysisView.label}}</text>
+    <text wx:if="{{analysisView.hasLiveCount}}" class="muted">本场已实时记录 {{analysisView.live_shots_recorded}} 杆</text>
+    <text wx:elif="{{analysisView.hasCounts}}" class="muted">已完成 {{analysisView.available_shots}} / {{analysisView.total_shots}} 杆</text>
+    <text wx:else class="muted">击球数量仍在核对，不会按零杆展示。</text>
+  </view>
+  <view wx:if="{{loading}}" class="card muted">正在读取本场记录…</view>
+  <view wx:elif="{{errorCode}}" class="card"><text class="section-title">暂时没取到报告</text><text class="error">{{error}}</text><text class="muted">未取到记录不等于本场没有击球。</text><button class="secondary" bindtap="refresh">重新读取</button></view>
+  <view wx:elif="{{session}}">
+    <text class="muted intro">{{session.statusLabel || '状态待确认'}} · 以下是本场观察记录</text>
+    <view class="card context"><text class="record-title">{{session.dateLabel || '场次时间未记录'}}</text><text class="muted">{{session.participantsLabel || '参与者信息暂未取得'}}</text></view>
+    <view class="metric-grid">
+      <view class="metric"><text class="metric-value">{{shotCount}}</text><text class="muted">全场已记录击球</text><text wx:if="{{shotCount === '—'}}" class="muted small">尚未取得击球计数</text></view>
+      <view class="metric"><text class="metric-value">{{clipCount}}</text><text class="muted">本场片段条目</text><text wx:if="{{clipCount === '—'}}" class="muted small">数量请进入列表查看</text></view>
+    </view>
+    <view class="review-intro"><text class="section-title">先回看，再了解自己。</text><text class="muted">按击球顺序只读查看比赛结束后在大屏保存的片段。</text></view>
+    <view class="card limits"><text class="record-title">这些记录还不是个人成绩</text><text class="muted">逐杆身份与结果尚未完成审核。</text><text class="muted">本页不据此计算胜率、球技分或同城排名。</text></view>
+    <view wx:if="{{rankingMatch && rankingMatch.result}}" class="card ranking-result">
+      <text class="tiny">同城排名 · {{rankingScope && rankingScope.is_test ? '开发测试赛果' : '正式赛果'}}</text>
+      <text class="record-title">红方 {{rankingResult.red_score}} : {{rankingResult.blue_score}} 蓝方</text>
+      <text wx:if="{{rankingOutcomeView}}" class="state">{{rankingOutcomeView.label}}</text>
+      <block wx:if="{{rankingOutcomeView && rankingOutcomeView.status === 'settled'}}">
+        <text wx:if="{{rankingOutcomeView.placement_status === 'placed'}}" class="ranking-score">{{rankingOutcomeView.display_rating}} <text class="tiny">本场 {{rankingOutcomeView.delta_label}}</text></text>
+        <text wx:else class="muted">定级 {{rankingOutcomeView.rated_matches}} / {{rankingOutcomeView.required_matches}} 场 · {{rankingOutcomeView.distinct_opponents}} / {{rankingOutcomeView.required_opponents}} 名不同对手；隐藏积分暂不展示。</text>
+      </block>
+      <text wx:if="{{rankingOutcomeView && rankingOutcomeView.status === 'review_pending'}}" class="muted">审核期间不加减 0 分，也不公开内部风控信号。</text>
+      <text wx:if="{{rankingOutcomeView && (rankingOutcomeView.status === 'corrected' || rankingOutcomeView.status === 'revoked')}}" class="muted">旧榜单保持只读并标注更新中；系统按账本重放，不能人工改分。</text>
+      <button wx:if="{{rankingOutcome && rankingOutcome.can_appeal && !rankingOutcome.actor_appealed}}" class="secondary" bindtap="appealRankingReview" disabled="{{rankingActionBusy}}">提交本场申诉</button>
+      <text wx:if="{{rankingOutcome && rankingOutcome.actor_appealed}}" class="feedback">申诉已提交，等待复核。</text>
+      <button class="text-action" bindtap="reportRankingMatch" disabled="{{rankingActionBusy || reportSubmitted}}">{{reportSubmitted ? '本场问题已提交' : '举报本场问题'}}</button>
+      <text wx:if="{{rankingActionError}}" class="error">{{rankingActionError}}</text>
+    </view>
+    <view class="limits-details"><text class="section-title">记录范围与限制</text>
+      <text wx:for="{{session.limitations}}" wx:key="*this" class="muted">{{item === 'development_replay_media' ? '开发回放测试：视频球员不等于扫码用户，不计入正式个人成绩。' : '部分记录存在识别或记录范围限制，需结合原始片段核对。'}}</text>
+      <text wx:if="{{!session.limitations.length}}" class="muted">尚无更多限制说明；这不代表记录已完整或完成审核。</text>
+    </view>
+    <navigator class="primary" url="/pages/clips/index?session_id={{session.session_id}}">查看本场击球片段 ↗</navigator>
+  </view>
+  <navigator class="back-link muted" url="/pages/sessions/index">返回比赛记录</navigator>
+</view>

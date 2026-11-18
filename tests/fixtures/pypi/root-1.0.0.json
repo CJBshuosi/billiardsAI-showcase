@@ -1,0 +1,17 @@
+{
+  "info": {
+    "name": "root",
+    "version": "1.0.0",
+    "summary": "Offline resolver root fixture",
+    "requires_python": ">=3.12",
+    "requires_dist": [
+      "child>=2; python_version >= \"3.12\" and extra == \"train\"",
+      "child<2; python_version < \"3.12\"",
+      "ignored>=1; extra == \"docs\""
+    ],
+    "license_expression": "Apache-2.0",
+    "license": null,
+    "classifiers": ["License :: OSI Approved :: Apache Software License"]
+  },
+  "urls": []
+}

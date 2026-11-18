@@ -1,0 +1,9 @@
+.hero { white-space: pre-line; }
+.intro { display: block; margin-bottom: 52rpx; }
+.record-title { font-weight: 700; font-size: 30rpx; }
+.list-row .muted { display: block; margin-top: 16rpx; }
+.footnote { display: block; margin-top: 48rpx; font-size: 23rpx; }
+.card text { display: block; }
+.secondary { margin-top: 28rpx; }
+
+.list-row { display: block; }

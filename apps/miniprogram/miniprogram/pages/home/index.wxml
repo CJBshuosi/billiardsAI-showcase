@@ -1,0 +1,16 @@
+<view class="page-shell nav-space">
+  <text class="eyebrow">billiardsAI / {{displayName || '球友'}}</text><text class="hero">我的球技</text>
+  <view wx:if="{{loading}}" class="card">正在读取账号…</view>
+  <view wx:if="{{errorMessage}}" class="error"><text>{{errorMessage}}</text><button bindtap="refresh">重新连接</button></view>
+  <view class="metric-grid"><view class="metric"><text class="metric-value">待开放</text><text class="muted">个人球技积分</text></view><view class="metric"><text class="metric-value">未开放</text><text class="muted">周口同城排名</text></view></view>
+  <view class="card outlined"><text class="state">先把每一场球留住。</text><text class="muted">已有的比赛记录和普通击球片段可以回看。个人评价尚未接入，不用示例数据替你评分。</text></view>
+  <navigator wx:if="{{guest}}" class="primary dark" url="/pages/login/index">登录，查看我的记录</navigator>
+  <text class="section-title">我的记录</text>
+  <navigator class="list-row" url="{{guest ? '/pages/login/index' : '/pages/sessions/index'}}"><view><text class="label">比赛记录</text><text class="tiny">查看本场事实报告</text></view><text class="chevron">›</text></navigator>
+  <navigator class="list-row" url="{{guest ? '/pages/login/index' : '/pages/clips/index'}}"><view><text class="label">我的已保存片段</text><text class="tiny">大屏保存后自动同步给该杆用户</text></view><text class="chevron">›</text></navigator>
+  <text class="section-title">更了解自己</text>
+  <navigator class="list-row" url="/pages/insight/index"><view><text class="label">优势、待改善与偏好</text><text class="tiny">待开放 · 评价须有真实视频依据</text></view><text class="chevron">›</text></navigator>
+  <navigator class="list-row" url="/pages/calibration/index"><view><text class="label">力度校准</text><text class="tiny">待开放 · 由体验桌店员引导</text></view><text class="chevron">›</text></navigator>
+  <navigator class="list-row" url="{{guest ? '/pages/login/index' : '/pages/profile/index'}}"><text class="label">账号资料</text><text class="chevron">›</text></navigator>
+  <app-nav active="home"/>
+</view>

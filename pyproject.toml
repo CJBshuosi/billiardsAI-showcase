@@ -1,0 +1,68 @@
+[project]
+name = "billiards-ai"
+version = "0.1.0"
+description = "台球教练AI — 异步教练服务"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "pydantic>=2.9",
+    "opencv-python>=4.10",
+    "numpy>=2.0",
+    "pyyaml>=6.0",
+    "pooltool-billiards==0.6.0",
+    "cryptography>=50.0.0",
+]
+
+[project.scripts]
+quality-gate-review = "billiards_ai.cloud.review.cli:main"
+
+[tool.uv]
+# Internal dependency-metadata patch for pooltool 0.6.0. Upstream pins a
+# Panda3D dev build that is absent from PyPI outside Darwin; physics code stays
+# on the verified upstream wheel. See third_party/pooltool-billiards-0.6.0.md.
+override-dependencies = ["panda3d>=1.10.13,<1.11"]
+
+[project.optional-dependencies]
+cloud = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.32",
+    "asyncpg>=0.31",
+    "aiomqtt>=2.5",
+    "sqlalchemy[asyncio]>=2.0",
+    "alembic>=1.14",
+]
+edge = [
+    "paho-mqtt>=2.1",
+]
+dev = [
+    "pip>=24.3",
+    "pytest>=8.3",
+    "pytest-asyncio>=0.24",
+    "ruff>=0.8",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/billiards_ai"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+# _bmad/ holds vendored BMad framework tooling, not project source
+# Historical diagnostic scripts are byte-pinned evidence, not maintained entry points.
+extend-exclude = [
+    "_bmad",
+    "docs/operations/diagnostics/*.py",
+    "docs/operations/recording-r4-consumer-probe-2026-11-10.py",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src", "."]
+addopts = "--import-mode=importlib"
+asyncio_mode = "auto"

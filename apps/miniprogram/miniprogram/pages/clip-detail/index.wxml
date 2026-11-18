@@ -1,0 +1,19 @@
+<view class="page-shell">
+  <text class="eyebrow">SHOT REPLAY / 片段详情</text>
+  <view class="hero">{{clip ? clip.title : '击球片段'}}</view>
+  <text class="muted intro">大屏已保存片段 · {{clip.durationLabel || '先看这一杆本身'}}</text>
+  <view wx:if="{{loading}}" class="media-state muted">正在核对权限并加载播放内容…</view>
+  <video wx:elif="{{state === 'published' && playbackUrl}}" id="clip-player" class="video" src="{{playbackUrl}}" controls="{{true}}" autoplay="{{false}}" show-fullscreen-btn="{{true}}" binderror="onPlaybackError"></video>
+  <view wx:else class="media-state">
+    <text>片段暂不可用</text>
+  </view>
+  <view wx:if="{{error}}" class="error playback-error">{{error}}</view>
+  <button wx:if="{{!loading && !playbackUrl && !playbackBlocked}}" class="secondary" bindtap="loadPlayback">重新加载播放内容</button>
+  <view class="card guidance"><text class="section-title">先看这一杆本身。</text><text class="muted">片段不附加未经审核的球技评价。</text><text class="muted">片段归属以击球开始时绑定的红方或蓝方用户为准。</text><text wx:if="{{clip.isReplay}}" class="replay-note">开发回放测试：视频球员不等于扫码用户，不计入正式个人成绩。</text><text wx:else class="muted">未经审核的片段不计入正式个人成绩。</text></view>
+  <view class="list-row" bindtap="backToClips">回到我的已保存片段 ↗</view>
+  <view class="deletion-actions">
+    <text wx:if="{{deletionMessage}}" class="muted deletion-message">{{deletionMessage}}</text>
+    <button wx:if="{{clipId && deletionState !== 'accepted'}}" class="secondary delete-button" bindtap="requestDeletion" disabled="{{deletionBusy}}" loading="{{deletionBusy}}">{{deletionState === 'unknown' ? '重试确认删除请求' : '删除本人片段'}}</button>
+  </view>
+  <text class="muted footer-note">保存操作仅在比赛结束后的现场大屏完成；小程序可查看及申请本人删除。</text>
+</view>

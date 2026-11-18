@@ -1,0 +1,9 @@
+<view class="page-shell">
+  <text class="pill">功能占位 · 暂未开放</text><text class="hero">让建议，
+更懂你的力度。</text><text class="muted">未来由专用体验桌的店员带你试打，记录你自己的力度手感。</text>
+  <view class="card outlined"><text class="state">力度校准尚未接入</text><text class="muted">当前不会采集试打、生成校准结果或保存个人力度曲线。</text></view>
+  <text class="section-title">准备这样体验</text><view class="card"><text>1. 确认本人和采集授权</text><text>2. 店员说明、摆球后直接试打</text><text>3. 大屏引导，系统采集并验证</text></view>
+  <text class="muted">不安排热身。十成力指动作正常、能控制的最大力度，不要求拼命发力。</text>
+  <button class="primary" disabled="{{!available}}">开始校准 · 暂未开放</button>
+  <navigator class="secondary" open-type="reLaunch" url="/pages/home/index">返回我的球技</navigator>
+</view>

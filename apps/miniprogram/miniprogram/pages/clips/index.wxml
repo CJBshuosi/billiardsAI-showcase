@@ -1,0 +1,19 @@
+<view class="page-shell">
+  <text class="eyebrow">SHOT CLIPS / 我的已保存片段</text>
+  <view class="hero">想回看的，<text class="line">都在这里。</text></view>
+  <text class="muted intro">大屏保存后，片段自动同步给击球开始时绑定的用户；这里只显示属于你的已保存片段。大屏保存不代表系统精选。</text>
+  <view wx:if="{{loading}}" class="card muted">正在读取片段…</view>
+  <view wx:elif="{{errorCode && !clips.length && !nextCursor}}" class="card"><text class="error">{{error}}</text><button class="secondary" bindtap="refresh">重新读取</button></view>
+  <block wx:else>
+    <view wx:if="{{!clips.length && !nextCursor}}" class="card"><text class="section-title">暂无已保存片段</text><text class="muted">目前没有可查看的已保存片段，不据此推断没有击球。</text></view>
+    <navigator wx:for="{{clips}}" wx:key="clip_id" class="clip-row" url="/pages/clip-detail/index?clip_id={{item.clip_id}}&session_id={{item.session_id || sessionId || ''}}">
+      <view class="thumbnail"><text>▷</text><text class="small">击球片段</text></view>
+      <view class="clip-info"><view class="row"><text class="clip-title">{{item.title || (item.sequence ? '第 ' + item.sequence + ' 杆' : '击球片段 · 序号待确认')}}</text></view>
+      <text class="muted small">已在大屏保存{{item.durationLabel ? ' · ' + item.durationLabel : ''}}</text>
+      <text wx:if="{{item.retentionLabel}}" class="muted small">{{item.retentionLabel}}</text>
+      <text wx:if="{{item.isReplay}}" class="muted small">开发回放测试 · 不计入正式个人成绩</text></view><text>↗</text>
+    </navigator>
+    <view wx:if="{{nextCursor}}" class="card muted"><text wx:if="{{!clips.length}}">还有片段待检查，请继续加载。</text><text wx:if="{{error}}" class="error">{{error}}</text><button class="secondary" bindtap="loadMore" loading="{{loadingMore}}" disabled="{{loadingMore}}">加载更多</button></view>
+  </block>
+  <view class="list-footer"><text class="muted">片段由大屏保存并同步给该杆用户；小程序仅供本人查看。</text><button class="secondary" bindtap="refresh" loading="{{loading}}" disabled="{{loading}}">重新查看状态</button><navigator wx:if="{{sessionId}}" class="back-link" url="/pages/session-detail/index?session_id={{sessionId}}">返回本场报告</navigator></view>
+</view>

@@ -1,0 +1,33 @@
+from billiards_ai.shared.calibration.homography import (
+    CalibrationAccuracyError,
+    CalibrationDriftError,
+    DistortionNotVerifiedError,
+    NotCalibratedError,
+    TableCalibration,
+    assert_no_drift,
+    calibrate,
+    corner_drift_px,
+    pixel_to_table,
+    pixels_to_table,
+    reference_errors_mm,
+    require_calibration,
+    table_to_pixel,
+    validate_reference_accuracy,
+)
+
+__all__ = [
+    "CalibrationAccuracyError",
+    "CalibrationDriftError",
+    "DistortionNotVerifiedError",
+    "NotCalibratedError",
+    "TableCalibration",
+    "assert_no_drift",
+    "calibrate",
+    "corner_drift_px",
+    "pixel_to_table",
+    "pixels_to_table",
+    "reference_errors_mm",
+    "require_calibration",
+    "table_to_pixel",
+    "validate_reference_accuracy",
+]

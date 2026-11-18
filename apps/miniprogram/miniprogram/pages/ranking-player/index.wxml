@@ -1,0 +1,15 @@
+<view class="page-shell">
+  <view class="profile-heading"><text class="eyebrow">球友公开主页 · {{rankingTitle}}</text><text wx:if="{{isTest}}" class="test-badge">开发测试榜</text></view>
+  <view wx:if="{{isTest}}" class="test-notice"><text>{{scopeNotice}}</text></view>
+  <view wx:if="{{loading}}" class="card"><text>正在读取公开积分…</text></view>
+  <view wx:elif="{{errorMessage}}" class="error"><text>{{errorMessage}}</text></view>
+  <block wx:elif="{{player}}">
+    <text class="hero small">{{player.nickname}}</text>
+    <view wx:if="{{player.ranking_status === 'placed'}}" class="profile-score"><text class="tiny">{{isTest ? '开发测试积分' : '周口长期球技积分'}}</text><text class="score-number">{{player.display_rating}}</text><text class="state">第 {{player.rank}} 名</text><text wx:if="{{player.recent_sample_limited}}" class="muted">近期正式比赛样本较少</text></view>
+    <view wx:else class="card outlined"><text class="state">定级中</text><text class="muted">已完成 {{player.rated_matches}} / {{player.required_matches}} 场，遇到 {{player.distinct_opponents}} / {{player.required_opponents}} 名不同对手。</text><text class="tiny">未定级不显示隐藏积分，也不编造名次。</text></view>
+    <button wx:if="{{player.accept_challenges && !isSelf}}" class="primary dark" bindtap="challenge">邀请 PK</button>
+    <view wx:elif="{{!isSelf}}" class="card"><text class="muted">这位球友暂未开启接受挑战。</text></view>
+    <text class="tiny">邀请只用于约球；接受后仍需到店扫码并完成正式比赛流程，积分权重不会改变。</text>
+  </block>
+  <navigator class="list-row" open-type="navigateBack"><text>返回排名</text><text class="chevron">‹</text></navigator>
+</view>

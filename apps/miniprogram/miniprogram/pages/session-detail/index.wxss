@@ -1,0 +1,16 @@
+.line, .card text, .review-intro text, .limits-details text { display: block; }
+.intro { display: block; margin-bottom: 32rpx; }
+.record-title { font-size: 30rpx; font-weight: 700; }
+.context .muted, .limits .muted { margin-top: 12rpx; }
+.metric-grid { margin: 32rpx 0 46rpx; }
+.small { font-size: 21rpx; margin-top: 12rpx; }
+.review-intro { margin: 38rpx 0; }
+.limits { border: 2rpx solid #242424; }
+.limits-details { margin: 36rpx 0 44rpx; }
+.limits-details .muted { margin-top: 16rpx; }
+.back-link { display: block; text-align: center; margin: 36rpx 0; }
+.secondary { margin-top: 28rpx; }
+.ranking-result { background: #fff; border: 3rpx solid #111; }
+.ranking-score { font-size: 50rpx; font-weight: 900; }
+.ranking-score .tiny { display: inline; margin-left: 12rpx; }
+.text-action { margin-top: 18rpx; padding: 16rpx 0; background: transparent; text-decoration: underline; }

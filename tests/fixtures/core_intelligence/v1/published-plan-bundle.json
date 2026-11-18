@@ -1,0 +1,47 @@
+{
+  "schema_version": "1.0",
+  "bundle_id": "00000000-0000-4000-8000-00000000000e",
+  "plan": {
+    "schema_version": "1.0",
+    "plan_id": "00000000-0000-4000-8000-00000000000c",
+    "user_id": "00000000-0000-4000-8000-000000000001",
+    "assessment_id": "00000000-0000-4000-8000-00000000000a",
+    "assessment_revision": 1,
+    "version": 1,
+    "created_at": "2026-08-04T08:20:00Z",
+    "valid_until": "2026-08-11T08:20:00Z",
+    "blocks": [{
+      "block_id": "00000000-0000-4000-8000-00000000000d",
+      "order": 1,
+      "drill": {
+        "catalog_version": "2026.08",
+        "drill_id": "large-angle-potting-01",
+        "drill_revision": 1,
+        "required_capabilities": ["TABLE_MM_COORDINATES"]
+      },
+      "target_finding_id": "00000000-0000-4000-8000-00000000000b",
+      "target_repetitions": 20,
+      "progress_after_successes": 4,
+      "regress_after_failures": 3
+    }],
+    "fallback_drill": {
+      "catalog_version": "2026.08",
+      "drill_id": "straight-potting-01",
+      "drill_revision": 1,
+      "required_capabilities": ["TABLE_MM_COORDINATES"]
+    },
+    "content_sha256": "8888888888888888888888888888888888888888888888888888888888888888"
+  },
+  "target_device_id": "dilan-table-01",
+  "growth_runtime_view": {
+    "snapshot_id": "00000000-0000-4000-8000-000000000008",
+    "snapshot_version": 1,
+    "focus_metric_codes": ["large_angle_potting.success_rate"],
+    "minimum_reliability": "MEDIUM"
+  },
+  "published_at": "2026-08-04T08:21:00Z",
+  "expires_at": "2026-08-11T08:20:00Z",
+  "plan_sha256": "6bf7376f1b3e430f68b48dfd5009e9179bace80ed4312e97ca14c3ae8b8acf2c",
+  "signature_key_id": "edge-signing-key-v1",
+  "signature": "test-signature-not-for-production"
+}

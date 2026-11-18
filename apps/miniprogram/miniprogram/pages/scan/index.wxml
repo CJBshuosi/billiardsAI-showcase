@@ -1,0 +1,11 @@
+<view class="page-shell nav-space">
+  <text class="eyebrow">扫码开局</text><text class="hero">找到球桌，
+加入这一场。</text>
+  <view class="scan-illustration"><view class="scan-corners">＋</view><text>{{previewMode ? '当前开发预览已绑定测试球桌' : '扫描球桌大屏二维码'}}</text></view>
+  <view wx:if="{{errorMessage}}" class="error">{{errorMessage}}</view>
+  <button wx:if="{{previewMode}}" class="primary" bindtap="enterPreviewTable">进入当前测试球桌</button>
+  <button wx:else class="primary" bindtap="scan" loading="{{scanning}}" disabled="{{scanning}}">{{scanning ? '正在扫码…' : '扫描球桌二维码'}}</button>
+  <text class="muted">{{previewMode ? '开发预览码请使用微信外层“扫一扫”；本页直接进入已绑定的雷神测试球桌。' : '两位球友扫描同一张球桌的二维码，分别加入并认领身份。'}}</text>
+  <navigator class="list-row" url="/pages/calibration/index"><view><text class="label">第一次使用力度建议？</text><text class="tiny">了解体验桌力度校准 · 待开放</text></view><text class="chevron">›</text></navigator>
+  <app-nav active="scan"/>
+</view>

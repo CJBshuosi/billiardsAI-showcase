@@ -1,0 +1,37 @@
+const MESSAGES = {
+  NETWORK_UNAVAILABLE: '连接暂时中断，请检查网络后重试。',
+  ENVIRONMENT_MISMATCH: '服务尚未连接，请联系工作人员完成配置。',
+  PROFILE_INVALID: '昵称格式不合适，请使用不超过40个字符的昵称。',
+  REQUEST_INVALID: '入口信息不完整，请返回后重新进入。',
+  TABLE_CODE_DISABLED: '这张球桌暂时不可加入，请联系工作人员。',
+  TABLE_CODE_INVALID: '没有识别到有效球桌，请扫描大屏上的二维码。',
+  SESSION_NOT_JOINABLE: '本场已结束或暂不可加入，请查看球桌当前状态。',
+  FORBIDDEN: '当前账号没有查看权限，请确认登录的是本人账号。',
+  COMMAND_FORBIDDEN: '当前状态不允许这项操作，请刷新现场状态。',
+  COMMAND_STALE_REVISION: '现场状态已变化，请先刷新并核对。',
+  COMMAND_NOT_FOUND: '暂时没有取得操作结果，请稍后重新查看。',
+  COMMAND_INVALID: '操作信息不完整，请重新查看现场状态。',
+  COMMAND_IDEMPOTENCY_CONFLICT: '这次操作需要核对，请联系现场工作人员。',
+  GROUP_CORRECTION_REQUIRED: '球组修改需要对方确认，请核对双方选择。',
+  MATCH_SETTINGS_NOT_READY: '请先由双方确认模式、赛制和开球方，再启动比赛。',
+  MATCH_SETUP_NOT_CONFIRMABLE: '当前设置不能确认，请刷新后核对最新版本。',
+  RANKING_MATCH_VENUE_UNAVAILABLE: '这张球桌尚未加入周口正式排名范围。',
+  RANKING_REPORT_INVALID: '请选择与这场比赛有关的问题类型。',
+  RANKING_REPORT_ALREADY_SUBMITTED: '你已经提交过这场比赛的问题。',
+  RANKING_APPEAL_INVALID: '当前比赛状态不支持这项申诉，请刷新后核对。',
+  MEDIA_NOT_AVAILABLE: '这段视频目前不可查看，请返回片段列表。',
+  ACTION_UNSUPPORTED: '这项旧操作已停用，请返回已保存片段列表。',
+  IDENTITY_CONFLICT: '账号状态需要核对，请联系工作人员。',
+  PUBLIC_NICKNAME_INVALID: '公开昵称需为 2 至 16 个字符，不能包含不可见字符。',
+  PUBLIC_NICKNAME_TAKEN: '这个公开昵称已被使用，请换一个。',
+  RANKING_PLAYER_UNAVAILABLE: '这个球友主页未公开或暂不可查看。',
+  RANKING_NOT_PUBLISHED: '正式排名快照尚未发布，请稍后再看。',
+  CHALLENGE_TARGET_UNAVAILABLE: '这位球友未公开接受挑战。',
+  CHALLENGE_PAIR_PENDING: '你们之间已有一条待回应邀请。',
+  CHALLENGE_VENUE_UNAVAILABLE: '请选择已批准的周口球房。',
+  CHALLENGE_INVALID: '邀请信息不完整，请核对球房、时间和赛制。',
+}
+function errorMessage(code) {
+  return MESSAGES[code] || '暂时未能完成，请重试；持续出现时请联系工作人员。'
+}
+module.exports = { errorMessage }

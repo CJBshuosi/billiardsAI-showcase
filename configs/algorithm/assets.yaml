@@ -1,0 +1,243 @@
+schema_version: "1.0"
+assets:
+  - id: ruff-macos-arm64-0.15.22
+    kind: development_tool
+    source: https://files.pythonhosted.org/packages/c9/10/74e53572aa758dfaa678c2a2646b5c5515d884b7ca56be4d2ce03ca4b560/ruff-0.15.22-py3-none-macosx_11_0_arm64.whl
+    version: "0.15.22"
+    sha256: "11c1c715af53a09f714e011106bffc419751ec8232fcb5da42173284ea3fec6f"
+    license: MIT
+    expected_bytes: 10466716
+    commercial_status: allowed
+    approval_status: approved
+
+  - id: rfdetr-package-1.9.0
+    kind: python_package
+    source: https://files.pythonhosted.org/packages/97/5e/5b7696a6bfe46b0da7e3ca82c0ae535e5a2221bcb8fff2ccd7768376af57/rfdetr-1.9.0-py3-none-any.whl
+    version: "1.9.0@a700efc750c0f8763e0e0828ba6525e9e7e0b4aa"
+    sha256: "2fe800acd555fe006e80e1b5c44af0cd4a3d3924854f09ade61bcc9b97cc7445"
+    license: Apache-2.0
+    expected_bytes: 486317
+    commercial_status: allowed
+    approval_status: approved
+    approval_scope: local_install_import_and_synthetic_smoke
+    approval_revision: boyu-2026-08-01-rfdetr-smoke
+    fetch_approval_status: approved
+    fetch_approval_scope: local_research_integrity_verification
+    fetch_verification_status: verified
+
+  - id: rfdetr-seg-small-1.9.0
+    kind: model_weight
+    source: https://storage.googleapis.com/rfdetr/rf-detr-seg-s-ft.pth
+    version: "registry-1.9.0"
+    sha256: "6de3da31b2572cac214a1c76cce4a92a13966d56390ac2b3a3de9a8dc2b2bca3"
+    upstream_md5: "0a2a3006381d0c42853907e700eadd08"
+    license: Apache-2.0
+    expected_bytes: 135042342
+    commercial_status: allowed
+    approval_status: approved
+    approval_scope: local_weight_load_and_synthetic_smoke
+    approval_revision: boyu-2026-08-01-rfdetr-smoke
+    fetch_approval_status: approved
+    fetch_approval_scope: local_research_integrity_verification
+    fetch_verification_status: verified
+    selection_status: primary_smoke_candidate
+
+  - id: rfdetr-seg-medium-1.9.0
+    kind: model_weight
+    source: https://storage.googleapis.com/rfdetr/rf-detr-seg-m-ft.pth
+    version: "registry-1.9.0"
+    sha256: "3ad325094735f431aee9962a8d204d68eb5bfc393d53e7e836e70998fef5ea58"
+    upstream_md5: "a49af1562c3719227ad43d0ca53b4c7a"
+    license: Apache-2.0
+    expected_bytes: 143024058
+    commercial_status: allowed
+    approval_status: pending
+    fetch_approval_status: approved
+    fetch_approval_scope: local_research_integrity_verification
+    fetch_verification_status: verified
+    selection_status: primary_accuracy_candidate
+
+  - id: rfdetr-seg-large-1.9.0
+    kind: model_weight
+    source: https://storage.googleapis.com/rfdetr/rf-detr-seg-l-ft.pth
+    version: "registry-1.9.0"
+    sha256: ""
+    upstream_md5: "275f7b094909544ed2841c94a677d07e"
+    license: Apache-2.0
+    expected_bytes: 145055866
+    commercial_status: allowed
+    approval_status: pending
+    selection_status: dormant_requires_explicit_escalation
+
+  - id: rfdetr-seg-xlarge-1.9.0
+    kind: model_weight
+    source: https://storage.googleapis.com/rfdetr/rf-detr-seg-xl-ft.pth
+    version: "registry-1.9.0"
+    sha256: ""
+    upstream_md5: "3693b35d0eea86ebb3e0444f4a611fba"
+    license: Apache-2.0
+    expected_bytes: 152713150
+    commercial_status: allowed
+    approval_status: pending
+    selection_status: dormant_requires_explicit_escalation
+
+  - id: roboflow-trackers-package-2.5.0.post0
+    kind: python_package
+    source: https://files.pythonhosted.org/packages/94/c7/a4e267efd2c0c14df812338c597b5bc1f911d2f6073fe03178369cf35912/trackers-2.5.0.post0-py3-none-any.whl
+    version: "2.5.0.post0@a35a60d4f39ad1d7f8713eb60f1839a9792edf20"
+    sha256: "bd2e1d1a9a0186a5d2aecfa0ea028f74b37bf8f662ba8e07407df3cc45183737"
+    license: Apache-2.0
+    expected_bytes: 144264
+    commercial_status: allowed
+    approval_status: pending
+    fetch_approval_status: approved
+    fetch_approval_scope: local_research_integrity_verification
+    fetch_verification_status: verified
+
+  - id: dinov2-small-model-ed25f3a
+    kind: model_weight
+    source: https://huggingface.co/facebook/dinov2-small/resolve/ed25f3a31f01632728cabb09d1542f84ab7b0056/model.safetensors
+    version: "ed25f3a31f01632728cabb09d1542f84ab7b0056"
+    sha256: "ae1e99fcefd534ed978cdeb8326f08030c96e28b7a81ffcbc98a857c84d14be1"
+    license: Apache-2.0
+    expected_bytes: 88249960
+    commercial_status: allowed
+    approval_status: pending
+    fetch_approval_status: approved
+    fetch_approval_scope: local_research_integrity_verification
+    fetch_verification_status: verified
+    selection_status: primary_identity_backbone
+
+  - id: dinov2-small-config-ed25f3a
+    kind: model_config
+    source: https://huggingface.co/facebook/dinov2-small/resolve/ed25f3a31f01632728cabb09d1542f84ab7b0056/config.json
+    version: "ed25f3a31f01632728cabb09d1542f84ab7b0056"
+    sha256: "1809f83e3bdb1609a501a610ad4a742f4fd8ae44d72ca4aa0df52d1f2ac8628d"
+    upstream_git_blob_sha1: "5664b325e6258d3960fad8c4c1cff958f3cc2272"
+    license: Apache-2.0
+    expected_bytes: 547
+    commercial_status: allowed
+    approval_status: pending
+    fetch_approval_status: approved
+    fetch_approval_scope: local_research_integrity_verification
+    fetch_verification_status: verified
+
+  - id: dinov2-small-preprocessor-ed25f3a
+    kind: model_config
+    source: https://huggingface.co/facebook/dinov2-small/resolve/ed25f3a31f01632728cabb09d1542f84ab7b0056/preprocessor_config.json
+    version: "ed25f3a31f01632728cabb09d1542f84ab7b0056"
+    sha256: "14e780d86fa1861f8751f868d7f45425b5feb55c38ca26f152ca5097ab30f828"
+    upstream_git_blob_sha1: "ff5b47c2edcd1d3556d63c01a65d93b58b9efce1"
+    license: Apache-2.0
+    expected_bytes: 436
+    commercial_status: allowed
+    approval_status: pending
+    fetch_approval_status: approved
+    fetch_approval_scope: local_research_integrity_verification
+    fetch_verification_status: verified
+
+  - id: det-sam2-only-test-labels-7d3fb984
+    kind: dataset_annotation
+    source: https://huggingface.co/ATA-space/Det-SAM2/resolve/7d3fb98497a2103251f7f3d6bb9a0f32e9b2aa41/data/Det-SAM2-Evaluation/only_test.jsonl
+    version: "7d3fb98497a2103251f7f3d6bb9a0f32e9b2aa41"
+    sha256: "078715ae907bbe5502350731fcce096a7544f057f84bc2ad6f510c1e0b5fd3da"
+    license: Apache-2.0-repository-declaration-video-provenance-unresolved
+    expected_bytes: 340
+    commercial_status: legal_review_required
+    approval_status: approved
+    approval_scope: local_internal_research_label_validation_and_baseline_only
+    approval_revision: boyu-2026-08-02-detsam2-only-test
+    training_status: prohibited
+    redistribution_status: prohibited
+    production_status: prohibited
+
+  - id: det-sam2-evaluation-usable-bundle-7d3fb984
+    kind: external_dataset_descriptor
+    source: https://huggingface.co/ATA-space/Det-SAM2/tree/7d3fb98497a2103251f7f3d6bb9a0f32e9b2aa41/data/Det-SAM2-Evaluation
+    version: "7d3fb98497a2103251f7f3d6bb9a0f32e9b2aa41"
+    sha256: "61bc5961d6b3edcfd3f2a292c1feea6887a7cdbc742450a8a7d2829e6c9e74ae"
+    descriptor_path: configs/algorithm/datasets/detsam2-evaluation-7d3fb984.yaml
+    descriptor_file_sha256: "0d1b8afd8572f211daa0487e1550e04d773174d5623ab654548acd3a8a0561ec"
+    license: Apache-2.0-repository-declaration-video-provenance-unresolved
+    expected_bytes: 573697171
+    expected_files: 95
+    commercial_status: legal_review_required
+    approval_status: approved
+    approval_scope: local_internal_research_pseudo_labels_and_training_only
+    approval_revision: boyu-2026-08-03-detsam2-effect-first
+    cloud_status: prohibited
+    redistribution_status: prohibited
+    production_status: prohibited
+    excluded_source_paths:
+      - videos/video151.mp4
+      - videos/video153.mp4
+      - videos/video154.mp4
+      - videos/video155.mp4
+      - videos/video157.mp4
+      - videos/video158.mp4
+      - videos/video159.mp4
+
+  - id: det-sam2-only-test-video1-7d3fb984
+    kind: external_development_video
+    source: https://huggingface.co/ATA-space/Det-SAM2/resolve/7d3fb98497a2103251f7f3d6bb9a0f32e9b2aa41/data/Det-SAM2-Evaluation/videos/video1.mp4
+    version: "7d3fb98497a2103251f7f3d6bb9a0f32e9b2aa41"
+    sha256: "ea3a7532718e53cdc2fb3715e4f41d6815bd20fbbb7806c6637ffa64a7f0387a"
+    license: Apache-2.0-repository-declaration-video-provenance-unresolved
+    expected_bytes: 6683605
+    commercial_status: legal_review_required
+    approval_status: approved
+    approval_scope: local_internal_research_label_validation_and_baseline_only
+    approval_revision: boyu-2026-08-02-detsam2-only-test
+    training_status: prohibited
+    redistribution_status: prohibited
+    production_status: prohibited
+
+  - id: det-sam2-only-test-video2-7d3fb984
+    kind: external_development_video
+    source: https://huggingface.co/ATA-space/Det-SAM2/resolve/7d3fb98497a2103251f7f3d6bb9a0f32e9b2aa41/data/Det-SAM2-Evaluation/videos/video2.mp4
+    version: "7d3fb98497a2103251f7f3d6bb9a0f32e9b2aa41"
+    sha256: "7fbb262def1ac7b9bd5ecfcef20e5b4f2ce02177cae88837c15f61f6fae3be24"
+    license: Apache-2.0-repository-declaration-video-provenance-unresolved
+    expected_bytes: 3100382
+    commercial_status: legal_review_required
+    approval_status: approved
+    approval_scope: local_internal_research_label_validation_and_baseline_only
+    approval_revision: boyu-2026-08-02-detsam2-only-test
+    training_status: prohibited
+    redistribution_status: prohibited
+    production_status: prohibited
+
+  - id: det-sam2-only-test-video3-7d3fb984
+    kind: external_development_video
+    source: https://huggingface.co/ATA-space/Det-SAM2/resolve/7d3fb98497a2103251f7f3d6bb9a0f32e9b2aa41/data/Det-SAM2-Evaluation/videos/video3.mp4
+    version: "7d3fb98497a2103251f7f3d6bb9a0f32e9b2aa41"
+    sha256: "55c3d09de7f976e46bebd50622b1a7b5d75f11e142f52bf952ef1e777c412aa0"
+    license: Apache-2.0-repository-declaration-video-provenance-unresolved
+    expected_bytes: 7422877
+    commercial_status: legal_review_required
+    approval_status: approved
+    approval_scope: local_internal_research_label_validation_and_baseline_only
+    approval_revision: boyu-2026-08-02-detsam2-only-test
+    training_status: prohibited
+    redistribution_status: prohibited
+    production_status: prohibited
+
+  - id: billiards-public-dataset
+    kind: dataset
+    source: https://github.com/FJ-Rodriguez-Lozano/Billiard-dataset
+    version: repository-review-2026-07-31
+    sha256: ""
+    license: CC-BY-SA-4.0
+    expected_bytes: 190000000000
+    commercial_status: legal_review_required
+    approval_status: pending
+
+  - id: cuedetat-model
+    kind: model_weight
+    source: https://github.com/HereLiesAz/CueDetat
+    version: reviewed-2026-07-31
+    sha256: ""
+    license: AGPL-3.0
+    expected_bytes: 24971937
+    commercial_status: excluded
+    approval_status: rejected

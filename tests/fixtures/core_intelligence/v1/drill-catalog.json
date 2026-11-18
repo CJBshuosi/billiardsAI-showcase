@@ -1,0 +1,166 @@
+{
+  "schema_version": "1.0",
+  "catalog_version": "2026.08",
+  "created_at": "2026-08-04T09:00:00Z",
+  "drills": [
+    {
+      "schema_version": "1.0",
+      "drill_id": "capability-target-zone-01",
+      "revision": 1,
+      "supersedes_revision": null,
+      "supersedes_content_sha256": null,
+      "skill_codes": ["CUE_BALL_CONTROL"],
+      "minimum_level": 2,
+      "maximum_level": 5,
+      "prerequisite_skill_codes": ["POTTING"],
+      "setup": {
+        "table_width_mm": 1270,
+        "table_length_mm": 2540,
+        "placements": [
+          {"ball_code": "CUE", "position": {"x_mm": 635, "y_mm": 635}},
+          {"ball_code": "OBJECT_1", "position": {"x_mm": 1270, "y_mm": 635}}
+        ],
+        "target_pocket_code": null,
+        "target_zone": {
+          "zone_code": "CENTER_CONTROL_ZONE",
+          "minimum_x_mm": 1750,
+          "maximum_x_mm": 2050,
+          "minimum_y_mm": 500,
+          "maximum_y_mm": 770
+        }
+      },
+      "instructions": ["Pot the object ball.", "Leave the cue ball inside the target zone."],
+      "success_metrics": [
+        {"metric_code": "TARGET_ZONE_SUCCESS_COUNT", "target_attempts": 10, "minimum_successes": 6}
+      ],
+      "progression_rule": {"reason_code": "SUCCESS_STREAK", "threshold": 4, "level_delta": 1},
+      "regression_rule": {"reason_code": "FAILURE_STREAK", "threshold": 3, "level_delta": -1},
+      "required_equipment_codes": ["STANDARD_TABLE"],
+      "required_capabilities": ["CUE_BALL_TARGET_ZONE", "TABLE_MM_COORDINATES"],
+      "safety_codes": ["KEEP_CUE_CLEAR_OF_BYSTANDERS"],
+      "contraindication_codes": ["SHOULDER_INJURY"],
+      "review_status": "APPROVED",
+      "review_lineage": {
+        "reviewer_id": "00000000-0000-4000-8000-000000000901",
+        "reviewed_at": "2026-08-04T08:00:00Z",
+        "reason_code": "INITIAL_SYNTHETIC_REVIEW"
+      },
+      "content_sha256": "b299513eb50c3fbb7e2b488bbb64682e7c906b940725f42347c514f7308c434b"
+    },
+    {
+      "schema_version": "1.0",
+      "drill_id": "disabled-bank-shot-01",
+      "revision": 1,
+      "supersedes_revision": null,
+      "supersedes_content_sha256": null,
+      "skill_codes": ["BANK_SHOT"],
+      "minimum_level": 3,
+      "maximum_level": 5,
+      "prerequisite_skill_codes": ["POTTING"],
+      "setup": {
+        "table_width_mm": 1270,
+        "table_length_mm": 2540,
+        "placements": [
+          {"ball_code": "CUE", "position": {"x_mm": 650, "y_mm": 350}},
+          {"ball_code": "OBJECT_1", "position": {"x_mm": 1450, "y_mm": 920}}
+        ],
+        "target_pocket_code": "TOP_LEFT",
+        "target_zone": null
+      },
+      "instructions": ["Bank the object ball from the side cushion.", "Stop if the lane is not clear."],
+      "success_metrics": [
+        {"metric_code": "BANK_POT_SUCCESS_COUNT", "target_attempts": 10, "minimum_successes": 5}
+      ],
+      "progression_rule": {"reason_code": "SUCCESS_STREAK", "threshold": 3, "level_delta": 1},
+      "regression_rule": {"reason_code": "FAILURE_STREAK", "threshold": 2, "level_delta": -1},
+      "required_equipment_codes": ["STANDARD_TABLE"],
+      "required_capabilities": ["TABLE_MM_COORDINATES"],
+      "safety_codes": ["KEEP_CUE_CLEAR_OF_BYSTANDERS"],
+      "contraindication_codes": ["SHOULDER_INJURY"],
+      "review_status": "DISABLED",
+      "review_lineage": {
+        "reviewer_id": "00000000-0000-4000-8000-000000000901",
+        "reviewed_at": "2026-08-04T08:05:00Z",
+        "reason_code": "SYNTHETIC_DISABLED_PATH"
+      },
+      "content_sha256": "d120744660e10a570f49655b0994ad5860bcf1bae1d6a51e9b2118ac42b275a9"
+    },
+    {
+      "schema_version": "1.0",
+      "drill_id": "large-angle-potting-01",
+      "revision": 1,
+      "supersedes_revision": null,
+      "supersedes_content_sha256": null,
+      "skill_codes": ["POTTING"],
+      "minimum_level": 2,
+      "maximum_level": 5,
+      "prerequisite_skill_codes": ["POTTING"],
+      "setup": {
+        "table_width_mm": 1270,
+        "table_length_mm": 2540,
+        "placements": [
+          {"ball_code": "CUE", "position": {"x_mm": 620, "y_mm": 320}},
+          {"ball_code": "OBJECT_1", "position": {"x_mm": 1380, "y_mm": 890}}
+        ],
+        "target_pocket_code": "TOP_RIGHT",
+        "target_zone": null
+      },
+      "instructions": ["Align for the marked large cut angle.", "Pot the object ball without adding spin."],
+      "success_metrics": [
+        {"metric_code": "POT_SUCCESS_COUNT", "target_attempts": 20, "minimum_successes": 12}
+      ],
+      "progression_rule": {"reason_code": "SUCCESS_STREAK", "threshold": 4, "level_delta": 1},
+      "regression_rule": {"reason_code": "FAILURE_STREAK", "threshold": 3, "level_delta": -1},
+      "required_equipment_codes": ["STANDARD_TABLE"],
+      "required_capabilities": ["TABLE_MM_COORDINATES"],
+      "safety_codes": ["KEEP_CUE_CLEAR_OF_BYSTANDERS"],
+      "contraindication_codes": ["SHOULDER_INJURY"],
+      "review_status": "APPROVED",
+      "review_lineage": {
+        "reviewer_id": "00000000-0000-4000-8000-000000000901",
+        "reviewed_at": "2026-08-04T08:10:00Z",
+        "reason_code": "INITIAL_SYNTHETIC_REVIEW"
+      },
+      "content_sha256": "59ab9ebb09e1398db0621078d58e40c5ed60a6a4365aba3cec38a0084c4d0ad7"
+    },
+    {
+      "schema_version": "1.0",
+      "drill_id": "straight-potting-01",
+      "revision": 1,
+      "supersedes_revision": null,
+      "supersedes_content_sha256": null,
+      "skill_codes": ["POTTING"],
+      "minimum_level": 1,
+      "maximum_level": 3,
+      "prerequisite_skill_codes": [],
+      "setup": {
+        "table_width_mm": 1270,
+        "table_length_mm": 2540,
+        "placements": [
+          {"ball_code": "CUE", "position": {"x_mm": 635, "y_mm": 635}},
+          {"ball_code": "OBJECT_1", "position": {"x_mm": 1270, "y_mm": 635}}
+        ],
+        "target_pocket_code": "TOP_CENTER",
+        "target_zone": null
+      },
+      "instructions": ["Align the cue ball and object ball.", "Pot the object ball into the target pocket."],
+      "success_metrics": [
+        {"metric_code": "POT_SUCCESS_COUNT", "target_attempts": 20, "minimum_successes": 14}
+      ],
+      "progression_rule": {"reason_code": "SUCCESS_STREAK", "threshold": 4, "level_delta": 1},
+      "regression_rule": {"reason_code": "FAILURE_STREAK", "threshold": 3, "level_delta": -1},
+      "required_equipment_codes": ["STANDARD_TABLE"],
+      "required_capabilities": ["TABLE_MM_COORDINATES"],
+      "safety_codes": ["KEEP_CUE_CLEAR_OF_BYSTANDERS"],
+      "contraindication_codes": ["SHOULDER_INJURY"],
+      "review_status": "APPROVED",
+      "review_lineage": {
+        "reviewer_id": "00000000-0000-4000-8000-000000000901",
+        "reviewed_at": "2026-08-04T08:15:00Z",
+        "reason_code": "INITIAL_SYNTHETIC_REVIEW"
+      },
+      "content_sha256": "dd4429dfa02e2742e04279313354c1897ac4090b894390e8480a271d0ae31eec"
+    }
+  ],
+  "content_sha256": "412aef2d42a58f1b1d3692453f5c90cc29411d9cc6ff03b113b51e0bc3747957"
+}

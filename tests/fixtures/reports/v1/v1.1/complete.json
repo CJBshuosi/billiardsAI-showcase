@@ -1,0 +1,329 @@
+{
+  "schema_version": "1.1",
+  "report_id": "30000000-0000-4000-8000-000000000101",
+  "revision": 2,
+  "parent_revision_id": "30000000-0000-4000-8000-000000000001",
+  "session_id": "10000000-0000-4000-8000-000000000001",
+  "generated_at": "2026-07-29T14:00:00Z",
+  "analysis_version": "phase0-3.3",
+  "calibration_status": "ACTIVE",
+  "report_status": "DRAFT_PENDING_REVIEW",
+  "quality_summary": {
+    "shot_count": 4,
+    "abstained_shot_count": 0,
+    "abstention_rate": 0.0,
+    "session_quality_status": "SUFFICIENT_COVERAGE"
+  },
+  "session_statistics": {
+    "total_shot_count": 4,
+    "valid_shot_count": 4,
+    "potted_ball_count": 2,
+    "successful_potting_shot_count": 2,
+    "potting_shot_count": 4,
+    "pot_rate": 0.5,
+    "cushion_distribution": [
+      {
+        "cushion_count": 0,
+        "shot_count": 3
+      },
+      {
+        "cushion_count": 1,
+        "shot_count": 1
+      }
+    ],
+    "cushion_count_shot_count": 4,
+    "average_cue_ball_travel_distance_mm": 650.0,
+    "cue_ball_travel_shot_count": 4,
+    "cue_ball_end_distribution": [
+      {
+        "position": {
+          "x_mm": 800,
+          "y_mm": 500
+        },
+        "shot_count": 4
+      }
+    ],
+    "cue_ball_end_shot_count": 4,
+    "target_zone_deviation_by_source": []
+  },
+  "dimension_scores": {
+    "potting": {
+      "score": 50,
+      "status": "SCORED"
+    },
+    "positioning": {
+      "score": null,
+      "status": "UNSUPPORTED"
+    },
+    "power_control": {
+      "score": null,
+      "status": "UNSUPPORTED"
+    },
+    "rotation_application": {
+      "score": null,
+      "status": "UNSUPPORTED"
+    }
+  },
+  "abstention_summary": {
+    "total_shot_count": 4,
+    "abstained_shot_count": 0,
+    "display_text": "0 杆超出当前分析范围"
+  },
+  "typical_shots": [],
+  "coaching_recommendations": [],
+  "headline": {
+    "code": "READY",
+    "text": "本场已找到可复核的典型杆证据和下一步训练方向。"
+  },
+  "trust_scope": {
+    "review_status": "APPROVED",
+    "total_shot_count": 4,
+    "valid_shot_count": 4,
+    "abstained_shot_count": 0,
+    "calibration_status": "ACTIVE",
+    "unsupported_dimensions": [
+      "positioning",
+      "power_control",
+      "rotation_application"
+    ],
+    "default_expanded": true
+  },
+  "objective_statistics": {
+    "source": {
+      "session_id": "10000000-0000-4000-8000-000000000001",
+      "report_id": "30000000-0000-4000-8000-000000000001",
+      "report_revision": 1
+    },
+    "analysis_version": "phase0-3.3",
+    "shot_ids": [
+      "50000000-0000-4000-8000-000000000001",
+      "50000000-0000-4000-8000-000000000002",
+      "50000000-0000-4000-8000-000000000003",
+      "50000000-0000-4000-8000-000000000004"
+    ],
+    "content_sha256": "be576c32ed7f23381c5ffb6f95a05a1531bfa91517c2348b45e71cdc4dbfcd83"
+  },
+  "typical_shot_analysis": {
+    "status": "READY",
+    "no_data_reason": null,
+    "cards": [
+      {
+        "shot_id": "50000000-0000-4000-8000-000000000001",
+        "sequence": 1,
+        "selection_rank": 1,
+        "selection_reason": "severe_foul",
+        "selection_reason_text": "严重犯规代表",
+        "rule_version": "1.0",
+        "visualization_status": "SUCCEEDED",
+        "visualization_reason": null,
+        "asset_reference": {
+          "asset_id": "visualization-0f39d0344b0f3ecff9a3208ed146025f659f4d4af683da1a7fb1ea07fdeeca0b",
+          "asset_content_sha256": "0f39d0344b0f3ecff9a3208ed146025f659f4d4af683da1a7fb1ea07fdeeca0b",
+          "spec_version": "actual-ideal-overlay/1.0",
+          "text_summary": "实际母球路径来源为 CV，置信度 90%；理想路径来源为 pooltool 0.6.0。",
+          "actual": {
+            "source": "CV",
+            "confidence": 0.9
+          },
+          "ideal": {
+            "adapter_version": "pooltool-adapter-1.0",
+            "engine_name": "pooltool",
+            "engine_version": "0.6.0",
+            "configuration_version": "chinese-eight-ball-9ft-v1"
+          },
+          "source_approved_lineage": {
+            "session_id": "10000000-0000-4000-8000-000000000001",
+            "report_id": "30000000-0000-4000-8000-000000000001",
+            "report_revision": 1
+          },
+          "target_report_lineage": {
+            "session_id": "10000000-0000-4000-8000-000000000001",
+            "report_id": "30000000-0000-4000-8000-000000000101",
+            "report_revision": 2
+          },
+          "exact_source_binding": {
+            "schema_version": "1.0",
+            "asset_id": "visualization-0f39d0344b0f3ecff9a3208ed146025f659f4d4af683da1a7fb1ea07fdeeca0b",
+            "asset_content_sha256": "0f39d0344b0f3ecff9a3208ed146025f659f4d4af683da1a7fb1ea07fdeeca0b",
+            "source": {
+              "session_id": "10000000-0000-4000-8000-000000000001",
+              "report_id": "30000000-0000-4000-8000-000000000001",
+              "report_revision": 1,
+              "shot_id": "50000000-0000-4000-8000-000000000001"
+            },
+            "target_session_id": "10000000-0000-4000-8000-000000000001",
+            "target_report_id": "30000000-0000-4000-8000-000000000001",
+            "target_report_revision": 1,
+            "target_shot_id": "50000000-0000-4000-8000-000000000001"
+          }
+        }
+      },
+      {
+        "shot_id": "50000000-0000-4000-8000-000000000002",
+        "sequence": 2,
+        "selection_rank": 2,
+        "selection_reason": "severe_deviation",
+        "selection_reason_text": "母球停位偏差代表",
+        "rule_version": "1.0",
+        "visualization_status": "SUCCEEDED",
+        "visualization_reason": null,
+        "asset_reference": {
+          "asset_id": "visualization-9ba68a25b22f7423307fe6e205f538868a4e6578a8bd95363301603dbb2cbf0e",
+          "asset_content_sha256": "9ba68a25b22f7423307fe6e205f538868a4e6578a8bd95363301603dbb2cbf0e",
+          "spec_version": "actual-ideal-overlay/1.0",
+          "text_summary": "实际母球路径来源为 CV，置信度 90%；理想路径来源为 pooltool 0.6.0。",
+          "actual": {
+            "source": "CV",
+            "confidence": 0.9
+          },
+          "ideal": {
+            "adapter_version": "pooltool-adapter-1.0",
+            "engine_name": "pooltool",
+            "engine_version": "0.6.0",
+            "configuration_version": "chinese-eight-ball-9ft-v1"
+          },
+          "source_approved_lineage": {
+            "session_id": "10000000-0000-4000-8000-000000000001",
+            "report_id": "30000000-0000-4000-8000-000000000001",
+            "report_revision": 1
+          },
+          "target_report_lineage": {
+            "session_id": "10000000-0000-4000-8000-000000000001",
+            "report_id": "30000000-0000-4000-8000-000000000101",
+            "report_revision": 2
+          },
+          "exact_source_binding": {
+            "schema_version": "1.0",
+            "asset_id": "visualization-9ba68a25b22f7423307fe6e205f538868a4e6578a8bd95363301603dbb2cbf0e",
+            "asset_content_sha256": "9ba68a25b22f7423307fe6e205f538868a4e6578a8bd95363301603dbb2cbf0e",
+            "source": {
+              "session_id": "10000000-0000-4000-8000-000000000001",
+              "report_id": "30000000-0000-4000-8000-000000000001",
+              "report_revision": 1,
+              "shot_id": "50000000-0000-4000-8000-000000000002"
+            },
+            "target_session_id": "10000000-0000-4000-8000-000000000001",
+            "target_report_id": "30000000-0000-4000-8000-000000000001",
+            "target_report_revision": 1,
+            "target_shot_id": "50000000-0000-4000-8000-000000000002"
+          }
+        }
+      },
+      {
+        "shot_id": "50000000-0000-4000-8000-000000000004",
+        "sequence": 4,
+        "selection_rank": 3,
+        "selection_reason": "positive_potting",
+        "selection_reason_text": "正向进球样本",
+        "rule_version": "1.0",
+        "visualization_status": "SUCCEEDED",
+        "visualization_reason": null,
+        "asset_reference": {
+          "asset_id": "visualization-204aa9a7932a4d7befd1be2e35ba15ce9abfab3d8631fe2ea9f8a557f57bd598",
+          "asset_content_sha256": "204aa9a7932a4d7befd1be2e35ba15ce9abfab3d8631fe2ea9f8a557f57bd598",
+          "spec_version": "actual-ideal-overlay/1.0",
+          "text_summary": "实际母球路径来源为 CV，置信度 90%；理想路径来源为 pooltool 0.6.0。",
+          "actual": {
+            "source": "CV",
+            "confidence": 0.9
+          },
+          "ideal": {
+            "adapter_version": "pooltool-adapter-1.0",
+            "engine_name": "pooltool",
+            "engine_version": "0.6.0",
+            "configuration_version": "chinese-eight-ball-9ft-v1"
+          },
+          "source_approved_lineage": {
+            "session_id": "10000000-0000-4000-8000-000000000001",
+            "report_id": "30000000-0000-4000-8000-000000000001",
+            "report_revision": 1
+          },
+          "target_report_lineage": {
+            "session_id": "10000000-0000-4000-8000-000000000001",
+            "report_id": "30000000-0000-4000-8000-000000000101",
+            "report_revision": 2
+          },
+          "exact_source_binding": {
+            "schema_version": "1.0",
+            "asset_id": "visualization-204aa9a7932a4d7befd1be2e35ba15ce9abfab3d8631fe2ea9f8a557f57bd598",
+            "asset_content_sha256": "204aa9a7932a4d7befd1be2e35ba15ce9abfab3d8631fe2ea9f8a557f57bd598",
+            "source": {
+              "session_id": "10000000-0000-4000-8000-000000000001",
+              "report_id": "30000000-0000-4000-8000-000000000001",
+              "report_revision": 1,
+              "shot_id": "50000000-0000-4000-8000-000000000004"
+            },
+            "target_session_id": "10000000-0000-4000-8000-000000000001",
+            "target_report_id": "30000000-0000-4000-8000-000000000001",
+            "target_report_revision": 1,
+            "target_shot_id": "50000000-0000-4000-8000-000000000004"
+          }
+        }
+      }
+    ]
+  },
+  "training_recommendation": {
+    "result": {
+      "catalog_version": "1.0",
+      "status": "READY",
+      "reason": null,
+      "source_lineage": {
+        "session_id": "10000000-0000-4000-8000-000000000001",
+        "report_id": "30000000-0000-4000-8000-000000000001",
+        "report_revision": 1,
+        "selection_rule_version": "1.0"
+      },
+      "recommendations": [
+        {
+          "semantic_core": {
+            "rule_id": "reduce-foul-risk",
+            "rule_version": "1.0",
+            "scope": "SESSION_PRIMARY",
+            "claim_code": "REDUCE_FOUL_RISK",
+            "practice_code": "TRACK_BASIC_SHOTS_WITHOUT_FOUL"
+          },
+          "evidence": [
+            {
+              "evidence_kind": "FOUL",
+              "shot_id": "50000000-0000-4000-8000-000000000001",
+              "sequence": 1,
+              "confidence": "high",
+              "analysis_status": "analyzed",
+              "review_status": "approved",
+              "selection_rank": 1,
+              "selection_reason": "severe_foul",
+              "selection_rule_version": "1.0",
+              "is_foul": true,
+              "potted_balls": null,
+              "deviation_mm": null,
+              "target_zone_source": null
+            }
+          ],
+          "drill": {
+            "practice_code": "TRACK_BASIC_SHOTS_WITHOUT_FOUL",
+            "instruction": "固定同一组基础直线球位重复击球，逐杆记录是否犯规。"
+          },
+          "title": "建议下次重点练：减少犯规",
+          "primary_advice": "先把无犯规的基础击球稳定下来。",
+          "wording_variant": "RULE_ORIGINAL"
+        }
+      ],
+      "fallback": null,
+      "content_sha256": "a93833a2a7778199bd50c2761a01af6691414cf3255fcb9ed286e8a7a8a52a8e"
+    }
+  },
+  "quality_notice": {
+    "data_coverage_status": "SUFFICIENT_COVERAGE",
+    "algorithm_boundaries": [
+      "positioning",
+      "power_control",
+      "rotation_application"
+    ],
+    "current_revision": 2,
+    "source_parent_report_id": "30000000-0000-4000-8000-000000000001",
+    "source_parent_revision": 1,
+    "created_as_status": "DRAFT_PENDING_REVIEW",
+    "review_notice": "本报告新增教练内容，须再次人工复核后方可交付。"
+  },
+  "content_sha256": "236a7df4aa87199063f2cba211252cc14c367018b282da62e76b2ebd5de9bd2f"
+}

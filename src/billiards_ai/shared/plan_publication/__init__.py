@@ -1,0 +1,51 @@
+"""Final plan-publication contracts, canonical codec and Ed25519 adapters."""
+
+from billiards_ai.shared.plan_publication.codec import (
+    CanonicalCodecError,
+    canonical_json_bytes,
+    decode_bundle,
+    decode_bundle_v3,
+    decode_canonical_json,
+    encode_bundle,
+    encode_bundle_v3,
+)
+from billiards_ai.shared.plan_publication.contracts import (
+    AuthorizationBinding,
+    CapabilityManifest,
+    DecodedPublishedPlanBundle,
+    DecodedPublishedPlanBundleV3,
+    DrillExecutionPolicyDefinitionV1,
+    ExecutionPolicyCatalogV1,
+    FinalTrainingPlan,
+    FinalTrainingPlanV3,
+    GrowthRuntimeViewV2,
+    PublicVerificationKey,
+    PublishedPlanEnvelope,
+    PublishedPlanEnvelopeV3,
+    PublishedPlanPayload,
+    PublishedPlanPayloadV3,
+)
+
+__all__ = [
+    "AuthorizationBinding",
+    "CanonicalCodecError",
+    "CapabilityManifest",
+    "DecodedPublishedPlanBundle",
+    "DecodedPublishedPlanBundleV3",
+    "DrillExecutionPolicyDefinitionV1",
+    "ExecutionPolicyCatalogV1",
+    "FinalTrainingPlan",
+    "FinalTrainingPlanV3",
+    "GrowthRuntimeViewV2",
+    "PublicVerificationKey",
+    "PublishedPlanEnvelope",
+    "PublishedPlanEnvelopeV3",
+    "PublishedPlanPayload",
+    "PublishedPlanPayloadV3",
+    "canonical_json_bytes",
+    "decode_bundle",
+    "decode_bundle_v3",
+    "decode_canonical_json",
+    "encode_bundle",
+    "encode_bundle_v3",
+]

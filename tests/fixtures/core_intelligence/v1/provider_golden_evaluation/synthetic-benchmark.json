@@ -1,0 +1,42 @@
+{
+  "schema_version": "1.0",
+  "fixture_classification": "SYNTHETIC_TEST",
+  "notice": "SYNTHETIC TEST DATA ONLY. NOT HUMAN-COACH APPROVED AND NOT PRODUCTION ELIGIBLE.",
+  "benchmark_id": "coach-golden-synthetic-v1",
+  "benchmark_revision": 1,
+  "prompt_version": "growth-analysis-v1",
+  "prompt_sha256": "2c144a5c1e4176d90ff7610676a8a2c83e0a2233b17609e4c80e021ebe3a4d8e",
+  "drill_catalog_content_sha256": "b993cd13b0e5e8786265e78de51152f3be23b148493b756487bb75d724fcdfd4",
+  "reference_set_revision": 1,
+  "repetition_count": 2,
+  "test_candidate_pricing": {
+    "policy_version": "pricing-v1",
+    "input_microunits_per_million_tokens": 1000,
+    "output_microunits_per_million_tokens": 2000
+  },
+  "hard_gates": {
+    "policy_version": "provider-hard-gates-v1",
+    "minimum_evidence_score_bps": 10000,
+    "minimum_numeric_score_bps": 10000,
+    "minimum_drill_score_bps": 10000,
+    "maximum_unsupported_violations": 0,
+    "minimum_stability_score_bps": 10000,
+    "maximum_observed_cost_microunits": 100,
+    "maximum_estimated_cost_microunits": 100,
+    "maximum_p95_latency_ms": 500
+  },
+  "cases": [
+    {
+      "case_id": "growth-supported-001",
+      "task_type": "GROWTH_ASSESSMENT",
+      "input_payload": {
+        "fixture_classification": "SYNTHETIC_TEST",
+        "synthetic_context_id": "context-001"
+      },
+      "expected_evidence_refs": ["metric-shot-001"],
+      "expected_numeric_facts": [{"fact_code": "attempt_count", "value": 10}],
+      "expected_claim_codes": ["CUT_ANGLE_NEEDS_WORK"],
+      "expected_drill_refs": [{"drill_id": "cut-angle-basic", "drill_revision": 1}]
+    }
+  ]
+}

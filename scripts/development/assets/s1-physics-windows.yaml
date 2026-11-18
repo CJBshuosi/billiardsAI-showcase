@@ -1,0 +1,202 @@
+{
+  "contract": "s1-physics-windows-wheels/v1",
+  "metadata_override": "panda3d>=1.10.13,<1.11; original pooltool wheel unchanged",
+  "payload_bytes": 202686001,
+  "payload_count": 24,
+  "source_uv_lock_sha256": "1d2b8dd7fb0c6f5f64ea47ecf5c19a6fbebbf05ac94d42dc9a8855cbba1b4954",
+  "target": "CPython312-win_amd64",
+  "wheels": [
+    {
+      "bytes": 67548,
+      "filename": "attrs-26.1.0-py3-none-any.whl",
+      "name": "attrs",
+      "sha256": "c647aa4a12dfbad9333ca4e71fe62ddc36f4e63b2d260a37a8b83d2f043ac309",
+      "url": "https://files.pythonhosted.org/packages/64/b4/17d4b0b2a2dc85a6df63d1157e028ed19f90d4cd97c36717afef2bc2f395/attrs-26.1.0-py3-none-any.whl",
+      "version": "26.1.0"
+    },
+    {
+      "bytes": 73054,
+      "filename": "cattrs-26.1.0-py3-none-any.whl",
+      "name": "cattrs",
+      "sha256": "d1e0804c42639494d469d08d4f26d6b9de9b8ab26b446db7b5f8c2e97f7c3096",
+      "url": "https://files.pythonhosted.org/packages/80/56/60547f7801b97c67e97491dc3d9ade9fbccbd0325058fd3dfcb2f5d98d90/cattrs-26.1.0-py3-none-any.whl",
+      "version": "26.1.0"
+    },
+    {
+      "bytes": 119243,
+      "filename": "click-8.4.2-py3-none-any.whl",
+      "name": "click",
+      "sha256": "e6f9f66136c816745b9d65817da91d61d957fb16e02e4dcd0552553c5a197b76",
+      "url": "https://files.pythonhosted.org/packages/fb/e2/79c688af8b210d232694e31e59da9f6ec747bae31c3f5946e4e9b98860d5/click-8.4.2-py3-none-any.whl",
+      "version": "8.4.2"
+    },
+    {
+      "bytes": 25335,
+      "filename": "colorama-0.4.6-py2.py3-none-any.whl",
+      "name": "colorama",
+      "sha256": "4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6",
+      "url": "https://files.pythonhosted.org/packages/d1/d6/3965ed04c63042e047cb6a3e6ed1a63a35087b6a609aa3a15ed8ac56c221/colorama-0.4.6-py2.py3-none-any.whl",
+      "version": "0.4.6"
+    },
+    {
+      "bytes": 37515,
+      "filename": "h11-0.16.0-py3-none-any.whl",
+      "name": "h11",
+      "sha256": "63cf8bbe7522de3bf65932fda1d9c2772064ffb3dae62d55932da54b31cb6c86",
+      "url": "https://files.pythonhosted.org/packages/04/4b/29cac41a4d98d144bf5f6d33995617b185d14b22401f75ca86f384e87ff1/h11-0.16.0-py3-none-any.whl",
+      "version": "0.16.0"
+    },
+    {
+      "bytes": 3182868,
+      "filename": "h5py-3.16.0-cp312-cp312-win_amd64.whl",
+      "name": "h5py",
+      "sha256": "96b422019a1c8975c2d5dadcf61d4ba6f01c31f92bbde6e4649607885fe502d6",
+      "url": "https://files.pythonhosted.org/packages/03/c1/0976b235cf29ead553e22f2fb6385a8252b533715e00d0ae52ed7b900582/h5py-3.16.0-cp312-cp312-win_amd64.whl",
+      "version": "3.16.0"
+    },
+    {
+      "bytes": 38132231,
+      "filename": "llvmlite-0.45.1-cp312-cp312-win_amd64.whl",
+      "name": "llvmlite",
+      "sha256": "9e6c9949baf25d9aa9cd7cf0f6d011b9ca660dd17f5ba2b23bdbdb77cc86b116",
+      "url": "https://files.pythonhosted.org/packages/33/94/9ba4ebcf4d541a325fd8098ddc073b663af75cc8b065b6059848f7d4dce7/llvmlite-0.45.1-cp312-cp312-win_amd64.whl",
+      "version": "0.45.1"
+    },
+    {
+      "bytes": 91687,
+      "filename": "markdown_it_py-4.2.0-py3-none-any.whl",
+      "name": "markdown-it-py",
+      "sha256": "9f7ebbcd14fe59494226453aed97c1070d83f8d24b6fc3a3bcf9a38092641c4a",
+      "url": "https://files.pythonhosted.org/packages/b3/81/4da04ced5a082363ecfa159c010d200ecbd959ae410c10c0264a38cac0f5/markdown_it_py-4.2.0-py3-none-any.whl",
+      "version": "4.2.0"
+    },
+    {
+      "bytes": 9979,
+      "filename": "mdurl-0.1.2-py3-none-any.whl",
+      "name": "mdurl",
+      "sha256": "84008a41e51615a49fc9966191ff91509e3c40b939176e643fd50a5c2196b8f8",
+      "url": "https://files.pythonhosted.org/packages/b3/38/89ba8ad64ae25be8de66a6d463314cf1eb366222074cfda9ee839c56a4b4/mdurl-0.1.2-py3-none-any.whl",
+      "version": "0.1.2"
+    },
+    {
+      "bytes": 77272,
+      "filename": "msgpack-1.2.4-cp312-cp312-win_amd64.whl",
+      "name": "msgpack",
+      "sha256": "6e38b123681df22373d545520f54bbeddc4706d9235a1161061f12bd6648497d",
+      "url": "https://files.pythonhosted.org/packages/81/c5/dd0e78eb04f9a0773a810d25ef2cd8f16bb941487567d0c63f814881133c/msgpack-1.2.4-cp312-cp312-win_amd64.whl",
+      "version": "1.2.4"
+    },
+    {
+      "bytes": 6919,
+      "filename": "msgpack_numpy-0.4.8-py2.py3-none-any.whl",
+      "name": "msgpack-numpy",
+      "sha256": "773c19d4dfbae1b3c7b791083e2caf66983bb19b40901646f61d8731554ae3da",
+      "url": "https://files.pythonhosted.org/packages/9b/5d/f25ac7d4fb77cbd53ddc6d05d833c6bf52b12770a44fa9a447eed470ca9a/msgpack_numpy-0.4.8-py2.py3-none-any.whl",
+      "version": "0.4.8"
+    },
+    {
+      "bytes": 2745552,
+      "filename": "numba-0.62.1-cp312-cp312-win_amd64.whl",
+      "name": "numba",
+      "sha256": "44e3aa6228039992f058f5ebfcfd372c83798e9464297bdad8cc79febcf7891e",
+      "url": "https://files.pythonhosted.org/packages/80/44/79bfdab12a02796bf4f1841630355c82b5a69933b1d50eb15c7fa37dabe8/numba-0.62.1-cp312-cp312-win_amd64.whl",
+      "version": "0.62.1"
+    },
+    {
+      "bytes": 12782922,
+      "filename": "numpy-2.3.5-cp312-cp312-win_amd64.whl",
+      "name": "numpy",
+      "sha256": "86945f2ee6d10cdfd67bcb4069c1662dd711f7e2a4343db5cecec06b87cf31aa",
+      "url": "https://files.pythonhosted.org/packages/2d/57/8aeaf160312f7f489dea47ab61e430b5cb051f59a98ae68b7133ce8fa06a/numpy-2.3.5-cp312-cp312-win_amd64.whl",
+      "version": "2.3.5"
+    },
+    {
+      "bytes": 70264,
+      "filename": "numpy_quaternion-2024.0.13-cp312-cp312-win_amd64.whl",
+      "name": "numpy-quaternion",
+      "sha256": "a6f4b0d7002961e0d1e93fec77fc23b607f7840e99eeafe52d10502296601849",
+      "url": "https://files.pythonhosted.org/packages/88/3c/2fad7bec16d2180c138721ef70bc6a0b42bbcf1f3783d22b9cd4804d6cbc/numpy_quaternion-2024.0.13-cp312-cp312-win_amd64.whl",
+      "version": "2024.0.13"
+    },
+    {
+      "bytes": 65586786,
+      "filename": "panda3d-1.10.16-cp312-cp312-win_amd64.whl",
+      "name": "panda3d",
+      "sha256": "f6493e2ecc0d1b7c1556a999556e5278cbc9484fe5fe1e159a1ccc02b870b18f",
+      "url": "https://files.pythonhosted.org/packages/5e/06/8f32a501a98d82a10060c1f75ed5c06672d652022763079c49ed67b970ef/panda3d-1.10.16-cp312-cp312-win_amd64.whl",
+      "version": "1.10.16"
+    },
+    {
+      "bytes": 27758,
+      "filename": "panda3d_gltf-1.3.0-py3-none-any.whl",
+      "name": "panda3d-gltf",
+      "sha256": "2512500ee7e2fc13431dc47e9510efff2c29b9dd82714bd2c36165be2c82ef97",
+      "url": "https://files.pythonhosted.org/packages/24/0f/b9406c4434422822039a4daefdc479e71326131f2a0f80f88f7cfc60e9c8/panda3d_gltf-1.3.0-py3-none-any.whl",
+      "version": "1.3.0"
+    },
+    {
+      "bytes": 2457097,
+      "filename": "panda3d_simplepbr-0.13.1-py3-none-any.whl",
+      "name": "panda3d-simplepbr",
+      "sha256": "cda41cb57cff035b851646956cfbdcc408bee42511dabd4f2d7bd4fbf48c57a9",
+      "url": "https://files.pythonhosted.org/packages/11/5d/3744c6550dddf933785a37cdd4a9921fe13284e6d115b5a2637fe390f158/panda3d_simplepbr-0.13.1-py3-none-any.whl",
+      "version": "0.13.1"
+    },
+    {
+      "bytes": 7272166,
+      "filename": "pillow-13.0.0-cp312-cp312-win_amd64.whl",
+      "name": "pillow",
+      "sha256": "ff3fe9eb621fbb9db4c4be33ab946f6bac5f98ab50ca8d3260503653656c961b",
+      "url": "https://files.pythonhosted.org/packages/ff/cd/73a79ecdc822076002eb24b5e1e4a530b0bb5310fcb6d239abbec877110b/pillow-13.0.0-cp312-cp312-win_amd64.whl",
+      "version": "13.0.0"
+    },
+    {
+      "bytes": 31581172,
+      "filename": "pooltool_billiards-0.6.0-py3-none-any.whl",
+      "name": "pooltool-billiards",
+      "sha256": "c47a46aeeeac6eea645e5c1610211ce0f0ae350e4b77909b8dd55b66e77b3bd5",
+      "url": "https://files.pythonhosted.org/packages/7c/14/bf4fac0e16abf8245399a2d0e14444c717722299684f6e319a0117baf8d8/pooltool_billiards-0.6.0-py3-none-any.whl",
+      "version": "0.6.0"
+    },
+    {
+      "bytes": 1231151,
+      "filename": "pygments-2.20.0-py3-none-any.whl",
+      "name": "pygments",
+      "sha256": "81a9e26dd42fd28a23a2d169d86d7ac03b46e2f8b59ed4698fb4785f946d0176",
+      "url": "https://files.pythonhosted.org/packages/f4/7e/a72dd26f3b0f4f2bf1dd8923c85f7ceb43172af56d63c7383eb62b332364/pygments-2.20.0-py3-none-any.whl",
+      "version": "2.20.0"
+    },
+    {
+      "bytes": 154003,
+      "filename": "pyyaml-6.0.3-cp312-cp312-win_amd64.whl",
+      "name": "pyyaml",
+      "sha256": "5fcd34e47f6e0b794d17de1b4ff496c00986e1c83f7ab2fb8fcfe9616ff7477b",
+      "url": "https://files.pythonhosted.org/packages/86/bf/899e81e4cce32febab4fb42bb97dcdf66bc135272882d1987881a4b519e9/pyyaml-6.0.3-cp312-cp312-win_amd64.whl",
+      "version": "6.0.3"
+    },
+    {
+      "bytes": 310480,
+      "filename": "rich-14.3.4-py3-none-any.whl",
+      "name": "rich",
+      "sha256": "07e7adb4690f68864777b1450859253bed81a99a31ac321ac1817b2313558952",
+      "url": "https://files.pythonhosted.org/packages/b3/76/6d163cfac87b632216f71879e6b2cf17163f773ff59c00b5ff4900a80fa3/rich-14.3.4-py3-none-any.whl",
+      "version": "14.3.4"
+    },
+    {
+      "bytes": 36597428,
+      "filename": "scipy-1.18.0-cp312-cp312-win_amd64.whl",
+      "name": "scipy",
+      "sha256": "71ccc8faa2dd16ac310233203474a8b5cb67f10dedd54a3116d34943f4b19132",
+      "url": "https://files.pythonhosted.org/packages/2b/54/9a9edb45345bd6744da5ddfb6628e5d5185920494c6a67ec45b6381004cb/scipy-1.18.0-cp312-cp312-win_amd64.whl",
+      "version": "1.18.0"
+    },
+    {
+      "bytes": 45571,
+      "filename": "typing_extensions-4.16.0-py3-none-any.whl",
+      "name": "typing-extensions",
+      "sha256": "481caa481374e813c1b176ada14e97f1f67a4539ce9cfeb3f350d78d6370c2e8",
+      "url": "https://files.pythonhosted.org/packages/49/d3/b8441a820a491ddfc024b0b0cf0393375b75ea13866d9c66727e54c2fc80/typing_extensions-4.16.0-py3-none-any.whl",
+      "version": "4.16.0"
+    }
+  ]
+}

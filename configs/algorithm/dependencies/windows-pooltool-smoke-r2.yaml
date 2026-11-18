@@ -1,0 +1,14 @@
+schema_version: "1.0"
+request_id: windows-pooltool-smoke-r2
+purpose: synthetic_smoke
+target:
+  os: windows
+  os_version: "11.0"
+  architecture: x86_64
+  python_implementation: cp
+  python_version: "3.12.10"
+root: pooltool-billiards==0.6.0
+pypi_index: https://pypi.org/simple/
+panda3d_index: https://archive.panda3d.org/simple/
+single_response_bytes_max: 12582912
+total_metadata_bytes_max: 134217728

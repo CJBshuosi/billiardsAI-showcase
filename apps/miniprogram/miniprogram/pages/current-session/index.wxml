@@ -1,0 +1,70 @@
+<view class="page-shell">
+  <text class="eyebrow">当前球桌</text>
+  <text class="hero">{{status === 'ended' ? '这一场，已结束。' : (!actorRole ? '今天，你是哪一方？' : (started ? '收起手机，看球桌。' : (!redOccupied || !blueOccupied ? '你已就位。等球友加入。' : '先说好，再开球。')))}}</text>
+  <view wx:if="{{loading}}" class="card"><text>正在读取现场状态…</text></view>
+  <view wx:elif="{{errorCode}}" class="error">
+    <text wx:if="{{errorCode === 'NETWORK_UNAVAILABLE'}}">连接中断，现场状态待核对。</text>
+    <text wx:elif="{{errorCode === 'TABLE_CODE_DISABLED'}}">这张球桌暂不可加入。</text>
+    <text wx:elif="{{errorCode === 'SESSION_NOT_JOINABLE'}}">本场已结束或暂不可加入。</text>
+    <text>{{errorMessage}}</text><button bindtap="refresh" disabled="{{refreshing}}">重新查看现场</button>
+  </view>
+  <block wx:else>
+    <view class="card identity"><text class="state">{{displayName || '球友'}}</text><text class="muted">{{actorRole ? (actorRole === 'red' ? '本场红方身份已确认' : '本场蓝方身份已确认') : '本场身份尚未认领'}}</text><text class="tiny">红蓝用于区分双方，不代表花色或全色球组。</text></view>
+    <view wx:if="{{!actorRole && status === 'open' && !started}}" class="stack">
+      <button class="role-option red" data-role="red" disabled="{{redOccupied || submitting || commandState === 'pending' || commandState === 'claimed' || commandState === 'unknown'}}" bindtap="claimRole"><text class="role-title">● 红方</text><text class="tiny">{{redOccupied ? '已被认领' : '确认认领红方身份'}}</text></button>
+      <button class="role-option blue" data-role="blue" disabled="{{blueOccupied || submitting || commandState === 'pending' || commandState === 'claimed' || commandState === 'unknown'}}" bindtap="claimRole"><text class="role-title">● 蓝方</text><text class="tiny">{{blueOccupied ? '已被认领' : '确认认领蓝方身份'}}</text></button>
+      <text wx:if="{{redOccupied && blueOccupied}}" class="muted">双方都已就位，你尚未成为本场选手。</text>
+    </view>
+    <view wx:if="{{!actorRole && started}}" class="card"><text>本场已开始，当前不能认领身份。</text></view>
+    <block wx:if="{{actorRole && status === 'open'}}">
+      <view wx:if="{{!started && (!redOccupied || !blueOccupied)}}" class="card"><text class="state">等待对手扫码加入</text><text class="muted">请球友扫描同一球桌的大屏二维码。这里会自动更新，不用反复扫码。</text></view>
+      <view wx:if="{{!started && redOccupied && blueOccupied}}" class="card outlined">
+        <text class="state">先说好，再开球。</text>
+        <block wx:if="{{!matchState || matchState.status === 'not_configured'}}">
+          <text class="tiny">模式</text><view class="tab-row"><button class="{{matchMode === 'observation' ? 'selected' : ''}}" data-mode="observation" bindtap="chooseMatchMode">观察模式</button><button class="{{matchMode === 'assistance' ? 'selected' : ''}}" data-mode="assistance" bindtap="chooseMatchMode">辅助模式</button></view>
+          <text class="tiny">赛制</text><view class="tab-row"><button class="{{matchFormat === 'single' ? 'selected' : ''}}" data-format="single" bindtap="chooseMatchFormat">单局</button><button class="{{matchFormat === 'race' ? 'selected' : ''}}" data-format="race" bindtap="chooseMatchFormat">抢球</button></view>
+          <input wx:if="{{matchFormat === 'race'}}" class="field-input" type="number" min="2" max="99" value="{{raceTarget}}" bindinput="updateRaceTarget" placeholder="抢几"/>
+          <text class="tiny">谁先开球？</text><view class="row"><button class="{{selectedBreaker === 'red' ? 'selected-choice' : ''}}" data-role="red" bindtap="setBreaker">红方</button><button class="{{selectedBreaker === 'blue' ? 'selected-choice' : ''}}" data-role="blue" bindtap="setBreaker">蓝方</button></view>
+          <view class="setting-line"><text>{{matchMode === 'observation' ? '计入正式排名' : '辅助模式固定不计排名'}}</text><switch checked="{{rankingIntent}}" disabled="{{matchMode !== 'observation'}}" bindchange="toggleRankingIntent" color="#111111"/></view>
+          <button class="primary dark" bindtap="proposeMatchSettings" disabled="{{!selectedBreaker || matchBusy}}">提交给双方确认</button>
+        </block>
+        <block wx:elif="{{matchState.status === 'awaiting_settings_confirmations'}}">
+          <text class="muted">{{matchState.settings.mode === 'observation' ? '观察模式' : '辅助模式'}} · {{matchState.settings.format === 'single' ? '单局' : '抢 ' + matchState.settings.race_target}} · {{matchState.settings.first_breaker === 'red' ? '红方' : '蓝方'}}开球</text>
+          <text class="muted">{{matchState.settings.ranking_intent ? '正式积分局' : '本场不计排名'}}</text>
+          <text class="tiny">已确认：{{matchState.settings_confirmations.length}} / 2。任一修改都会让旧确认失效。</text>
+          <button class="primary dark" bindtap="confirmMatchSettings" disabled="{{matchBusy || actorSettingsConfirmed}}">{{actorSettingsConfirmed ? '我已确认，等待对方' : '确认这套设置'}}</button>
+        </block>
+        <block wx:elif="{{matchState.status === 'ready'}}">
+          <text class="muted">双方已确认：{{matchState.settings.mode === 'observation' ? '观察模式' : '辅助模式'}} · {{matchState.settings.format === 'single' ? '单局' : '抢 ' + matchState.settings.race_target}} · {{matchState.settings.first_breaker === 'red' ? '红方' : '蓝方'}}开球</text>
+          <button class="primary dark" bindtap="startMatch" disabled="{{breakerLocked || submitting}}">通知球桌开始</button>
+        </block>
+        <text wx:if="{{matchErrorMessage}}" class="error">{{matchErrorMessage}}</text>
+      </view>
+      <view wx:if="{{started}}" class="card outlined"><text class="state">本场进行中</text><text wx:if="{{activeRole}}" class="muted">现场记录轮次：{{activeRole === 'red' ? '红方' : '蓝方'}}</text><text wx:if="{{redGroup}}" class="muted">红方{{redGroup === 'stripe' ? '花色' : '全色'}} · 蓝方{{blueGroup === 'stripe' ? '花色' : '全色'}}</text><text class="tiny">实际击球人自动识别尚未接入，轮次记录不是识别结果。</text></view>
+      <view wx:if="{{matchState && matchState.status === 'awaiting_result_confirmations'}}" class="card result-confirmation"><text class="tiny">设备候选赛果</text><text class="state">红方 {{matchState.result.red_score}} : {{matchState.result.blue_score}} 蓝方</text><text class="muted">候选胜方：{{matchState.result.winner_role === 'red' ? '红方' : '蓝方'}}</text><view wx:if="{{matchState.actor_result_confirmed}}" class="feedback">你已确认，等待对方。现在还没有正式加减分。</view><view wx:else class="row"><button class="primary dark" bindtap="confirmCurrentResult" disabled="{{matchBusy}}">结果正确</button><button class="secondary" bindtap="disputeCurrentResult" disabled="{{matchBusy}}">结果有问题</button></view><text class="tiny">双方一致并通过资格与风控后才进入积分账本。</text></view>
+      <view wx:if="{{matchState && matchState.status === 'disputed'}}" class="card"><text class="state">赛果已进入核对</text><text class="muted">争议解决前不计分，也不会显示加减 0 分。</text></view>
+    </block>
+    <view wx:if="{{submitting}}" class="feedback">正在提交，请勿重复点击。</view>
+    <view wx:elif="{{commandState === 'pending' || commandState === 'claimed'}}" class="feedback"><text class="state">等待现场确认</text><text class="muted">本页会自动查询结果，请以大屏提示为准。</text></view>
+    <view wx:elif="{{commandState === 'applied'}}" class="feedback"><text>{{commandMessage || '现场状态已更新'}}</text></view>
+    <view wx:elif="{{commandState === 'unknown'}}" class="feedback"><text class="state">正在核对操作结果</text><text class="muted">请先核对大屏。若状态已变化且仍无法确认，请让工作人员处理，不重复启动。</text><button bindtap="retrySubmission" disabled="{{submitting || status !== 'open'}}">用原请求重新查询</button></view>
+    <view wx:elif="{{commandState === 'rejected' || commandState === 'expired'}}" class="feedback"><text>操作未完成，请核对现场状态。</text><button bindtap="refresh">刷新现场</button></view>
+    <view wx:if="{{commandErrorMessage}}" class="error">{{commandErrorMessage}}</view>
+    <view wx:if="{{status === 'ended'}}" class="card outlined"><text class="state">本场已结束</text><text class="muted">报告和片段可能仍在同步。设备准备下一场，不会沿用你的身份。</text><navigator class="primary" url="/pages/session-detail/index?session_id={{sessionId}}">查看本场报告</navigator></view>
+    <view wx:if="{{actorRole && status === 'open'}}" class="footer-actions">
+      <button wx:if="{{!started}}" class="secondary" bindtap="releaseRole" disabled="{{submitting || commandState === 'pending' || commandState === 'claimed' || commandState === 'unknown'}}">认领错了？释放身份</button>
+      <button class="danger" bindtap="endSession" disabled="{{submitting || commandState === 'pending' || commandState === 'claimed' || commandState === 'unknown'}}">结束本场</button>
+      <button class="debug-toggle" bindtap="toggleDebug">{{showDebug ? '收起现场调试工具' : '展开现场调试工具'}}</button>
+      <view wx:if="{{showDebug}}" class="card debug">
+        <text class="state">仅供开发联调使用</text><text class="muted">保留旧版人工控制，不是普通用户每杆操作流程；未新增任何服务权限。</text>
+        <text class="tiny">现场版本：{{revision}}</text><text class="tiny">场次：{{sessionId}}</text>
+        <view class="row"><button data-group="stripe" bindtap="assignGroups" disabled="{{!redOccupied || !blueOccupied || submitting || commandState === 'pending' || commandState === 'claimed' || commandState === 'unknown'}}">红方花色</button><button data-group="solid" bindtap="assignGroups" disabled="{{!redOccupied || !blueOccupied || submitting || commandState === 'pending' || commandState === 'claimed' || commandState === 'unknown'}}">红方全色</button></view>
+        <text class="tiny">更正球组仍需遵循原服务的双方确认规则。</text>
+        <button bindtap="continueTurn" disabled="{{activeRole !== actorRole || submitting || commandState === 'pending' || commandState === 'claimed' || commandState === 'unknown'}}">本方继续击球</button>
+        <button bindtap="switchTurn" disabled="{{activeRole !== actorRole || submitting || commandState === 'pending' || commandState === 'claimed' || commandState === 'unknown'}}">轮到对方击球</button>
+      </view>
+    </view>
+  </block>
+  <navigator class="list-row" open-type="reLaunch" url="/pages/home/index"><text>返回我的球技</text><text class="chevron">›</text></navigator>
+  <text class="tiny">返回不等于退出本场；再次扫描本桌可恢复加入状态。</text>
+</view>
