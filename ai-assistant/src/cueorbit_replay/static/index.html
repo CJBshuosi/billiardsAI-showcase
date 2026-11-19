@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CueOrbit — Replay lab</title><link rel="icon" href="data:,"><link rel="stylesheet" href="/static/styles.css?v=unified-4"><script src="/static/app.js?v=unified-4" defer></script></head>
+<body>
+<header><a class="brand" href="/" aria-label="CueOrbit home"><span class="mark">↗</span> CueOrbit<span class="label">REPLAY LAB</span></a><span class="local">LOCAL / M2</span></header>
+<main>
+<section class="intro"><p class="eyebrow">OBSERVATION → EVIDENCE → REPLAY</p><h1>Return to the shot.<br><span>Stay with the facts.</span></h1><p class="lede">Explore a session, inspect the record, and see exactly what supports the answer.</p></section>
+<div class="workspace">
+<aside class="panel"><p class="step">01 / OPTIONAL REPLAY CONTEXT</p><label for="session">Synthetic session (optional)</label><select id="session" disabled><option value="">Loading sessions…</option></select><p id="session-state" class="muted" aria-live="polite">Connecting to the local data service…</p><div id="stats" class="stats"></div><p class="small">Three hand-annotated demos. Observed outcomes describe records; they do not establish player scores, ball totals or technical causes.</p><div class="divider"></div><label for="mode">Answer mode</label><select id="mode"><option value="offline">Offline fixture mode</option><option value="live" disabled>Live model — not configured</option></select><p id="mode-note" class="mode-note">OFFLINE FIXTURE MODE · Scripted responses for development. This is not a real model evaluation.</p></aside>
+<section class="panel review"><p class="step">02 / ASK ABOUT THE RECORD OR RULES</p>
+<p id="rules-edition" class="edition"></p><p id="rules-capability" class="small" aria-live="polite"></p><div id="replay-context"><section class="clip-browser" aria-label="Recorded clips"><div class="clip-heading"><h2>Choose a moment</h2><span class="small">Click a clip, then ask “this shot”.</span></div><p id="clip-status" class="small" aria-live="polite">Loading clips…</p><div id="clip-list" class="clip-list"></div><div class="clip-actions"><button id="more-clips" type="button" hidden>More clips ↓</button><button id="retry-clips" type="button" hidden>Retry clips</button></div></section>
+<div class="selection-bar"><p id="selection-context" aria-live="polite">Whole session / 整场 · Click a clip to ask about this shot.</p><button id="clear-selection" type="button" hidden>Clear selection / 清除选择</button></div><div id="replay-player"></div>
+</div><div id="replay-pane"><form id="ask-form"><label for="question">Your question <span class="muted">(English or Chinese)</span></label><textarea id="question" maxlength="2000" rows="3" placeholder="这一杆发生了什么？ / Does the 8-ball need a called pocket?" required></textarea><div class="form-footer"><span class="small">Up to 3 model rounds · 4 tools · 30 seconds</span><button id="ask" type="submit" disabled>Ask <span>↗</span></button></div></form>
+<div id="examples" class="examples"><button type="button">Session summary</button><button type="button">Call the pocket?</button><button type="button">This shot / 这一杆</button><button type="button">Can this clip prove a foul?</button></div>
+<div id="response" aria-live="polite" aria-busy="false"><div class="empty"><span class="orbit">◎</span><h2>A record worth revisiting.</h2><p>Choose a question to explore the observations.<br>Missing evidence will stay visible.</p></div></div>
+</div>
+</section>
+</div><footer><span>一杆 / CUEORBIT</span><span>Synthetic replay · Registered official rule excerpts · Local preview.</span></footer>
+</main></body></html>

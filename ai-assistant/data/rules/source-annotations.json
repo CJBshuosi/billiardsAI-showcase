@@ -1,0 +1,36 @@
+{
+  "corpus_hash": "c6d379e9861cf3069528173f281f240be3b891d3596ab29403d5f35779ee5a9f",
+  "version": "heyball-editorial-2026-11-18-v2",
+  "annotations": [
+    {
+      "annotation_id": "heyball-II4-quantity-scope",
+      "chunk_id": "rule-5daa9b63b8469f54815969faeda662d06cacc0caa99d57fd",
+      "source_id": "wpa-heyball-20250816",
+      "pdf_sha256": "2b92dd5088ea630337326e26b7a2a7a4499a9801f2c5da7e5cc40421d5424a24",
+      "text_sha256": "8d73d395a85675026e47a28746677dbf4e4621fdd3fe51ff98556907518db272",
+      "fragment": "first two rows of three balls",
+      "kind": "quantity_scope",
+      "note": "AI editorial audit, not official rule text: collective versus per-row quantity is ambiguous in this English phrase. Inspect the original page and figure; do not infer per-row counts from this wording."
+    },
+    {
+      "annotation_id": "heyball-II4-correction-scope",
+      "chunk_id": "rule-5daa9b63b8469f54815969faeda662d06cacc0caa99d57fd",
+      "source_id": "wpa-heyball-20250816",
+      "pdf_sha256": "2b92dd5088ea630337326e26b7a2a7a4499a9801f2c5da7e5cc40421d5424a24",
+      "text_sha256": "8d73d395a85675026e47a28746677dbf4e4621fdd3fe51ff98556907518db272",
+      "fragment": "may request corrections.",
+      "kind": "procedure_scope",
+      "note": "AI editorial audit, not official rule text: this correction phrase does not define a separate formal re-rack entitlement or prohibition. Do not silently equate those procedures."
+    },
+    {
+      "annotation_id": "heyball-II4-corner-scope",
+      "chunk_id": "rule-5daa9b63b8469f54815969faeda662d06cacc0caa99d57fd",
+      "source_id": "wpa-heyball-20250816",
+      "pdf_sha256": "2b92dd5088ea630337326e26b7a2a7a4499a9801f2c5da7e5cc40421d5424a24",
+      "text_sha256": "8d73d395a85675026e47a28746677dbf4e4621fdd3fe51ff98556907518db272",
+      "fragment": "one solid ball and one stripe ball at each end of the base of the triangle",
+      "kind": "quantity_scope",
+      "note": "AI editorial audit, not official rule text: allocation across the two ends versus a count at each end is ambiguous in this English sentence. Consult the original diagram before asserting per-corner quantities."
+    }
+  ]
+}

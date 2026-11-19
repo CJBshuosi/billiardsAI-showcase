@@ -6,6 +6,8 @@
 
 ## 从哪里开始看
 
+- [AI 工程实现](ai-assistant/README.md)：RAG、Embedding、原生工具调用、引用校验和评估。
+
 - [系统与模块](docs/architecture.md)：输入如何进入系统，感知、录像、回放和同步如何配合。
 - [源码导览](docs/source-guide.md)：各功能的代码位置。
 - [隐私与片段保留](docs/engineering/privacy/image-retention-deletion.md)：授权、保留和删除边界。
@@ -15,6 +17,7 @@
 
 | 目录 | 内容 |
 |---|---|
+| `ai-assistant` | 独立 AI 应用：规则 RAG、记录查询、工具编排与精选测试 |
 | `src/billiards_ai/lab` | 摄像头/黑盒输入接入、现场运行时、大屏 HTTP 与媒体处理 |
 | `src/billiards_ai/edge` | 本地录像、逐杆状态、路线辅助、同步与清理 |
 | `src/billiards_ai/cloud` | 会话、媒体、分析、训练与复核服务 |

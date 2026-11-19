@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "source_id": "wpa-heyball-20250816",
+  "ruleset_id": "wpa-heyball",
+  "effective_date": "2025-08-16",
+  "source_url": "https://wpapool.com/wp-content/uploads/2025/08/250816-Rules-of-Heyball.pdf",
+  "retrieved_at": "2026-11-17T15:13:42.998050+00:00",
+  "pdf_sha256": "2b92dd5088ea630337326e26b7a2a7a4499a9801f2c5da7e5cc40421d5424a24",
+  "scope_sections": [
+    "II",
+    "A"
+  ],
+  "extraction_version": "pypdf-7.1.0-nfkc-ws-v2",
+  "data_kind": "official",
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "dimension": 384
+}

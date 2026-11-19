@@ -1,0 +1,25 @@
+[project]
+name = "cueorbit-replay"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = ["fastapi>=0.115", "uvicorn>=0.32", "pydantic>=2.10", "sqlalchemy[asyncio]>=2.0", "asyncpg>=0.30", "httpx>=0.28", "python-dotenv>=1.2"]
+[project.optional-dependencies]
+rag = ["fastembed==0.9.1", "onnxruntime==1.32.0", "pgvector==0.5.1", "pypdf==7.1.0"]
+[project.scripts]
+cueorbit-replay = "cueorbit_replay.cli:main"
+cueorbit-rules = "cueorbit_replay.rules.cli:main"
+[dependency-groups]
+dev = ["pytest>=8", "pytest-asyncio>=0.25", "ruff>=0.9", "pillow>=11"]
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+pythonpath = ["."]
+[tool.ruff]
+target-version = "py312"
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = ["E501"]

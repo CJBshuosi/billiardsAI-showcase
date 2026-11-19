@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0",
+  "bundle_id": "bundle-empty",
+  "revision": 1,
+  "data_kind": "synthetic",
+  "session": {
+    "session_id": "demo-empty",
+    "title": "Empty observation demo",
+    "limitations": [
+      "no_player_attribution",
+      "no_automatic_adjudication"
+    ]
+  },
+  "shots": [],
+  "media": [
+    {
+      "media_id": "clip-empty",
+      "filename": "empty.mp4",
+      "duration_ms": 2000
+    }
+  ]
+}

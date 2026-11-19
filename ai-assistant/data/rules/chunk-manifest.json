@@ -1,0 +1,692 @@
+{
+  "source": {
+    "schema_version": "1.0",
+    "source_id": "wpa-heyball-20250816",
+    "ruleset_id": "wpa-heyball",
+    "effective_date": "2025-08-16",
+    "source_url": "https://wpapool.com/wp-content/uploads/2025/08/250816-Rules-of-Heyball.pdf",
+    "retrieved_at": "2026-11-17T15:13:42.998050+00:00",
+    "pdf_sha256": "2b92dd5088ea630337326e26b7a2a7a4499a9801f2c5da7e5cc40421d5424a24",
+    "scope_sections": [
+      "II",
+      "A"
+    ],
+    "extraction_version": "pypdf-7.1.0-nfkc-ws-v2",
+    "data_kind": "official",
+    "embedding_model": "intfloat/multilingual-e5-small",
+    "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "dimension": 384
+  },
+  "contexts": [
+    {
+      "ruleset_id": "wpa-heyball",
+      "version": "2025-08-16",
+      "corpus_hash": "a47b1f1579a225bc7f03598894885934e771e3925eb20b545a739df72147dae8",
+      "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3"
+    },
+    {
+      "ruleset_id": "wpa-heyball",
+      "version": "2025-08-16",
+      "corpus_hash": "c6d379e9861cf3069528173f281f240be3b891d3596ab29403d5f35779ee5a9f",
+      "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3"
+    }
+  ],
+  "active_context": {
+    "ruleset_id": "wpa-heyball",
+    "version": "2025-08-16",
+    "corpus_hash": "c6d379e9861cf3069528173f281f240be3b891d3596ab29403d5f35779ee5a9f",
+    "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3"
+  },
+  "chunks": [
+    {
+      "chunk_id": "rule-24e657ee0927cedc637b45b8a4db632d268209a2ff2f1c48",
+      "rule_number": "II.1",
+      "heading": "Player\u2019s Responsibilities",
+      "page_start": 6,
+      "page_end": 6,
+      "text_sha256": "7d14d5da7608028129618b34c1f78919f09478f0a9abe01334ed1e9ce1762dc7",
+      "body_tokens": 65,
+      "input_tokens": 78
+    },
+    {
+      "chunk_id": "rule-9b1daa31a044f9f06865c4a24de0f77e4e7f24510ebb35a8",
+      "rule_number": "II.2",
+      "heading": "Method of Play",
+      "page_start": 6,
+      "page_end": 6,
+      "text_sha256": "adfaec05d00af6459d407e4c0198119f0678cb10ca86fb2290e12ddd4b574ef0",
+      "body_tokens": 51,
+      "input_tokens": 60
+    },
+    {
+      "chunk_id": "rule-8333d172a9f3e7e0d0a41704f4b06d4adc18b9d8d17c9d7a",
+      "rule_number": "II.3",
+      "heading": "Equipment",
+      "page_start": 6,
+      "page_end": 6,
+      "text_sha256": "ecc5578908d1fcd230dddfa32118cef0813e4008af2bddfb1b5cab8b0b24b43c",
+      "body_tokens": 198,
+      "input_tokens": 206
+    },
+    {
+      "chunk_id": "rule-5daa9b63b8469f54815969faeda662d06cacc0caa99d57fd",
+      "rule_number": "II.4",
+      "heading": "Racking Balls",
+      "page_start": 6,
+      "page_end": 6,
+      "text_sha256": "8d73d395a85675026e47a28746677dbf4e4621fdd3fe51ff98556907518db272",
+      "body_tokens": 145,
+      "input_tokens": 155
+    },
+    {
+      "chunk_id": "rule-2b36b69ab808e152a3948b6c48b395fb8556d175cad41dea",
+      "rule_number": "II.5",
+      "heading": "Lag for Break",
+      "page_start": 7,
+      "page_end": 7,
+      "text_sha256": "fc337e7b8bf7f3976b8baf9e7df6ab63bd869b762dfb150502e832a3061c271c",
+      "body_tokens": 121,
+      "input_tokens": 130
+    },
+    {
+      "chunk_id": "rule-73ab66dcc6a66911a495a1037238ee9248fa20a9444a7aeb",
+      "rule_number": "II.5.1",
+      "heading": "Lag for Break",
+      "page_start": 7,
+      "page_end": 7,
+      "text_sha256": "7f1229c126276ebb1cd55f6c66ee4379b05c5c7400ac51ff17b02afe41773039",
+      "body_tokens": 120,
+      "input_tokens": 129
+    },
+    {
+      "chunk_id": "rule-6fa0b287a08ee82839c6c60c8425ec4a4ac3242f72bb4965",
+      "rule_number": "II.5.2",
+      "heading": "Lag for Break",
+      "page_start": 7,
+      "page_end": 7,
+      "text_sha256": "9e549a55093f8eed732d895e120dafc62f7093998ee6724965121a581bdf2abc",
+      "body_tokens": 90,
+      "input_tokens": 99
+    },
+    {
+      "chunk_id": "rule-a16905b6567cce2251692ec1284998569c38ff60f182c489",
+      "rule_number": "II.6",
+      "heading": "Break shot",
+      "page_start": 7,
+      "page_end": 8,
+      "text_sha256": "d8e6d8a83d7af0af4ee09ee5fd0085e21a72fcea4bb389994f1fc5791bef34d4",
+      "body_tokens": 369,
+      "input_tokens": 377
+    },
+    {
+      "chunk_id": "rule-4e8a41eadf408a183a1b31d4eee00267b4460717e0e9cda5",
+      "rule_number": "II.6",
+      "heading": "Break shot",
+      "page_start": 8,
+      "page_end": 8,
+      "text_sha256": "04d8f9ceb01a66d5ad54276a1f4f845c24c43cc40365feab12fc9a9b87909647",
+      "body_tokens": 124,
+      "input_tokens": 132
+    },
+    {
+      "chunk_id": "rule-36d231b10762952132bf13486233b8ad7359a7d8935f9c20",
+      "rule_number": "II.7",
+      "heading": "Re-spotting Balls",
+      "page_start": 8,
+      "page_end": 8,
+      "text_sha256": "ca85c41c36a1dbaf05a2f1c55bd2720bac9f26cc9b0502d473616fa679930832",
+      "body_tokens": 164,
+      "input_tokens": 176
+    },
+    {
+      "chunk_id": "rule-a0bc92614a103a481ba00f4cfc563d3ba2a864e9def79b6e",
+      "rule_number": "II.8",
+      "heading": "Ball in Hand Behind the Head String",
+      "page_start": 8,
+      "page_end": 8,
+      "text_sha256": "4bd30ec018fc6a74b7f7f0d0bf9a86ce470f1b343505c6999d5c1729233ed027",
+      "body_tokens": 205,
+      "input_tokens": 220
+    },
+    {
+      "chunk_id": "rule-5479434d593dcb953bca61a4ba48f4970cd76889de95e597",
+      "rule_number": "II.9",
+      "heading": "Ball in Hand",
+      "page_start": 8,
+      "page_end": 8,
+      "text_sha256": "9d4dfd4899c1de13e70c993eed4f86ba155bd0f97f55ff4bc6ac447d819961d5",
+      "body_tokens": 181,
+      "input_tokens": 190
+    },
+    {
+      "chunk_id": "rule-3e666f81395b2ce892aebbdc8fe14844beffa287a2bbb17e",
+      "rule_number": "II.10",
+      "heading": "Open Table",
+      "page_start": 8,
+      "page_end": 8,
+      "text_sha256": "8ed0d1ee2ed5e488a065293f16d1b0b8aa866c965aa399cb92def875d76d3f9d",
+      "body_tokens": 33,
+      "input_tokens": 41
+    },
+    {
+      "chunk_id": "rule-8a076be4f8af243818bc2d12df754ca23c5d4b0241851220",
+      "rule_number": "II.10.1",
+      "heading": "Open Table",
+      "page_start": 8,
+      "page_end": 9,
+      "text_sha256": "cf993dffd26c1f0b30424468c3c546fd30c5b6c1d30e1f218605614e9d87690a",
+      "body_tokens": 108,
+      "input_tokens": 116
+    },
+    {
+      "chunk_id": "rule-663bb072d3e5cb9a181087bea92e7dc0e9246c4849493879",
+      "rule_number": "II.10.2",
+      "heading": "Open Table",
+      "page_start": 9,
+      "page_end": 9,
+      "text_sha256": "528c5dfd0d000ac249b121ae99377529f0cdf44ce3bb1834f9ceaafd5cc315d1",
+      "body_tokens": 31,
+      "input_tokens": 39
+    },
+    {
+      "chunk_id": "rule-42aa9135d4a53402fafc86f6c20b1f50e04769cb8fd6907d",
+      "rule_number": "II.10.3",
+      "heading": "Open Table",
+      "page_start": 9,
+      "page_end": 9,
+      "text_sha256": "01da825fa061be6ffac4519553bab0544fa59a55e2f1bd9c392114be57843be6",
+      "body_tokens": 78,
+      "input_tokens": 86
+    },
+    {
+      "chunk_id": "rule-f84fd0250d858d04ac167d161b270d3e546e37817a25e086",
+      "rule_number": "II.10.4",
+      "heading": "Open Table",
+      "page_start": 9,
+      "page_end": 9,
+      "text_sha256": "19fed74cd1bb51643e88c857af9cc585d2532489006faa3b30289531d128fbb1",
+      "body_tokens": 83,
+      "input_tokens": 91
+    },
+    {
+      "chunk_id": "rule-2a8e9dc4b19aac14a966cc9fd9b07c5df0371997cf514582",
+      "rule_number": "II.11",
+      "heading": "Call Your Shot - No Need",
+      "page_start": 9,
+      "page_end": 9,
+      "text_sha256": "f8d6739d7abd3eee9c42500c67f9c0b39d477af26e83f5af0700f9c21adfe65c",
+      "body_tokens": 38,
+      "input_tokens": 51
+    },
+    {
+      "chunk_id": "rule-78207548b7fafb45d3989050e6b0c6b7148ce3737b45ecf9",
+      "rule_number": "II.12.1",
+      "heading": "Playing Shots",
+      "page_start": 9,
+      "page_end": 9,
+      "text_sha256": "239e5b02056fe89656405ae944f474a6bf11f1cded2bfa2e06234a3313151574",
+      "body_tokens": 115,
+      "input_tokens": 125
+    },
+    {
+      "chunk_id": "rule-930331e22b8f69bad46ce9a4548de9370f2490ec311f8f18",
+      "rule_number": "II.12.2",
+      "heading": "Playing Shots",
+      "page_start": 9,
+      "page_end": 9,
+      "text_sha256": "82f5251c3fa5cd7734db65b9594cb00ee4b867938f3fb14eb9d1f3f5e5273853",
+      "body_tokens": 39,
+      "input_tokens": 49
+    },
+    {
+      "chunk_id": "rule-5aa448d9d308f766cb1ca9ebf15fe254a87700f8dddf7748",
+      "rule_number": "II.12.3",
+      "heading": "Playing Shots",
+      "page_start": 9,
+      "page_end": 9,
+      "text_sha256": "7ad606330e4bc388ff264c7d036232f35ed77a2da256e33df1cad57716a45036",
+      "body_tokens": 65,
+      "input_tokens": 75
+    },
+    {
+      "chunk_id": "rule-b3e4631a2e2beacf332b3a9e9a6805198c3f9df3e1ab6268",
+      "rule_number": "II.12.4",
+      "heading": "Playing Shots",
+      "page_start": 9,
+      "page_end": 9,
+      "text_sha256": "f47ccb5ed9bb92d8820c90d4f70c659debf3c841f08404d9cf28b1c487a1e2ea",
+      "body_tokens": 62,
+      "input_tokens": 72
+    },
+    {
+      "chunk_id": "rule-45c78506285ecf1c66a2e5f5f5f41169ee88739f2d9946d5",
+      "rule_number": "II.12.5",
+      "heading": "Playing Shots",
+      "page_start": 9,
+      "page_end": 9,
+      "text_sha256": "45131942ad20e5cccb9ec705fd08977c99e394e4ae939e3d12325e1793bf2c4f",
+      "body_tokens": 63,
+      "input_tokens": 73
+    },
+    {
+      "chunk_id": "rule-43c3120eadfd59a251fada955538f05cebef1b6eced73304",
+      "rule_number": "II.12.6",
+      "heading": "Playing Shots",
+      "page_start": 9,
+      "page_end": 9,
+      "text_sha256": "797c8cdffbcd5283d62a8cbb4964e9cf30128033340c16d4fb4ba82b20c97333",
+      "body_tokens": 122,
+      "input_tokens": 132
+    },
+    {
+      "chunk_id": "rule-c04a4875f6045e7d24925326a6c4ca86321cbec06082f5e2",
+      "rule_number": "II.12.7",
+      "heading": "Playing Shots",
+      "page_start": 10,
+      "page_end": 10,
+      "text_sha256": "9ad044e51d03aa8bfc486bf2e34cacf7703e82563d7a46d41280cece69549798",
+      "body_tokens": 82,
+      "input_tokens": 92
+    },
+    {
+      "chunk_id": "rule-6dcecfd3b6631ef81156c78b2875f2e07c99a83b49b8a8a4",
+      "rule_number": "II.12.8",
+      "heading": "Playing Shots",
+      "page_start": 10,
+      "page_end": 10,
+      "text_sha256": "ff92678fbddd477401cdac96944d2388ce1732c4592c52ff0a1125c9d2f25782",
+      "body_tokens": 77,
+      "input_tokens": 87
+    },
+    {
+      "chunk_id": "rule-e0e0f7702f4d53e6a02a00a10fe23f5e9573e770130a7759",
+      "rule_number": "II.12.9",
+      "heading": "Playing Shots",
+      "page_start": 10,
+      "page_end": 10,
+      "text_sha256": "1deff9a623bae53a3cc7c9b84c6e975a2708f7aee09e445c9623e5208e13b9b7",
+      "body_tokens": 58,
+      "input_tokens": 68
+    },
+    {
+      "chunk_id": "rule-d8328f7e3b2bd26a22c992b99a00a7c8c75decdef8f230f1",
+      "rule_number": "II.13",
+      "heading": "Cue Ball Contacting Legal & Illegal Balls Simultaneously",
+      "page_start": 10,
+      "page_end": 10,
+      "text_sha256": "21dcaadc12eb4dd6e9dc3ceaf8429585dce376dff08859e971eff4ac4512accb",
+      "body_tokens": 70,
+      "input_tokens": 91
+    },
+    {
+      "chunk_id": "rule-b41ddbe23c84021e2e292d30c58f861312fe64cd023157cd",
+      "rule_number": "II.14",
+      "heading": "Balls Settling",
+      "page_start": 10,
+      "page_end": 10,
+      "text_sha256": "859169304ee2578220f630709d5e520f91182f42338e50e6cf5240a8461538c5",
+      "body_tokens": 172,
+      "input_tokens": 182
+    },
+    {
+      "chunk_id": "rule-b1093e8b5758392055eeea05db0da832cedb4424116a575b",
+      "rule_number": "II.15.1",
+      "heading": "Frozen Balls",
+      "page_start": 10,
+      "page_end": 10,
+      "text_sha256": "f6450cc01c56963bb75d3338c7322cbc09205ff3438f4e1be3cfd2ac9ad51ce2",
+      "body_tokens": 101,
+      "input_tokens": 113
+    },
+    {
+      "chunk_id": "rule-938e926aac0d18228d3ec2ee10a70029ea8f15c4d5b3ec8c",
+      "rule_number": "II.15.2",
+      "heading": "Frozen Balls",
+      "page_start": 10,
+      "page_end": 10,
+      "text_sha256": "af8984e106d98f28fc99ba405c79a465e8b6348393e35b0893a360fa255b3578",
+      "body_tokens": 98,
+      "input_tokens": 110
+    },
+    {
+      "chunk_id": "rule-aec19daae68c3b2b67185d2e129af95b475a454758752e5c",
+      "rule_number": "II.16.1",
+      "heading": "Jump Shot",
+      "page_start": 10,
+      "page_end": 10,
+      "text_sha256": "3e255a808d8f8ecdd7ee5b1f31bf104b5836fbfee97d76a900702dc46bf5b0df",
+      "body_tokens": 29,
+      "input_tokens": 40
+    },
+    {
+      "chunk_id": "rule-4c8d1fc2fb694e91b1bfcdb28e478055f12938ad24db173e",
+      "rule_number": "II.16.2",
+      "heading": "Jump Shot",
+      "page_start": 11,
+      "page_end": 11,
+      "text_sha256": "fb9ec3e167ddacb3c2c368a09b2d9dee847f0329b69d5dd01e77aa7dc8a4a523",
+      "body_tokens": 51,
+      "input_tokens": 62
+    },
+    {
+      "chunk_id": "rule-48ad63e74bdb8fbc97f1a7d524d26bd10459f1bd6d843fc3",
+      "rule_number": "II.16.3",
+      "heading": "Jump Shot",
+      "page_start": 11,
+      "page_end": 11,
+      "text_sha256": "2963343a60e0dc2ea64c8e7b9a5a8b15d1c682c6a9e74fd2fc5e73a02063adfb",
+      "body_tokens": 85,
+      "input_tokens": 96
+    },
+    {
+      "chunk_id": "rule-4fd8d74e12847326ef9d16eafe0e82ac1784488a5aca22bf",
+      "rule_number": "II.17",
+      "heading": "Fouls",
+      "page_start": 11,
+      "page_end": 11,
+      "text_sha256": "32697d1cacd8a24f9a46801303bc7ebffb08afb881f3cd96c2be7cd708952af8",
+      "body_tokens": 255,
+      "input_tokens": 264
+    },
+    {
+      "chunk_id": "rule-3aae40ab0f0d4434d9580cfb183da716a42ffe7918c9e32d",
+      "rule_number": "II.18",
+      "heading": "Intentional Fouls",
+      "page_start": 11,
+      "page_end": 11,
+      "text_sha256": "4f863ac536081fbfb596b6af18323c9b571b96de5e7cb1c95a15d3b90afb510d",
+      "body_tokens": 57,
+      "input_tokens": 69
+    },
+    {
+      "chunk_id": "rule-6735e1ba39f19bda626d74df77f07b3b7bb3dc1019053286",
+      "rule_number": "II.19",
+      "heading": "Ball Group Confusion",
+      "page_start": 11,
+      "page_end": 11,
+      "text_sha256": "43ae27357041d0d4796ae003fcd0469fd701f05eb2fafc591dba960e3ae8a519",
+      "body_tokens": 68,
+      "input_tokens": 78
+    },
+    {
+      "chunk_id": "rule-93b4c9879b2df45d56296076e4baf52bfb1624fc36f60f51",
+      "rule_number": "II.20",
+      "heading": "Loss of Rack",
+      "page_start": 12,
+      "page_end": 12,
+      "text_sha256": "40ebf9af0e15a35a398db1c25dbf26601911c69d6a42d4eaf1e41c95cfbfbd1e",
+      "body_tokens": 126,
+      "input_tokens": 137
+    },
+    {
+      "chunk_id": "rule-3ee5ac0b2ca9f4e84724c4dda7e6c6597d0ae2ada69f55b3",
+      "rule_number": "II.21",
+      "heading": "Stalemate",
+      "page_start": 12,
+      "page_end": 12,
+      "text_sha256": "48bc5a0c1ea47e331fa16354e03bbbbed0dc38df71703dc9d2ecd52cf35f689c",
+      "body_tokens": 149,
+      "input_tokens": 158
+    },
+    {
+      "chunk_id": "rule-48930ce15160bb95910420a9b416fef464375167df7f8ba0",
+      "rule_number": "II.22",
+      "heading": "Outside Interference",
+      "page_start": 12,
+      "page_end": 12,
+      "text_sha256": "0945fbb868cb8f45f1212f3b51e5ff78a0e993a405fe0d08f1e1f03b3ae344c0",
+      "body_tokens": 107,
+      "input_tokens": 118
+    },
+    {
+      "chunk_id": "rule-d8ab5c700eb2d4ce45de79c02d689c6d7e6ef90aa67999fe",
+      "rule_number": "II.23",
+      "heading": "Concession",
+      "page_start": 12,
+      "page_end": 12,
+      "text_sha256": "f359e758213fb50d1f5bb9abb48fb7f763370b79218b329d3ba9d9450c45d638",
+      "body_tokens": 40,
+      "input_tokens": 48
+    },
+    {
+      "chunk_id": "rule-02d92604555725aed28f66c47d24f93ef1c785a065541881",
+      "rule_number": "II.24",
+      "heading": "Unsportsmanlike Conduct",
+      "page_start": 12,
+      "page_end": 13,
+      "text_sha256": "3289d80900231380a82b0d80b17a9d8b713b8247fdd105190c78e452bb4476e3",
+      "body_tokens": 310,
+      "input_tokens": 322
+    },
+    {
+      "chunk_id": "rule-303173384cf109f243a0762b35eda242521e87538e258138",
+      "rule_number": "A.1",
+      "heading": "General Rules",
+      "page_start": 15,
+      "page_end": 15,
+      "text_sha256": "9a765c2571df335db8c3499436d6b12f6026bfee63f0204d04c008a1723c5166",
+      "body_tokens": 225,
+      "input_tokens": 234
+    },
+    {
+      "chunk_id": "rule-1d1e705e1bf17fa95ebf616b5a78208c0a65b2ff8a5f1cc7",
+      "rule_number": "A.1.1",
+      "heading": "General Rules",
+      "page_start": 15,
+      "page_end": 15,
+      "text_sha256": "465961c6a641f29033625953defa9b57fafa7111f36e77b9c0ff6c32a9bce346",
+      "body_tokens": 64,
+      "input_tokens": 72
+    },
+    {
+      "chunk_id": "rule-1c678811949b8d19e6a2146bd3c3174a7feeec55c936d746",
+      "rule_number": "A.1.2",
+      "heading": "General Rules",
+      "page_start": 15,
+      "page_end": 16,
+      "text_sha256": "ed587889bba8c3455f259fe62bd6750d43b97f5ebbe39b0deda46b76cda37d35",
+      "body_tokens": 287,
+      "input_tokens": 296
+    },
+    {
+      "chunk_id": "rule-2201379d8e4f4302fb3324cd409e7e53010a123948d48039",
+      "rule_number": "A.1.3",
+      "heading": "General Rules",
+      "page_start": 16,
+      "page_end": 16,
+      "text_sha256": "b59296bc4d56ff207768efe7586236e832ed5c5e7821fef628a7e17cab3a6d3c",
+      "body_tokens": 31,
+      "input_tokens": 40
+    },
+    {
+      "chunk_id": "rule-c2b9228106d2156e756ad04cd468ed293e838814723c0cd5",
+      "rule_number": "A.1.4",
+      "heading": "General Rules",
+      "page_start": 16,
+      "page_end": 16,
+      "text_sha256": "455b17c4f3f945aa28719aec18cb4a7bd1f03bbe9bcc047d81711e5b1bbd9537",
+      "body_tokens": 315,
+      "input_tokens": 324
+    },
+    {
+      "chunk_id": "rule-c0541b75279800b19e5517303a105b592eb57f07030c9fb6",
+      "rule_number": "A.1.5",
+      "heading": "General Rules",
+      "page_start": 16,
+      "page_end": 17,
+      "text_sha256": "5bed7389c79ec22bd3f46c89e2e3eb815faba964ea202445b8e89760530db8f8",
+      "body_tokens": 173,
+      "input_tokens": 182
+    },
+    {
+      "chunk_id": "rule-ccc6f8f4077be40c1959bf399dbe985138d5cd609a02adb5",
+      "rule_number": "A.1.6",
+      "heading": "General Rules",
+      "page_start": 17,
+      "page_end": 17,
+      "text_sha256": "8275d42e2ad9abe2756dcd787747c782de6f2f176f00ecc136a86fe0568970bf",
+      "body_tokens": 272,
+      "input_tokens": 281
+    },
+    {
+      "chunk_id": "rule-fc89935eead943869bf6bedce803056bb723a765d3a58acb",
+      "rule_number": "A.1.7",
+      "heading": "General Rules",
+      "page_start": 17,
+      "page_end": 17,
+      "text_sha256": "d1d843f84f1d755944637208e84f0f72092cd794227466b1955c8ffa29c03082",
+      "body_tokens": 207,
+      "input_tokens": 216
+    },
+    {
+      "chunk_id": "rule-4c5414278eb3f601bd92d57285149ecde218e5bc4716edce",
+      "rule_number": "A.1.8",
+      "heading": "General Rules",
+      "page_start": 17,
+      "page_end": 17,
+      "text_sha256": "4543529f52940a4138298d6f221cad6644a9a519857f9da3678b3582a147d7d6",
+      "body_tokens": 162,
+      "input_tokens": 171
+    },
+    {
+      "chunk_id": "rule-97e2a2ffc1b859c19b9cacc561287ac1cc818f803eeaccd3",
+      "rule_number": "A.1.9",
+      "heading": "General Rules",
+      "page_start": 17,
+      "page_end": 18,
+      "text_sha256": "7fb854c394c8866f41a9c5eb0f58811a62f702b823a1907e19580beb117ae081",
+      "body_tokens": 59,
+      "input_tokens": 68
+    },
+    {
+      "chunk_id": "rule-2cf3b7dfc4d829139840d1fdf64fbebe4201669aee261096",
+      "rule_number": "A.1.10",
+      "heading": "General Rules",
+      "page_start": 18,
+      "page_end": 18,
+      "text_sha256": "d19a6b3fd1c1a2a9e136fcbb8844ec680bcaa85f893ac8b50228efbc46a43673",
+      "body_tokens": 106,
+      "input_tokens": 115
+    },
+    {
+      "chunk_id": "rule-b992749f69ef211b51f279920649f2d58fc55c2b202de042",
+      "rule_number": "A.1.11",
+      "heading": "General Rules",
+      "page_start": 18,
+      "page_end": 18,
+      "text_sha256": "8ca2e959ff12a67762ae404974938464fe7b72e489e4d7d50dc0203f9ec5673d",
+      "body_tokens": 148,
+      "input_tokens": 157
+    },
+    {
+      "chunk_id": "rule-070da456671eea378869c0d88b5d0a95a7b4d2225165851b",
+      "rule_number": "A.1.12",
+      "heading": "General Rules",
+      "page_start": 18,
+      "page_end": 18,
+      "text_sha256": "6ec3f88ba9fc70afde6f2cc02c51c3ce3b068786afb77290601ed5fda1d7717b",
+      "body_tokens": 65,
+      "input_tokens": 74
+    },
+    {
+      "chunk_id": "rule-bff04ca1a3268f85577f0fe8e7a36e83bcfbea13c806bc8e",
+      "rule_number": "A.1.13",
+      "heading": "General Rules",
+      "page_start": 18,
+      "page_end": 18,
+      "text_sha256": "f10552d5d356efa6c24203cd3b17073a5d5ec0e24c447359e04431f49fd44f95",
+      "body_tokens": 104,
+      "input_tokens": 113
+    },
+    {
+      "chunk_id": "rule-f3717d9ac58c8416ba5b3d7e13ae6104195a0cd4f70c876b",
+      "rule_number": "A.2.1",
+      "heading": "Parts of the Table",
+      "page_start": 19,
+      "page_end": 20,
+      "text_sha256": "7a60d2d2b529534ce479f46cfe86c44d2335b026622e3555d95d1abcb1e7efc7",
+      "body_tokens": 398,
+      "input_tokens": 409
+    },
+    {
+      "chunk_id": "rule-573cb6b0b15a8279caac6485149ad35e68dffb32472ce635",
+      "rule_number": "A.2.1",
+      "heading": "Parts of the Table",
+      "page_start": 20,
+      "page_end": 20,
+      "text_sha256": "111e20985b4dd8290819108e808c16291d988f262c41b7587d4c0ed28590498c",
+      "body_tokens": 82,
+      "input_tokens": 93
+    },
+    {
+      "chunk_id": "rule-8e4b0547ec08557f91634025dbdba698c4a195258b9ac430",
+      "rule_number": "A.2.2",
+      "heading": "BALL POCKETED",
+      "page_start": 20,
+      "page_end": 20,
+      "text_sha256": "330ccad8aef06980972739b404feb48dbfeb0c1be63475c527cdee742c1896b7",
+      "body_tokens": 297,
+      "input_tokens": 309
+    },
+    {
+      "chunk_id": "rule-9beced7f87bec4df1b029ff10552420c743638fb459a62f8",
+      "rule_number": "A.2.19",
+      "heading": "SHOT",
+      "page_start": 20,
+      "page_end": 20,
+      "text_sha256": "0bb6ec8f71930818bbac6bec9dd2cedbb0f4ca3c76955f4cadf056dcf435e311",
+      "body_tokens": 67,
+      "input_tokens": 76
+    },
+    {
+      "chunk_id": "rule-d269c4ba2d24447315a22723b14f549c900665b9bbde73f9",
+      "rule_number": "A.3",
+      "heading": "Fouls",
+      "page_start": 21,
+      "page_end": 21,
+      "text_sha256": "f4571f9573aa3e239a891d68fdd96ede62017c33d0b45bc6be0831327c08fcd1",
+      "body_tokens": 69,
+      "input_tokens": 78
+    },
+    {
+      "chunk_id": "rule-6ed8699084bd01b91f3ed7f5a23048a6028ce4f452d9f010",
+      "rule_number": "A.3.9",
+      "heading": "Fouls",
+      "page_start": 21,
+      "page_end": 21,
+      "text_sha256": "a24b30d9d42e5e710fb737895625ece2d356a1f89978cb295ed1ddc0de838ff5",
+      "body_tokens": 27,
+      "input_tokens": 36
+    },
+    {
+      "chunk_id": "rule-57637a5afb02ffd2feb57154cb76490a0024cc51b48e5e89",
+      "rule_number": "A.3.10",
+      "heading": "Fouls",
+      "page_start": 21,
+      "page_end": 21,
+      "text_sha256": "ba37d7d688216be71e27653516b219967bf93a9dc657c5c265db88d8f4cac90b",
+      "body_tokens": 84,
+      "input_tokens": 93
+    },
+    {
+      "chunk_id": "rule-b956e78593125ae581c5e7a19dd77caf04397a3d8998bdeb",
+      "rule_number": "A.3.11",
+      "heading": "Fouls",
+      "page_start": 21,
+      "page_end": 21,
+      "text_sha256": "ceb7f5b45528fe06dde43af214bd65fe08073419613095db237888a9d1947460",
+      "body_tokens": 154,
+      "input_tokens": 163
+    },
+    {
+      "chunk_id": "rule-c1d0fca3713baf5417bf2ee1577f77d7251d424ec96132d9",
+      "rule_number": "A.3.16",
+      "heading": "Fouls",
+      "page_start": 21,
+      "page_end": 21,
+      "text_sha256": "0d8547c64f5a6097a8f8d0ce5c8df16c57206358278e6b8c92c66d8b77adf6a6",
+      "body_tokens": 258,
+      "input_tokens": 267
+    }
+  ]
+}

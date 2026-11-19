@@ -1,0 +1,24 @@
+{
+  "version": "heyball-terms-v1",
+  "method": "Visible domain-term expansion; original query retained. This is not hidden translation of the raw retrieval baselines.",
+  "terms": {
+    "开球": "break shot",
+    "8号球": "eight ball",
+    "指袋": "call shot designate a pocket",
+    "自由球": "ball in hand",
+    "全色": "solid ball group",
+    "球组": "ball grouping",
+    "跳球": "jump shot",
+    "推杆": "push shot",
+    "双击": "double hit",
+    "同时": "simultaneous contact",
+    "首碰": "first contact",
+    "先碰": "first contact",
+    "贴着": "frozen ball",
+    "贴球": "frozen ball",
+    "认输": "concession",
+    "犯规": "foul",
+    "碰库": "cushion contact",
+    "落袋": "pocketed ball"
+  }
+}

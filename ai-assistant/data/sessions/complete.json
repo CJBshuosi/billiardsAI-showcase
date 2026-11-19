@@ -1,0 +1,119 @@
+{
+  "schema_version": "1.0",
+  "bundle_id": "bundle-complete",
+  "revision": 1,
+  "data_kind": "synthetic",
+  "session": {
+    "session_id": "demo-complete",
+    "title": "Complete observation demo",
+    "limitations": [
+      "no_player_attribution",
+      "no_automatic_adjudication"
+    ]
+  },
+  "shots": [
+    {
+      "shot_id": "complete-1",
+      "session_id": "demo-complete",
+      "sequence": 1,
+      "start_ms": 0,
+      "end_ms": 1500,
+      "outcome": "no_pocket_observed",
+      "evidence_id": "ev-complete-1",
+      "observation_source": "synthetic_annotation",
+      "limitations": [],
+      "media_id": "clip-complete"
+    },
+    {
+      "shot_id": "complete-2",
+      "session_id": "demo-complete",
+      "sequence": 2,
+      "start_ms": 2000,
+      "end_ms": 3500,
+      "outcome": "pocket_observed",
+      "evidence_id": "ev-complete-2",
+      "observation_source": "synthetic_annotation",
+      "limitations": [],
+      "media_id": "clip-complete"
+    },
+    {
+      "shot_id": "complete-3",
+      "session_id": "demo-complete",
+      "sequence": 3,
+      "start_ms": 4000,
+      "end_ms": 5500,
+      "outcome": "no_pocket_observed",
+      "evidence_id": "ev-complete-3",
+      "observation_source": "synthetic_annotation",
+      "limitations": [],
+      "media_id": "clip-complete"
+    },
+    {
+      "shot_id": "complete-4",
+      "session_id": "demo-complete",
+      "sequence": 4,
+      "start_ms": 6000,
+      "end_ms": 7500,
+      "outcome": "pocket_observed",
+      "evidence_id": "ev-complete-4",
+      "observation_source": "synthetic_annotation",
+      "limitations": [],
+      "media_id": "clip-complete"
+    },
+    {
+      "shot_id": "complete-5",
+      "session_id": "demo-complete",
+      "sequence": 5,
+      "start_ms": 8000,
+      "end_ms": 9500,
+      "outcome": "no_pocket_observed",
+      "evidence_id": "ev-complete-5",
+      "observation_source": "synthetic_annotation",
+      "limitations": [],
+      "media_id": "clip-complete"
+    },
+    {
+      "shot_id": "complete-6",
+      "session_id": "demo-complete",
+      "sequence": 6,
+      "start_ms": 10000,
+      "end_ms": 11500,
+      "outcome": "no_pocket_observed",
+      "evidence_id": "ev-complete-6",
+      "observation_source": "synthetic_annotation",
+      "limitations": [],
+      "media_id": "clip-complete"
+    },
+    {
+      "shot_id": "complete-7",
+      "session_id": "demo-complete",
+      "sequence": 7,
+      "start_ms": 12000,
+      "end_ms": 13500,
+      "outcome": "pocket_observed",
+      "evidence_id": "ev-complete-7",
+      "observation_source": "synthetic_annotation",
+      "limitations": [],
+      "media_id": "clip-complete"
+    },
+    {
+      "shot_id": "complete-8",
+      "session_id": "demo-complete",
+      "sequence": 8,
+      "start_ms": 14000,
+      "end_ms": 15500,
+      "outcome": "no_pocket_observed",
+      "evidence_id": "ev-complete-8",
+      "observation_source": "synthetic_annotation",
+      "limitations": [],
+      "media_id": "clip-complete"
+    }
+  ],
+  "media": [
+    {
+      "media_id": "clip-complete",
+      "filename": "complete.mp4",
+      "duration_ms": 16000
+    }
+  ]
+}
