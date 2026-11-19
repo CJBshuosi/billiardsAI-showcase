@@ -8,16 +8,16 @@
 
 ## AI 工程入口
 
-独立 AI 助手负责记录查询与规则问答；与现场录像服务分开，使用合成场次验证。先从 [AI 助手导览](../ai-assistant/README.md) 看数据路径，再进入实现与测试。
+独立 AI 助手负责记录查询与规则问答；与现场录像服务分开，使用合成场次验证。先从 [AI 助手导览](../ai-assistant/README.md) 看数据路径，再进入实现与测试。207 项离线测试验证程序合同，真实回答质量与现场接入分别验证。
 
 | 关注点 | 使用的技术与设计 | 源码入口 |
 |---|---|---|
 | RAG 知识库 | pypdf、条款/句子分块、页码与版本元数据 | [corpus.py](../ai-assistant/src/cueorbit_replay/rules/corpus.py)、[storage.py](../ai-assistant/src/cueorbit_replay/rules/storage.py) |
 | Embedding | multilingual-e5-small / FastEmbed / ONNX Runtime，384维归一化 | [embeddings.py](../ai-assistant/src/cueorbit_replay/rules/embeddings.py) |
 | 检索与查询优化 | PostgreSQL + pgvector 余弦检索、版本过滤、Top-5、显式双语术语扩展；独立关键词对照 | [retrieval.py](../ai-assistant/src/cueorbit_replay/rules/retrieval.py)、[query.py](../ai-assistant/src/cueorbit_replay/rules/query.py) |
-| 工具调用与编排 | DeepSeek 原生 tool_calls、受限业务工具、轮数与时间预算 | [assistant.py](../ai-assistant/src/cueorbit_replay/assistant.py)、[workflow.py](../ai-assistant/src/cueorbit_replay/rules/workflow.py)、[tools.py](../ai-assistant/src/cueorbit_replay/tools.py) |
+| 工具调用与编排 | DeepSeek 原生 tool_calls；参数校验、3 轮/4 工具/30 秒共享预算 | [assistant.py](../ai-assistant/src/cueorbit_replay/assistant.py)、[workflow.py](../ai-assistant/src/cueorbit_replay/rules/workflow.py)、[tools.py](../ai-assistant/src/cueorbit_replay/tools.py) |
 | 结构化回答与依据 | Pydantic 响应、检索结果成员校验、短引文匹配、规范来源回填 | [contracts.py](../ai-assistant/src/cueorbit_replay/rules/contracts.py)、[evidence.py](../ai-assistant/src/cueorbit_replay/rules/evidence.py) |
-| 评估 | Recall@K、Hit@K、MRR、状态与引用有效性分开检查 | [检索评估](../ai-assistant/src/cueorbit_replay/rules/evaluation.py)、[回答评估](../ai-assistant/src/cueorbit_replay/evaluation.py)、[精选测试](../ai-assistant/tests/) |
+| 评估 | Recall@5、MRR@5 检查检索；工具与引用单独验证，语义正确性另行复核 | [检索评估](../ai-assistant/src/cueorbit_replay/rules/evaluation.py)、[回答评估](../ai-assistant/src/cueorbit_replay/evaluation.py)、[精选测试](../ai-assistant/tests/) |
 | 服务与可观测性 | FastAPI、SQLAlchemy、ASGI、允许字段日志及未知用量处理 | [app.py](../ai-assistant/src/cueorbit_replay/app.py)、[repository.py](../ai-assistant/src/cueorbit_replay/repository.py)、[observability.py](../ai-assistant/src/cueorbit_replay/observability.py) |
 
 ## 1. 采集与视觉感知
